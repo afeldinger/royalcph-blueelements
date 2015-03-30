@@ -10,7 +10,6 @@ Spørgsmål:
 	Skal vi skære ned til 15 snaps på mobil?
 	Fluid?
 	Hvad sker der med store browservinduer?
-
 	Webfont hosting?
 
 Assets:
