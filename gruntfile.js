@@ -315,7 +315,7 @@ module.exports = function(grunt) {
           patterns: [
             {
               match: /(\.\.\/src\/assets\/|src\/assets\/|assets\/)/g,
-              replacement: 'http://git.krympevaerk.dk/royalcph/dist/assets/',
+              replacement: 'http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/',
             },
           ]
         },
