@@ -1,0 +1,28 @@
+
+.page-footer {
+	@extend %content-wrapper;
+	margin-top: rhythm(11);
+	margin-bottom: rhythm(11);
+}
+
+ul.logos {
+	text-align:center;
+
+	margin:0;
+	padding:0;
+	list-style:none;
+
+	li {
+		display:inline;
+		margin: 0 1em;
+		padding: 0;
+		
+		@include breakpoint($sm) {
+			&:nth-of-type(5):after {
+				content:"\A"; 
+				white-space:pre; 
+			}
+		}
+
+	}
+}

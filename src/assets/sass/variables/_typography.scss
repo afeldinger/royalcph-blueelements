@@ -1,0 +1,29 @@
+
+
+$font-header: Georgia,Utopia,Charter,serif;
+$font-body: Georgia,Utopia,Charter,serif;
+
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-bold: 600;
+$weight-heavy: 800;
+
+$size-xxxl: 50px;
+$size-xxl:	30px;
+$size-xl:	22px;
+$size-lg:	18px;
+$size-md:	15px;
+$size-sm:	12px;
+$size-xs: 	10px;
+
+$base-font-size: $size-md;
+$base-line-height: 6px;
+$adjusted-line-height: 28px;
+
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-lg: 8px;

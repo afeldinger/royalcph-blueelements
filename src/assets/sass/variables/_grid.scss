@@ -1,0 +1,15 @@
+
+$content-margin: (30px / $base-font-size) * 1rem;
+$content-margin-em: (30px / $base-font-size) * 1em;
+
+$xs: 30em;
+$sm: 45em;
+$md: 60em;
+$lg: (1000px / $base-font-size) * 1em;
+$lg-bp: $lg + 2 * $content-margin-em ;
+
+/*
+@include add-grid(12);
+@include add-gutter(.3);
+@include sgs-change('output', 'isolation');
+*/

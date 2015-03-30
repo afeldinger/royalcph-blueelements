@@ -1,0 +1,106 @@
+
+
+
+*, *:before, *:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+table,
+thead,
+tbody,
+tfoot,
+input,
+textarea,
+button,
+select {
+	font-family: $font-body;
+}
+
+body {
+	color: $color-text-body;
+    @include adjust-leading-to($adjusted-line-height / $base-line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %gold-effect;
+	font-family: $font-header;
+    font-weight: $weight-normal;
+}
+
+h1 {
+    @include adjust-font-size-to($size-xxxl);
+    margin: rhythm(3) 0;
+    text-transform: uppercase;
+}
+h2 {
+    @include adjust-font-size-to($size-xxl);
+    margin: rhythm(2) 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    @include adjust-font-size-to($size-lg);
+    margin: rhythm(2) 0 rhythm(2);
+}
+
+h4 {
+    @include adjust-font-size-to($size-md);
+    margin: rhythm(1) 0;
+}
+
+h5 {
+    @include adjust-font-size-to($size-md);
+    margin: rhythm(1) 0;
+}
+
+h1,
+h2 {
+	+ p:nth-of-type(1) {
+		@include adjust-font-size-to($size-xl);
+		font-style: italic;
+	}
+}
+
+p,
+ul,
+ol {
+	@extend %gold-effect;
+	margin: rhythm(2) 0;
+
+    &:first-child {
+        margin-top:0;
+    }
+
+    & + h2 {
+        margin-top: rhythm(3)
+    }
+    & + h3 {
+        margin-top: rhythm(3)
+    }
+}
+
+a {
+	text-decoration: none;
+	
+	&,
+	&:visited {
+		color: $color-links;		
+	}
+	
+	&:active,
+	&:hover {
+		color: $color-links-active;
+	}
+
+    .icon {
+        align:absmiddle
+    }
+
+}

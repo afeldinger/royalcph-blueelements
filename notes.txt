@@ -1,0 +1,23 @@
+
+Mangler:
+
+	Kravspec - browser support
+	Færdige layouts
+	Tekster
+
+Spørgsmål:
+	Hvad sker der med de 30 snaps, før de findes?
+	Skal vi skære ned til 15 snaps på mobil?
+	Fluid?
+	Hvad sker der med store browservinduer?
+
+
+
+Assets:
+	Fonte
+	Baggrundstiles (guld & marmor)
+	Product shots, fritlagte
+	Stemningsbilleder 
+	logoer
+	Video url + preview thumbnail
+	Link til store locator

@@ -1,0 +1,14 @@
+---
+layout: default.hbs
+title: Cloud Shaped Dish
+is_aggr: true
+---
+
+
+{{#withSort pages "data.sortorder"}}
+	{{#isnt data.is_aggr true}}
+		<section class="content-section {{default data.class ''}}">
+			{{{aggregate this.src}}}
+		</section>
+	{{/isnt}}
+{{/withSort}}

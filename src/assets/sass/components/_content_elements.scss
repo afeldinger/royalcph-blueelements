@@ -1,0 +1,14 @@
+section.no-margin {
+	padding-left:0;
+	padding-right:0;
+	margin:0;
+	max-width:none;
+
+	&.white {
+		background:#fff;
+	}
+}
+
+img.full-width {
+	width:100%;
+}

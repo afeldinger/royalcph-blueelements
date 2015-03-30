@@ -1,0 +1,40 @@
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+	/*
+	> * + * {
+		margin-top: 2em;
+	}
+	*/
+}
+
+
+
+
+body {
+	background: url(../img/bg_marble.jpg) 50% 0;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+%content-wrapper {
+	padding: 0 $content-margin;
+	margin: 0 auto;
+	max-width: $lg + $content-margin-em;
+	text-align: left;
+
+}
+.content-section {
+	@extend %content-wrapper;
+	
+}

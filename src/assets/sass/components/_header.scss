@@ -1,0 +1,16 @@
+
+.page-header {
+	@extend %content-wrapper;
+	margin-top:rhythm(8);
+	margin-bottom:rhythm(8);
+
+	h1 {
+		text-align:center;
+		@include adjust-font-size-to(50px);
+		color:#fff;
+
+		span:nth-of-type(n+2) {
+			display:none;
+		}
+	}
+}
