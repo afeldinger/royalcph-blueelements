@@ -1,4 +1,62 @@
 
-.icon-royalcph {
+.icon {
+	&,
+	&:before {
+		color: inherit;
+	}
+}
+
+
+.logo-missing {
+	@include icon($logo-missing);
+}
+.logo-royalcph {
 	@include icon($logo-royalcph);
+}
+.logo-royalcph-simple {
+	@include icon($logo-royalcph-simple);
+}
+.logo-kopogkande {
+	@include icon($logo-kopogkande);
+}
+.logo-illumsbolighus {
+	@include icon($logo-illumsbolighus);
+}
+.logo-bahne {
+	@include icon($logo-bahne);
+}
+.logo-inspiration {
+	@include icon($logo-inspiration);
+}
+.logo-imerco {
+	@include icon($logo-imerco);
+}
+.logo-magasin {
+	@extend .logo-missing;
+}
+.logo-illum {
+	@extend .logo-missing;
+}
+.logo-salling {
+	@extend .logo-missing;
+}
+
+
+.icon_arrow_right {
+	@include icon($icon_arrow_right);
+}
+.icon_arrow_left {
+	@include icon($icon_arrow_left);
+}
+.icon_scroll_down {
+	@include icon($icon_scroll_down);
+}
+.icon_scroll_up {
+	@include icon($icon_scroll_up);
+}
+.icon_play {
+	@include icon($icon_play);
+}
+.icon_map_marker {
+	@include icon($icon_map_marker);
 }

@@ -1,25 +1,72 @@
 
 
-$font-header: Georgia,Utopia,Charter,serif;
-$font-body: Georgia,Utopia,Charter,serif;
+$font-bodoni-svtytwo: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 
+$font-header: $font-bodoni-svtytwo;
+$font-body: $font-bodoni-svtytwo;
 
-$weight-light: 300;
 $weight-normal: 400;
-$weight-bold: 600;
-$weight-heavy: 800;
+$weight-bold: 700;
 
 $size-xxxl: 50px;
 $size-xxl:	30px;
-$size-xl:	22px;
-$size-lg:	18px;
+$size-xl:	25px;
+$size-lg:	20px;
 $size-md:	15px;
 $size-sm:	12px;
 $size-xs: 	10px;
+$size-xxs:	6px;
+
+/*
+
+
+xxxl	50
+xxxl	45
+xxl		30
+xl		25
+lg		20 *
+md		15
+sm		12
+xs		10
+xxs		6
+
+Brødtekst
+50 (45)
+25
+15
+
+Snap viewport
+12,5
+
+Snap display
+15
+
+Snap submission
+25
+20
+10
+
+Blue elements launched
+32,5
+
+Citater
+30
+
+Slider
+30
+15
+
+Priser
+15
+6
+
+Splash
+17,5
+*/
 
 $base-font-size: $size-md;
-$base-line-height: 6px;
-$adjusted-line-height: 28px;
+$base-line-height: 5px;
+$adjusted-line-height: 20px;
 
 $rhythm-unit: "rem";
 $rem-with-px-fallback: true;
@@ -27,3 +74,4 @@ $rem-with-px-fallback: true;
 $border-radius-sm: 2px;
 $border-radius-md: 4px;
 $border-radius-lg: 8px;
+

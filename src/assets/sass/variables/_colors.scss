@@ -1,6 +1,6 @@
 
 
-$color-gold: #e0c578;
+$color-gold: #ffeba2;
 
 $color-background: #232a32;
 
@@ -11,8 +11,9 @@ $color-borders: #bcbcbc;
 $color-borders-light: #e8e8e8;
 
 
-$color-text-body: #707070;
-$color-text-headers: $color-primary;
+$color-text-body: $color-gold;
+$color-text-headers: $color-gold;
+$color-text-dark: #282b20;
 $color-links: $color-primary;
 $color-links-active: $color-primary;
 
@@ -29,14 +30,15 @@ $color-links-active: $color-primary;
 /*
 	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-animation-name: gold-animation;
-	-webkit-animation-duration: 180s;
+	-webkit-animation-duration: 30s;
 	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
 */
 }
 
+
 @-webkit-keyframes gold-animation {
-	0% {background-position: left top;}
-	50% {background-position: right top;}
+	0% {background-position: right top;}
 	100% {background-position: left top;}
 }

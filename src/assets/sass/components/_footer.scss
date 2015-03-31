@@ -3,6 +3,18 @@
 	@extend %content-wrapper;
 	margin-top: rhythm(11);
 	margin-bottom: rhythm(11);
+
+	.icon + span {
+		position: absolute;
+		left:-9999em;
+		opacity: 0;
+	}
+
+	.royalcph-logo {
+		margin: rhythm(12) 0;
+		text-align: center;
+		@include adjust-font-size-to(45px);
+	}
 }
 
 ul.logos {
@@ -25,4 +37,9 @@ ul.logos {
 		}
 
 	}
+
+	.icon {
+		@include adjust-font-size-to(65px);
+	}
 }
+

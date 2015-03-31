@@ -49,7 +49,7 @@ module.exports.register = function (Handlebars, options) {
 
 
     Handlebars.registerHelper('icon', function(key){
-        return new Handlebars.SafeString('<span class="icon icon-'+key+'" aria-hidden="true"></span>');
+        return new Handlebars.SafeString('<span class="icon '+key+'" aria-hidden="true"></span>');
       }
     );
 

@@ -11,13 +11,15 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -40,7 +42,8 @@ menu,
 nav,
 section,
 summary {
-  display: block; }
+  display: block;
+}
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
@@ -53,7 +56,8 @@ video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -61,7 +65,8 @@ video {
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
@@ -69,7 +74,8 @@ audio:not([controls]) {
  */
 [hidden],
 template {
-  display: none; }
+  display: none;
+}
 
 /* Links
    ========================================================================== */
@@ -77,14 +83,16 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -92,20 +100,23 @@ a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: 1px dotted;
+}
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
@@ -113,20 +124,23 @@ dfn {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /**
  * Address styling not present in IE 8/9.
  */
 mark {
   background: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -136,13 +150,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -150,13 +167,15 @@ sub {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
-  border: 0; }
+  border: 0;
+}
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -164,20 +183,23 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 /**
  * Address differences between Firefox and other browsers.
  */
 hr {
   box-sizing: content-box;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Contain overflow in all browsers.
  */
 pre {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
@@ -187,7 +209,8 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /* Forms
    ========================================================================== */
@@ -211,13 +234,15 @@ textarea {
   font: inherit;
   /* 2 */
   margin: 0;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -227,7 +252,8 @@ button {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -243,14 +269,16 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
-  cursor: default; }
+  cursor: default;
+}
 
 /**
  * Remove inner padding and border in Firefox 4+.
@@ -258,14 +286,16 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 input {
-  line-height: normal; }
+  line-height: normal;
+}
 
 /**
  * It's recommended that you don't attempt to style these elements.
@@ -279,7 +309,8 @@ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -288,7 +319,8 @@ input[type="radio"] {
  */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
@@ -299,7 +331,8 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   /* 2 */
-  box-sizing: content-box; }
+  box-sizing: content-box;
+}
 
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -308,7 +341,8 @@ input[type="search"] {
  */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * Define consistent border, margin, and padding.
@@ -316,7 +350,8 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -326,20 +361,23 @@ legend {
   border: 0;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 optgroup {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /* Tables
    ========================================================================== */
@@ -348,21 +386,16 @@ optgroup {
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 td,
 th {
-  padding: 0; }
+  padding: 0;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6, p,
-ul,
-ol {
-  color: #e0c578;
+.content-section {
+  color: #ffeba2;
   /* autoprefixer: off */
   -webkit-text-fill-color: transparent;
   background: url(../img/bg_gold.jpg) repeat, -webkit-linear-gradient(transparent, transparent);
@@ -371,30 +404,84 @@ ol {
   /*
   	-webkit-transform: translate3d(0, 0, 0);
   	-webkit-animation-name: gold-animation;
-  	-webkit-animation-duration: 180s;
+  	-webkit-animation-duration: 30s;
   	-webkit-animation-iteration-count: infinite;
-  	-webkit-animation-timing-function: linear;
-  */ }
+  	-webkit-animation-timing-function: ease-in-out;
+  	-webkit-animation-direction: alternate;
+  */
+}
 
 @-webkit-keyframes gold-animation {
   0% {
-    background-position: left top; }
-  50% {
-    background-position: right top; }
+    background-position: right top;
+  }
   100% {
-    background-position: left top; } }
+    background-position: left top;
+  }
+}
 /*
 @include add-grid(12);
 @include add-gutter(.3);
 @include sgs-change('output', 'isolation');
+*/
+/*
+
+
+xxxl	50
+xxxl	45
+xxl		30
+xl		25
+lg		20 *
+md		15
+sm		12
+xs		10
+xxs		6
+
+Brødtekst
+50 (45)
+25
+15
+
+Snap viewport
+12,5
+
+Snap display
+15
+
+Snap submission
+25
+20
+10
+
+Blue elements launched
+32,5
+
+Citater
+30
+
+Slider
+30
+15
+
+Priser
+15
+6
+
+Splash
+17,5
 */
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons.eot");
   src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal; }
-.icon-royalcph {
+  font-style: normal;
+}
+.icon, .icon:before {
+  color: inherit;
+}
+
+.logo-missing, .logo-magasin, .logo-illum, .logo-salling {
   font-family: "icons";
   speak: none;
   font-style: normal;
@@ -402,39 +489,270 @@ ol {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased; }
-  .icon-royalcph:before {
-    content: ""; }
+  -webkit-font-smoothing: antialiased;
+}
+.logo-missing:before, .logo-magasin:before, .logo-illum:before, .logo-salling:before {
+  content: "";
+}
+
+.logo-royalcph {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-royalcph:before {
+  content: "";
+}
+
+.logo-royalcph-simple {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-royalcph-simple:before {
+  content: "";
+}
+
+.logo-kopogkande {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-kopogkande:before {
+  content: "";
+}
+
+.logo-illumsbolighus {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-illumsbolighus:before {
+  content: "";
+}
+
+.logo-bahne {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-bahne:before {
+  content: "";
+}
+
+.logo-inspiration {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-inspiration:before {
+  content: "";
+}
+
+.logo-imerco {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-imerco:before {
+  content: "";
+}
+
+.icon_arrow_right {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_arrow_right:before {
+  content: "";
+}
+
+.icon_arrow_left {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_arrow_left:before {
+  content: "";
+}
+
+.icon_scroll_down {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_scroll_down:before {
+  content: "";
+}
+
+.icon_scroll_up {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_scroll_up:before {
+  content: "";
+}
+
+.icon_play {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_play:before {
+  content: "";
+}
+
+.icon_map_marker {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon_map_marker:before {
+  content: "";
+}
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 body {
   /*
   > * + * {
   	margin-top: 2em;
   }
-  */ }
+  */
+}
 
 body {
   background: url(../img/bg_marble.jpg) 50% 0;
   margin: 0;
   padding: 0;
-  text-align: center; }
+  text-align: center;
+}
 
 .content-section, .page-footer, .page-header {
   padding: 0 1.875rem;
   margin: 0 auto;
-  max-width: 64.375em;
-  text-align: left; }
+  max-width: 61.875em;
+  text-align: left;
+}
 
+/*
+@font-face {
+    font-family: "HelveticaNeueW01";
+    src: url("../fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a-abf75fb0048a6453487583d97e540c886a30bb40.eot?#iefix");
+    src: local('HelveticaNeue-Light'),
+         local('Helvetica Neue Light'),
+         url("../fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a-abf75fb0048a6453487583d97e540c886a30bb40.eot?#iefix") format("eot"), 
+    	 url("../fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656-d3f5ed72722efaf436265c43a014fdd0cfd77737.woff") format("woff"),
+    	 url("../fonts/688ab72b-4deb-4e15-a088-89166978d469-43777e352c10b5e05939db144bee82b73d858491.ttf") format("truetype"), 
+    	 url("../fonts/7816f72f-f47e-4715-8cd7-960e3723846a-72fb4fc5fc78ecb74c1a3c1712129eb4d0ebaa6b.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'bodoni-svtytwo-1';
+  src: url("../fonts/BodoniSvtyTwoITCTTBook.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BodoniSvtyTwoITCTTBook.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBook.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBook.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBook.svg#1a565e8a76ea597cd4cd4388d4d08105") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'bodoni-svtytwo-1';
+  src: url("../fonts/BodoniSvtyTwoITCTTBold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BodoniSvtyTwoITCTTBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBold.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBold.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBold.svg#9aa64ce3c4781d177662f1291723ead4") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'bodoni-svtytwo-1';
+  src: url("../fonts/BodoniSvtyTwoITCTTBookIta.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BodoniSvtyTwoITCTTBookIta.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBookIta.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBookIta.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBookIta.svg#db7b7489795eca1c2c221fea4c9f11a3") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: 400;
+}
 *, *:before, *:after {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body,
 table,
@@ -445,12 +763,14 @@ input,
 textarea,
 button,
 select {
-  font-family: Georgia, Utopia, Charter, serif; }
+  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
 
 body {
-  color: #707070;
-  line-height: 28px;
-  line-height: 1.86667rem; }
+  color: #ffeba2;
+  line-height: 20px;
+  line-height: 1.33333rem;
+}
 
 h1,
 h2,
@@ -458,130 +778,172 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, Utopia, Charter, serif;
-  font-weight: 400; }
+  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-weight: 400;
+  color: inherit;
+}
 
 h1 {
   font-size: 50px;
   font-size: 3.33333rem;
-  line-height: 54px;
-  line-height: 3.6rem;
-  margin: 1.2rem 0;
-  text-transform: uppercase; }
+  line-height: 55px;
+  line-height: 3.66667rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
 
 h2 {
   font-size: 30px;
   font-size: 2rem;
-  line-height: 36px;
-  line-height: 2.4rem;
-  margin: 0.8rem 0;
-  text-transform: uppercase; }
+  line-height: 35px;
+  line-height: 2.33333rem;
+  margin: 0.66667rem 0;
+  text-transform: uppercase;
+}
 
 h3 {
-  font-size: 18px;
-  font-size: 1.2rem;
-  line-height: 24px;
-  line-height: 1.6rem;
-  margin: 0.8rem 0 0.8rem; }
+  font-size: 25px;
+  font-size: 1.66667rem;
+  line-height: 30px;
+  line-height: 2rem;
+  margin: 0.66667rem 0 0.66667rem;
+}
 
 h4 {
-  font-size: 15px;
-  font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.6rem;
-  margin: 0.4rem 0; }
+  font-size: 20px;
+  font-size: 1.33333rem;
+  line-height: 25px;
+  line-height: 1.66667rem;
+  margin: 0.33333rem 0;
+}
 
 h5 {
   font-size: 15px;
   font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.6rem;
-  margin: 0.4rem 0; }
+  line-height: 20px;
+  line-height: 1.33333rem;
+  margin: 0.33333rem 0;
+}
 
 h1 + p:nth-of-type(1),
 h2 + p:nth-of-type(1) {
-  font-size: 22px;
-  font-size: 1.46667rem;
+  font-size: 25px;
+  font-size: 1.66667rem;
   line-height: 30px;
   line-height: 2rem;
-  font-style: italic; }
+  font-style: italic;
+}
 
 p,
 ul,
 ol {
-  margin: 0.8rem 0; }
-  p:first-child,
-  ul:first-child,
-  ol:first-child {
-    margin-top: 0; }
-  p + h2,
-  ul + h2,
-  ol + h2 {
-    margin-top: 1.2rem; }
-  p + h3,
-  ul + h3,
-  ol + h3 {
-    margin-top: 1.2rem; }
+  margin: 0.66667rem 0;
+  color: inherit;
+}
+p:first-child,
+ul:first-child,
+ol:first-child {
+  margin-top: 0;
+}
+p + h2,
+ul + h2,
+ol + h2 {
+  margin-top: 1rem;
+}
+p + h3,
+ul + h3,
+ol + h3 {
+  margin-top: 1rem;
+}
 
 a {
-  text-decoration: none; }
-  a, a:visited {
-    color: #e0c578; }
-  a:active, a:hover {
-    color: #e0c578; }
-  a .icon {
-    align: absmiddle; }
+  text-decoration: none;
+}
+a, a:visited {
+  color: #ffeba2;
+}
+a:active, a:hover {
+  color: #ffeba2;
+}
+a .icon {
+  align: absmiddle;
+}
 
 section.no-margin {
   padding-left: 0;
   padding-right: 0;
   margin: 0;
-  max-width: none; }
-  section.no-margin.white {
-    background: #fff; }
+  max-width: none;
+}
 
 img.full-width {
-  width: 100%; }
+  width: 100%;
+}
 
 .page-footer {
-  margin-top: 4.4rem;
-  margin-bottom: 4.4rem; }
+  margin-top: 3.66667rem;
+  margin-bottom: 3.66667rem;
+}
+.page-footer .icon + span {
+  position: absolute;
+  left: -9999em;
+  opacity: 0;
+}
+.page-footer .royalcph-logo {
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 45px;
+  font-size: 3rem;
+  line-height: 50px;
+  line-height: 3.33333rem;
+}
 
 ul.logos {
   text-align: center;
   margin: 0;
   padding: 0;
-  list-style: none; }
-  ul.logos li {
-    display: inline;
-    margin: 0 1em;
-    padding: 0; }
-    @media (min-width: 45em) {
-      ul.logos li:nth-of-type(5):after {
-        content: "\A";
-        white-space: pre; } }
+  list-style: none;
+}
+ul.logos li {
+  display: inline;
+  margin: 0 1em;
+  padding: 0;
+}
+@media (min-width: 45em) {
+  ul.logos li:nth-of-type(5):after {
+    content: "\A";
+    white-space: pre;
+  }
+}
+ul.logos .icon {
+  font-size: 65px;
+  font-size: 4.33333rem;
+  line-height: 70px;
+  line-height: 4.66667rem;
+}
 
 .page-header {
-  margin-top: 3.2rem;
-  margin-bottom: 3.2rem; }
-  .page-header h1 {
-    text-align: center;
-    font-size: 50px;
-    font-size: 3.33333rem;
-    line-height: 54px;
-    line-height: 3.6rem;
-    color: #fff; }
-    .page-header h1 span:nth-of-type(n+2) {
-      display: none; }
+  margin-top: 2.66667rem;
+  margin-bottom: 2.66667rem;
+}
+.page-header h1 {
+  text-align: center;
+  font-size: 50px;
+  font-size: 3.33333rem;
+  line-height: 55px;
+  line-height: 3.66667rem;
+  color: #fff;
+}
+.page-header h1 span:nth-of-type(n+2) {
+  display: none;
+}
 
 .section-designer {
-  position: relative; }
-  .section-designer:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: #fff; }
+  background: #fff;
+  color: #282b20;
+}
+
+.section-explore h1,
+.section-explore h1 + p {
+  text-align: center;
+}
