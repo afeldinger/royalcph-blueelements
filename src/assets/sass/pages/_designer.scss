@@ -1,5 +1,36 @@
 
 .section-designer {
-	background:#fff;
+
+	min-height:465px;
+	background:#f0f0f0 url(../img/bg_louise_campbell.jpg) no-repeat 45% 0;
 	color: $color-text-dark;
+	font-style:italic;
+
+	.content-wrapper {
+		margin-top:rhythm(8);
+		margin-bottom:rhythm(8);
+		width:100%;
+
+	}
+
+	.main-content {
+		display:inline;
+		float:left;
+
+		width: rel-width(140px);
+		margin-left: 5%;
+
+		@include breakpoint($sm) {
+			margin-left: perc-width(170px);
+		}
+	}
+
+
+	@include breakpoint($sm) {
+
+		display:flex;
+		align-items: center;	
+
+		background-position: 50% 0;
+	}
 }

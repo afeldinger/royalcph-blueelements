@@ -1,0 +1,37 @@
+
+%text-emboss {
+	text-shadow: 0px 1px 1px rgba(0,0,0,.75);
+}
+%text-emboss-shadow {
+	text-shadow: 0px 1px 1px rgba(0,0,0,.75), 0 0 13px rgba(0,0,0,.75);
+}
+%text-shadow {
+	text-shadow: 0 0 13px rgba(0,0,0,.75);
+}
+
+
+
+
+%gold-effect {
+	 color: $color-gold;
+	
+	/* autoprefixer: off */
+	-webkit-text-fill-color: transparent;
+	background: url(../img/bg_gold.jpg) repeat, -webkit-linear-gradient(transparent, transparent);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+/*
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-animation-name: gold-animation;
+	-webkit-animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+*/
+}
+
+
+@-webkit-keyframes gold-animation {
+	0% {background-position: right top;}
+	100% {background-position: left top;}
+}

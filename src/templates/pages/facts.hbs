@@ -1,6 +1,7 @@
 ---
 title: Royal Copenhagen Facts
 sortorder: 5
+class: section-facts
 ---
 
 
@@ -39,10 +40,11 @@ sortorder: 5
     </g> 
 </svg>
 
-<p>
-	<span class="caps">Blue Elements</span> was launched in 2011 and is inspired by the jagged edging from Flora Danica, classic fluting, exquisite lace and luxurious flower motifs
-</p>
-
+<div class="main-content">
+	<p>
+		<span class="caps">Blue Elements</span> was launched in 2011 and is inspired by the jagged edging from Flora Danica, classic fluting, exquisite lace and luxurious flower motifs
+	</p>
+</div>
 
 <div class="pricing-info">
 	<p>
@@ -51,15 +53,30 @@ sortorder: 5
 	</p>
 </div>
 
+<img src="{{assets}}/img/gx_facts_mood01.jpg" alt="Mood" />
 
-<div class="fact fact-white">
-	The main flower in the classic pattern is called chrysanthemum
-</div>
-
-<div class="fact fact-blue">
-	The Royal Copenhagen blue is called Cobalt Zinc Silicate
-</div>
-
-<div class="fact fact-white">
-	A blue-painter spends four years learning his or her craft
-</div>
+<ul class="tiles">
+	<li id="fact-1" class="fact fact-white">
+		<div class="elm-content">
+			The main flower in the classic pattern is called chrysanthemum
+		</div>
+	</li>
+	<li id="fact-2" class="fact fact-blue">
+		<div class="elm-content">
+			The Royal Copenhagen blue is called Cobalt Zinc Silicate
+		</div>
+	</li>
+	<li id="fact-3" class="fact fact-white">
+		<div class="elm-content">
+			A blue-painter spends four years learning his or her craft
+		</div>
+	</li>
+{{#eachOptions snaps}}
+	<li id="snapshot-{{this.key}}" class="snapshot">
+		<img src="{{this.value.imgurl}}" alt="{{this.value.name}}'s snapshot" />
+		<div class="elm-content">
+			<q>{{this.value.text}}</q>
+			<p class="name">{{this.value.name}}</p>
+		</div>
+	</li>
+{{/eachOptions}}

@@ -75,59 +75,63 @@ body {
     @include adjust-leading-to($adjusted-line-height / $base-line-height);
 }
 
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: $font-header;
-    font-weight: $weight-normal;
-    color: inherit;
+  font-family: $font-header;
+  font-weight: $weight-normal;
+  color: inherit;
 }
 
 h1 {
-    @include adjust-font-size-to($size-xxxl);
-    margin: rhythm(3) 0;
+    @include adjust-font-size-to($size-xxl);
+    @include adjust-leading-to(6);
+    margin: rhythm(6) 0;
     text-transform: uppercase;
+
+    @include breakpoint($sm) {
+    	@include adjust-font-size-to($size-xxxl);
+      @include adjust-leading-to(8);
+    }
 }
 h2 {
     @include adjust-font-size-to($size-xxl);
-    margin: rhythm(2) 0;
+    @include adjust-leading-to(5);
+    margin: rhythm(5) 0;
     text-transform: uppercase;
+
 }
 
 h3 {
     @include adjust-font-size-to($size-xl);
-    margin: rhythm(2) 0 rhythm(2);
+    margin: rhythm(4) 0 rhythm(2);
 }
 
 h4 {
     @include adjust-font-size-to($size-lg);
-    margin: rhythm(1) 0;
+    margin: rhythm(3) 0;
 }
 
 h5 {
     @include adjust-font-size-to($size-md);
-    margin: rhythm(1) 0;
-}
-
-h1,
-h2 {
-	+ p:nth-of-type(1) {
-		@include adjust-font-size-to($size-xl);
-		font-style: italic;
-	}
+    margin: rhythm(3) 0;
 }
 
 p,
 ul,
 ol {
-	margin: rhythm(2) 0;
+	margin: rhythm(6) 0;
 	color: inherit;
 
     &:first-child {
-        margin-top:0;
+      margin-top:0;
+    }
+    &:last-child {
+      margin-bottom:0;
     }
 
     & + h2 {
@@ -156,3 +160,9 @@ a {
     }
 
 }
+
+.caps {
+	text-transform: uppercase;
+	font-style: normal;
+}
+

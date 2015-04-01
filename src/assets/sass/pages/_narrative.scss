@@ -1,0 +1,66 @@
+
+.section-narrative {
+	@extend %gold-main-content;
+	
+	svg,
+	.pricing-info {
+		display:none;
+	}
+
+	@include breakpoint($xs) {
+		svg {
+			display:inline;
+			float:left;
+			width: 380px;
+			margin-left: -230px;
+			margin-right:-380px;
+		}
+
+		.pricing-info {
+			display:block;
+			position:absolute;
+			bottom: 8%;
+			left: 20px;
+			width: rel-width(100px);
+		}
+
+		.main-content {
+			position:relative;
+			display:inline;
+			float:right;
+			width: 70%;
+			img {
+				width:100%;
+			}
+		}
+	}
+	@include breakpoint($sm) {
+		svg {
+			width: 553px;
+			height: 813px;
+			margin-left: -250px;
+			margin-right:-553px;
+		}
+		.main-content {
+			width: perc-width(470px);
+			margin-right: perc-width(105px);
+		}
+		.pricing-info {
+			width: rel-width(230px);
+			left:auto;
+			bottom:auto;
+			top: 870px;
+			margin-left:80px;
+		}
+	}
+
+	@include breakpoint($md) {
+		svg {
+			margin-left: -206px;
+		}
+		.pricing-info {
+			width: rel-width(230px);
+			margin-left:140px;
+		}
+	}
+}

@@ -1,7 +1,16 @@
 
 .section-explore {
+	@extend %gold-main-content;
+
 	h1,
 	h1 + p {
 		text-align:center;
+	}
+
+    @include breakpoint($sm) {
+		h1 {
+			@include adjust-font-size-to(50px);
+			@include adjust-leading-to(9);
+		}
 	}
 }

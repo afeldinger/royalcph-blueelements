@@ -1,0 +1,13 @@
+
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+@function perc-width($width, $full: $lg-abs) {
+  @return calc-percent($width, $full);
+}
+
+@function rel-width($width, $rel: $base-font-size) {
+  @return $width / $rel * 1em;
+}

@@ -1,11 +1,12 @@
 
-$content-margin: (30px / $base-font-size) * 1rem;
-$content-margin-em: (30px / $base-font-size) * 1em;
+$content-margin: (20px / $base-font-size) * 1rem;
+$content-margin-em: (20px / $base-font-size) * 1em;
 
 $xs: 30em;
 $sm: 45em;
 $md: 60em;
-$lg: (960px / $base-font-size) * 1em;
+$lg-abs: 960px;
+$lg: ($lg-abs / $base-font-size) * 1em;
 $lg-bp: $lg + 2 * $content-margin-em ;
 
 /*

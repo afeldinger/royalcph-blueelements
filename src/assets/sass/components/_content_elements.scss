@@ -1,14 +1,50 @@
-.content-section {
-	@extend %gold-effect;
-}
 
-section.no-margin {
-	padding-left:0;
-	padding-right:0;
-	margin:0;
-	max-width:none;
+img {
+	display:block;
+	max-width:100%;
 }
-
 img.full-width {
 	width:100%;
+}
+
+
+.splash {
+	@extend %text-emboss;
+	width: 160px;
+	height: 160px;
+	padding-top:30px;
+	
+	border-radius: 80px;
+	color: $color-text-dark;
+	font-weight: $weight-bold;
+	text-align:center;
+	background: url(../img/bg_gold.jpg);
+}
+
+.pricing-info {
+	text-align:center;
+	font-style:italic;
+	color: #fff;
+
+	h2 {
+		display:inline-block;
+		clear:both;
+		font-style:normal;
+		border-bottom: 1px solid #fff;
+		margin: 0 0 rhythm(1);
+		@include adjust-font-size-to($size-md);
+	}
+
+	p {
+		margin: 0;
+		@include adjust-font-size-to($size-md);
+	}
+	.product-msrp {
+
+		.label {
+			display:block;
+			font-style: normal;
+			@include adjust-font-size-to($size-sm);
+		}
+	}
 }

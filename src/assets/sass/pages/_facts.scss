@@ -1,0 +1,42 @@
+
+.section-facts {
+	@extend %gold-main-content;
+}
+
+ul.tiles {
+	display:block;
+	overflow:hidden;
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	clear:both;
+
+	li {
+		position:relative;
+		float:left;
+		margin:0;
+		padding: 0;
+		width:20%;
+		overflow: hidden;
+
+		&:before{
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+
+		img {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+		}
+
+		.elm-content {
+			position:absolute;
+
+		}
+	}
+
+}

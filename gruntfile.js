@@ -96,6 +96,7 @@ module.exports = function(grunt) {
             sortorder: 'asc', 
           }
         ],
+        snaps: grunt.file.readJSON('src/templates/data/snaps.json'),
         /*
         articles: grunt.file.readJSON('src/templates/data/articles.json'),
         sections: grunt.file.readJSON('src/templates/data/sections.json'),

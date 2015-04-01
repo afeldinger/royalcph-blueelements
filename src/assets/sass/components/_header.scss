@@ -1,8 +1,9 @@
 
 .page-header {
-	@extend %content-wrapper;
+	@extend %center-element;
 	margin-top:rhythm(8);
 	margin-bottom:rhythm(8);
+
 
 	h1 {
 		text-align:center;
@@ -12,5 +13,9 @@
 		span:nth-of-type(n+2) {
 			display:none;
 		}
+	}
+
+	a {
+		color:#fff;
 	}
 }

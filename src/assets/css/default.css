@@ -394,31 +394,6 @@ th {
   padding: 0;
 }
 
-.content-section {
-  color: #ffeba2;
-  /* autoprefixer: off */
-  -webkit-text-fill-color: transparent;
-  background: url(../img/bg_gold.jpg) repeat, -webkit-linear-gradient(transparent, transparent);
-  background: -o-linear-gradient(transparent, transparent);
-  -webkit-background-clip: text;
-  /*
-  	-webkit-transform: translate3d(0, 0, 0);
-  	-webkit-animation-name: gold-animation;
-  	-webkit-animation-duration: 30s;
-  	-webkit-animation-iteration-count: infinite;
-  	-webkit-animation-timing-function: ease-in-out;
-  	-webkit-animation-direction: alternate;
-  */
-}
-
-@-webkit-keyframes gold-animation {
-  0% {
-    background-position: right top;
-  }
-  100% {
-    background-position: left top;
-  }
-}
 /*
 @include add-grid(12);
 @include add-gutter(.3);
@@ -470,6 +445,22 @@ Priser
 Splash
 17,5
 */
+.splash {
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.section-explore, .section-facts, .section-narrative {
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75), 0 0 13px rgba(0, 0, 0, 0.75);
+}
+
+@-webkit-keyframes gold-animation {
+  0% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
+  }
+}
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons.eot");
@@ -701,11 +692,41 @@ body {
   text-align: center;
 }
 
-.content-section, .page-footer, .page-header {
-  padding: 0 1.875rem;
+.page-footer,
+.content-wrapper, .page-header {
+  padding: 0 1.25rem;
   margin: 0 auto;
-  max-width: 61.875em;
+  max-width: 61.25em;
+}
+
+.page-footer,
+.content-wrapper {
+  margin-top: 3.33333rem;
+  margin-bottom: 3.33333rem;
   text-align: left;
+  *zoom: 1;
+}
+.page-footer:after,
+.content-wrapper:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media (min-width: 45em) {
+  .page-footer,
+  .content-wrapper {
+    margin-top: 6.66667rem;
+    margin-bottom: 6.66667rem;
+  }
+}
+.no-margin .page-footer, .no-margin
+.content-wrapper {
+  padding: 0;
+  margin: 0 !important;
+  max-width: none;
 }
 
 /*
@@ -784,12 +805,24 @@ h6 {
 }
 
 h1 {
-  font-size: 50px;
-  font-size: 3.33333rem;
-  line-height: 55px;
-  line-height: 3.66667rem;
-  margin: 1rem 0;
+  font-size: 30px;
+  font-size: 2rem;
+  line-height: 35px;
+  line-height: 2.33333rem;
+  line-height: 30px;
+  line-height: 2rem;
+  margin: 2rem 0;
   text-transform: uppercase;
+}
+@media (min-width: 45em) {
+  h1 {
+    font-size: 45px;
+    font-size: 3rem;
+    line-height: 50px;
+    line-height: 3.33333rem;
+    line-height: 40px;
+    line-height: 2.66667rem;
+  }
 }
 
 h2 {
@@ -797,7 +830,9 @@ h2 {
   font-size: 2rem;
   line-height: 35px;
   line-height: 2.33333rem;
-  margin: 0.66667rem 0;
+  line-height: 25px;
+  line-height: 1.66667rem;
+  margin: 1.66667rem 0;
   text-transform: uppercase;
 }
 
@@ -806,7 +841,7 @@ h3 {
   font-size: 1.66667rem;
   line-height: 30px;
   line-height: 2rem;
-  margin: 0.66667rem 0 0.66667rem;
+  margin: 1.33333rem 0 0.66667rem;
 }
 
 h4 {
@@ -814,7 +849,7 @@ h4 {
   font-size: 1.33333rem;
   line-height: 25px;
   line-height: 1.66667rem;
-  margin: 0.33333rem 0;
+  margin: 1rem 0;
 }
 
 h5 {
@@ -822,28 +857,24 @@ h5 {
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.33333rem;
-  margin: 0.33333rem 0;
-}
-
-h1 + p:nth-of-type(1),
-h2 + p:nth-of-type(1) {
-  font-size: 25px;
-  font-size: 1.66667rem;
-  line-height: 30px;
-  line-height: 2rem;
-  font-style: italic;
+  margin: 1rem 0;
 }
 
 p,
 ul,
 ol {
-  margin: 0.66667rem 0;
+  margin: 2rem 0;
   color: inherit;
 }
 p:first-child,
 ul:first-child,
 ol:first-child {
   margin-top: 0;
+}
+p:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
 }
 p + h2,
 ul + h2,
@@ -869,15 +900,80 @@ a .icon {
   align: absmiddle;
 }
 
-section.no-margin {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-  max-width: none;
+.caps {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 img.full-width {
   width: 100%;
+}
+
+.splash {
+  width: 160px;
+  height: 160px;
+  padding-top: 30px;
+  border-radius: 80px;
+  color: #282b20;
+  font-weight: 700;
+  text-align: center;
+  background: url(../img/bg_gold.jpg);
+}
+
+.pricing-info {
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+}
+.pricing-info h2 {
+  display: inline-block;
+  clear: both;
+  font-style: normal;
+  border-bottom: 1px solid #fff;
+  margin: 0 0 0.33333rem;
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
+}
+.pricing-info p {
+  margin: 0;
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
+}
+.pricing-info .product-msrp .label {
+  display: block;
+  font-style: normal;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
+}
+
+.section-explore .main-content h1 + p:nth-of-type(1), .section-facts .main-content h1 + p:nth-of-type(1), .section-narrative .main-content h1 + p:nth-of-type(1),
+.section-explore .main-content h2 + p:nth-of-type(1),
+.section-facts .main-content h2 + p:nth-of-type(1),
+.section-narrative .main-content h2 + p:nth-of-type(1) {
+  font-size: 25px;
+  font-size: 1.66667rem;
+  line-height: 30px;
+  line-height: 2rem;
+  font-style: italic;
+}
+
+.content-section {
+  position: relative;
+  overflow: hidden;
+}
+.content-section:nth-of-type(1) .content-wrapper {
+  margin-top: 0;
 }
 
 .page-footer {
@@ -937,13 +1033,152 @@ ul.logos .icon {
 .page-header h1 span:nth-of-type(n+2) {
   display: none;
 }
+.page-header a {
+  color: #fff;
+}
 
 .section-designer {
-  background: #fff;
+  min-height: 465px;
+  background: #f0f0f0 url(../img/bg_louise_campbell.jpg) no-repeat 45% 0;
   color: #282b20;
+  font-style: italic;
+}
+.section-designer .content-wrapper {
+  margin-top: 2.66667rem;
+  margin-bottom: 2.66667rem;
+  width: 100%;
+}
+.section-designer .main-content {
+  display: inline;
+  float: left;
+  width: 9.33333em;
+  margin-left: 5%;
+}
+@media (min-width: 45em) {
+  .section-designer .main-content {
+    margin-left: 17.70833%;
+  }
+}
+@media (min-width: 45em) {
+  .section-designer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-position: 50% 0;
+  }
 }
 
 .section-explore h1,
 .section-explore h1 + p {
   text-align: center;
+}
+@media (min-width: 45em) {
+  .section-explore h1 {
+    font-size: 50px;
+    font-size: 3.33333rem;
+    line-height: 55px;
+    line-height: 3.66667rem;
+    line-height: 45px;
+    line-height: 3rem;
+  }
+}
+
+ul.tiles {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+ul.tiles li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  overflow: hidden;
+}
+ul.tiles li:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+ul.tiles li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+ul.tiles li .elm-content {
+  position: absolute;
+}
+
+.section-narrative svg,
+.section-narrative .pricing-info {
+  display: none;
+}
+@media (min-width: 30em) {
+  .section-narrative svg {
+    display: inline;
+    float: left;
+    width: 380px;
+    margin-left: -230px;
+    margin-right: -380px;
+  }
+  .section-narrative .pricing-info {
+    display: block;
+    position: absolute;
+    bottom: 8%;
+    left: 20px;
+    width: 6.66667em;
+  }
+  .section-narrative .main-content {
+    position: relative;
+    display: inline;
+    float: right;
+    width: 70%;
+  }
+  .section-narrative .main-content img {
+    width: 100%;
+  }
+}
+@media (min-width: 45em) {
+  .section-narrative svg {
+    width: 553px;
+    height: 813px;
+    margin-left: -250px;
+    margin-right: -553px;
+  }
+  .section-narrative .main-content {
+    width: 48.95833%;
+    margin-right: 10.9375%;
+  }
+  .section-narrative .pricing-info {
+    width: 15.33333em;
+    left: auto;
+    bottom: auto;
+    top: 870px;
+    margin-left: 80px;
+  }
+}
+@media (min-width: 60em) {
+  .section-narrative svg {
+    margin-left: -206px;
+  }
+  .section-narrative .pricing-info {
+    width: 15.33333em;
+    margin-left: 140px;
+  }
+}
+
+.section-products {
+  background: #fff;
+  color: #282b20;
 }
