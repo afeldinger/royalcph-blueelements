@@ -3,4 +3,24 @@ title: Products
 sortorder: 10
 class: section-products
 ---
-Product slider
+
+<div class="products flexslider">
+	<ul class="slides">
+	{{#eachOptions products}}
+		<li>
+			<article class="product">
+				<div class="elm-image"><img src="{{this.value.imgurl}}" alt="{{this.value.name}}" /></div>
+				<div class="elm-content">
+					<h3>
+						<span class="product-series">{{this.value.series}}</span><br>
+						<span class="product-name">{{this.value.name}}</span>
+					</h3>
+					<p class="product-details">
+						{{{this.value.details}}}
+					</p>
+				</div>
+			</article>
+		</li>
+	{{/eachOptions}}
+	</ul>
+</div>

@@ -42,21 +42,21 @@
 }
 
 
-.icon_arrow_right {
-	@include icon($icon_arrow_right);
+.icon-arrow-right {
+	@include icon($icon-arrow-right);
 }
-.icon_arrow_left {
-	@include icon($icon_arrow_left);
+.icon-arrow-left {
+	@include icon($icon-arrow-left);
 }
-.icon_scroll_down {
-	@include icon($icon_scroll_down);
+.icon-scroll-down {
+	@include icon($icon-scroll-down);
 }
-.icon_scroll_up {
-	@include icon($icon_scroll_up);
+.icon-scroll-up {
+	@include icon($icon-scroll-up);
 }
-.icon_play {
-	@include icon($icon_play);
+.icon-play {
+	@include icon($icon-play);
 }
-.icon_map_marker {
-	@include icon($icon_map_marker);
+.icon-map-marker {
+	@include icon($icon-map-marker);
 }

@@ -97,6 +97,7 @@ module.exports = function(grunt) {
           }
         ],
         snaps: grunt.file.readJSON('src/templates/data/snaps.json'),
+        products: grunt.file.readJSON('src/templates/data/products.json'),
         /*
         articles: grunt.file.readJSON('src/templates/data/articles.json'),
         sections: grunt.file.readJSON('src/templates/data/sections.json'),

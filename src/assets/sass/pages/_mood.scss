@@ -1,0 +1,21 @@
+.section-mood {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+	.content-wrapper {
+		margin-top:0;
+		margin-bottom:0;
+		padding:0;
+	}
+	img {
+		opacity: 0;
+	}
+}
+
+.section-mood-1 {
+	min-height:465px;
+	background-image: url(../img/gx_mood01.jpg);
+}
+

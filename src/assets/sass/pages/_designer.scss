@@ -2,7 +2,11 @@
 .section-designer {
 
 	min-height:465px;
-	background:#f0f0f0 url(../img/bg_louise_campbell.jpg) no-repeat 45% 0;
+	background:#f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 45% 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
 	color: $color-text-dark;
 	font-style:italic;
 
