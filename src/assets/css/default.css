@@ -804,7 +804,7 @@ input,
 textarea,
 button,
 select {
-  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", Georgia, Garamond, "Times New Roman", serif;
 }
 
 body {
@@ -819,7 +819,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", Georgia, Garamond, "Times New Roman", serif;
   font-weight: 400;
   color: inherit;
 }
@@ -1871,12 +1871,11 @@ img.mfp-img {
   height: 634.02154px;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: left .3s;
-          transition: left .3s;
 }
 @media (min-width: 700px) {
   .section-explore .snapshot-view svg {
-    left: 0 !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
   }
 }
 .section-explore .snapshot-view .viewport {
@@ -2218,26 +2217,23 @@ img.mfp-img {
   margin-top: 140%;
 }
 
-.section-mood {
+.section-mood-1 {
+  background-image: url(../img/gx_mood01.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.no-touch .section-mood {
+.no-touch .section-mood-1 {
+  min-height: 465px;
   background-attachment: fixed;
   background-size: cover;
 }
-.section-mood .content-wrapper {
+.no-touch .section-mood-1 img {
+  opacity: 0;
+}
+.section-mood-1 .content-wrapper {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-}
-.section-mood img {
-  opacity: 0;
-}
-
-.section-mood-1 {
-  min-height: 465px;
-  background-image: url(../img/gx_mood01.jpg);
 }
 
 .section-narrative svg,

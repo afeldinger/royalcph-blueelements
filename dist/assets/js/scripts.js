@@ -2101,10 +2101,7 @@ d=b[0],b=b[1];c.removeChild(a);if(d.length){if(a=e[d]=e[d]||new XMLHttpRequest,a
 
 
 	var touchevents = function() {
-		var bool;
-		if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-		  bool = true;
-		}
+		return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
 	};
 
 
@@ -2136,7 +2133,7 @@ d=b[0],b=b[1];c.removeChild(a);if(d.length){if(a=e[d]=e[d]||new XMLHttpRequest,a
 		    		var x = $(this).offset().left;
 		    		var x_ratio = x / (viewport_width - viewfinder_width);
 		    		var x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
-		    		viewport_img.css('left', x_offset + 'px');
+		    		viewport_img.css('transform', 'translate3d(' + x_offset + 'px,0,0)');
 		    	}
 		    });
 		});
