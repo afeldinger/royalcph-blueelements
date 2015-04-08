@@ -84,6 +84,50 @@ class: section-explore
 	    </g>
 
 	</svg>
+</div>
+
+<div class="snapshot-form">
+	
+	<form>
+		<input type="hidden" id="snapId" value="" />
+	    <input type="hidden" id="userfacebookId" value="Facebook ID" />
+	    <input type="hidden" id="facebookSharePostId" value="Facebook share post ID" />
+	    <input type="hidden" id="fullImageUrl" value="" />
+
+	    <div class="form-step">
+		    <h2>What is your favorite detail?</h2>
+		    <label for="usercomment">
+		    	<span class="label">I love this detail because...</span>
+		    	<textarea id="usercomment">Comment</textarea>
+		    </label>
+		    <button id="btn-add-comment" class="input-button">Share your detail</button>
+		</div>
+		<div class="form-step">
+		    <h2>About you</h2>
+		    <label class="input-text" for="userfirstname">
+		    	<span class="label">First name</span>
+		    	<input type="text" id="userfirstname" value="" />
+		    </label>
+		    <label class="input-text" for="userlastname">
+		    	<span class="label">Last name</span>
+		    	<input type="text" id="userlastname" value="" />
+		    </label>
+		    <label class="input-text" for="useremail">
+		    	<span class="label">E-mail</span>
+		    	<input type="email" id="useremail" value="E-mail" />
+		    </label>
+		    <label class="input-checkbox" for="userallowemailpermission">
+		    	<span class="label">Allow e-mail permission</span>
+		    	<input id="userallowemailpermission" type="checkbox" />
+		    </label>
+		    <button id="btn-add-userdata" class="input-button">Done</button>
+		</div>
+		<div class="form-step">
+			<h2>Thank you</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+
+	</form>
 
 </div>
 

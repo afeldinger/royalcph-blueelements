@@ -4,7 +4,7 @@
 	@extend %gold-main-content;
 
 	.content-wrapper {
-		position: relative;
+
 	}
 
 	.main-content {
@@ -35,61 +35,6 @@
 			right: 80px;	
 		}
 	}
-	.snapshot-view {
-		position:relative;
-		margin:0 auto;
-		width: 700px;
-		max-width:100%;
-		overflow: hidden;
-
-
-		svg {
-			position:relative;
-			width:700px;
-			height:1009px / 1114px * 700px;
-			transform: translate3d(0,0,0);
-
-
-			@include breakpoint(700px) {
-				transform: translate3d(0,0,0) !important;
-			}
-		}
-
-		.viewport {
-			position:absolute;
-			top: 10%;
-			left: 25%;
-			border:4px solid #fff; 
-			border-radius: 3px;
-			width: 130px;
-			min-height: 130px;
-			box-shadow: 0 0 8px rgba(0,0,0,.5);
-			z-index:10;
-
-			a {
-				position:absolute;
-				display:block;
-				bottom:-4px;
-				left:0;
-				width:100%;
-				padding: 4px 8px;
-				font-style: italic;
-				background: #fff;
-				text-align: center;
-				text-shadow: none;
-				color: $color-text-dark;
-				transition: color .2s;
-				@include adjust-font-size-to($size-sm);
-
-				&:hover {
-					color: $color-brand;
-				}
-			}
-		}
-
-
-	}
-
 	
 
     @include breakpoint($sm) {
@@ -103,5 +48,86 @@
 			right: 25%;
 			bottom: 80px;
 		}
+	}
+}
+
+
+.snapshot-view {
+	position:relative;
+	margin:0 auto;
+	width: 700px;
+	max-width:100%;
+	overflow: hidden;
+
+
+	svg {
+		position:relative;
+		margin: 0 auto;
+		width:700px;
+		height:1009px / 1114px * 700px;
+		transform: translate3d(0,0,0);
+
+
+		@include breakpoint(700px) {
+			transform: translate3d(0,0,0) !important;
+		}
+	}
+
+	.viewport {
+		position:absolute;
+		top: 10%;
+		left: 25%;
+		border:4px solid #fff; 
+		border-radius: 3px;
+		width: 130px;
+		min-height: 130px;
+		box-shadow: 0 0 8px rgba(0,0,0,.5);
+		z-index:10;
+
+		a {
+			position:absolute;
+			display:block;
+			bottom:-4px;
+			left:0;
+			width:100%;
+			padding: 4px 8px;
+			font-style: italic;
+			background: #fff;
+			text-align: center;
+			text-shadow: none;
+			color: $color-text-dark;
+			transition: color .2s;
+			@include adjust-font-size-to($size-sm);
+
+			&:hover {
+				color: $color-brand;
+			}
+		}
+	}
+}
+
+.snapshot-form {
+	position: absolute;
+	visibility: hidden;
+	top:0;
+	left:0;
+	width: 130px;
+	min-height: 360px;
+	background: #fff;
+	color: $color-text-dark;
+	text-shadow: none;
+	z-index: 1;
+	opacity: 0;
+
+	&.active {
+		visibility: visible;
+		left:0 !important;
+		width:100% !important;
+		z-index:20;
+		opacity: 1;
+
+		transition-property: display,opacity, left, top, margin-top, width;
+		transition-duration: 0.3s;
+
 	}
 }

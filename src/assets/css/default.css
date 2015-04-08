@@ -1826,9 +1826,6 @@ img.mfp-img {
   }
 }
 
-.section-explore .content-wrapper {
-  position: relative;
-}
 .section-explore .main-content {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -1858,27 +1855,44 @@ img.mfp-img {
     right: 80px;
   }
 }
-.section-explore .snapshot-view {
+@media (min-width: 45em) {
+  .section-explore h1 {
+    font-size: 50px;
+    font-size: 3.33333rem;
+    line-height: 55px;
+    line-height: 3.66667rem;
+    line-height: 45px;
+    line-height: 3rem;
+  }
+  .section-explore .pricing-info {
+    position: absolute;
+    right: 25%;
+    bottom: 80px;
+  }
+}
+
+.snapshot-view {
   position: relative;
   margin: 0 auto;
   width: 700px;
   max-width: 100%;
   overflow: hidden;
 }
-.section-explore .snapshot-view svg {
+.snapshot-view svg {
   position: relative;
+  margin: 0 auto;
   width: 700px;
   height: 634.02154px;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 @media (min-width: 700px) {
-  .section-explore .snapshot-view svg {
+  .snapshot-view svg {
     -webkit-transform: translate3d(0, 0, 0) !important;
             transform: translate3d(0, 0, 0) !important;
   }
 }
-.section-explore .snapshot-view .viewport {
+.snapshot-view .viewport {
   position: absolute;
   top: 10%;
   left: 25%;
@@ -1889,7 +1903,7 @@ img.mfp-img {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
-.section-explore .snapshot-view .viewport a {
+.snapshot-view .viewport a {
   position: absolute;
   display: block;
   bottom: -4px;
@@ -1908,23 +1922,33 @@ img.mfp-img {
   line-height: 20px;
   line-height: 1.33333rem;
 }
-.section-explore .snapshot-view .viewport a:hover {
+.snapshot-view .viewport a:hover {
   color: #1a2550;
 }
-@media (min-width: 45em) {
-  .section-explore h1 {
-    font-size: 50px;
-    font-size: 3.33333rem;
-    line-height: 55px;
-    line-height: 3.66667rem;
-    line-height: 45px;
-    line-height: 3rem;
-  }
-  .section-explore .pricing-info {
-    position: absolute;
-    right: 25%;
-    bottom: 80px;
-  }
+
+.snapshot-form {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 130px;
+  min-height: 360px;
+  background: #fff;
+  color: #282b20;
+  text-shadow: none;
+  z-index: 1;
+  opacity: 0;
+}
+.snapshot-form.active {
+  visibility: visible;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 20;
+  opacity: 1;
+  -webkit-transition-property: display,opacity, left, top, margin-top, width;
+          transition-property: display,opacity, left, top, margin-top, width;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .section-facts {

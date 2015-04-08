@@ -38,6 +38,14 @@
 		    		var x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
 		    		viewport_img.css('transform', 'translate3d(' + x_offset + 'px,0,0)');
 		    	}
+		    }).on('dragstop', function() {
+		    	var pos = $(this).offset();
+		    	var x = pos.left;
+		    	var y = pos.top - $('.snapshot-form').offsetParent().offset().top;
+		    	$('.snapshot-form').css({'left':x, 'top':y, 'height':$(this).height()});
+		    }).find('a').click(function(event) {
+		    	event.preventDefault();
+		    	$('.snapshot-form').addClass('active');
 		    });
 		});
 
