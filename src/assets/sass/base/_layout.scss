@@ -10,7 +10,10 @@ html {
 
 html,
 body {
+	width: 100%;
 	height:100%;
+	overflow-x: hidden;
+
 }
 
 body {
@@ -38,15 +41,8 @@ body {
 %content-wrapper,
 .content-wrapper {
 	@extend %center-element;
-	margin-top: rhythm(10);
-	margin-bottom: rhythm(10);
 	text-align: left;
 	@include legacy-pie-clearfix;
-
-	@include breakpoint($sm) {
-		margin-top: rhythm(20);
-		margin-bottom: rhythm(20);
-	}
 
 	.no-margin & {
 		padding:0;

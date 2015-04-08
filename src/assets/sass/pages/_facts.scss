@@ -1,12 +1,85 @@
 
 .section-facts {
 	@extend %gold-main-content;
+	overflow-x: hidden;
+
+	.content-wrapper {
+		position:relative;
+	}
+
+	svg {
+		display:inline;
+		float:right;
+		height:600px;
+		width:600px;
+		margin-top:-50px;
+		margin-right: -450px;
+		margin-bottom: -600px;
+
+		@include breakpoint($xs) {
+			margin-right: -400px;
+
+		}
+
+		@include breakpoint($sm) {
+			height:790px;
+			width:790px;
+			margin-bottom: -790px;
+			margin-right: -450px;
+
+		}
+		@include breakpoint($md) {
+			margin-right: -300px;
+		}
+	}
+
+	.main-content {
+		width: 60%;
+		margin-left: 5%;
+		min-height: 600px;
+
+		p {
+			@include adjust-font-size-to($size-xl);
+			font-style: italic;
+		}
+
+		@include breakpoint($sm) {
+			min-height: 790px;
+			width: rel-width(300px);
+			margin-left: perc-width(170px);
+
+			p {
+				@include adjust-font-size-to($size-xxl);
+			}
+		}
+	}
+	
+	.pricing-info {
+		position:absolute;
+		top:440px;
+		right: 200px;
+
+		@include breakpoint($sm) {
+			top:600px;
+			right:340px;
+		}
+		@include breakpoint($md) {
+			right:500px;
+		}
+	}
+
+	ul.tiles {
+		clear:both;
+		margin-left: -$content-margin;
+		margin-right: -$content-margin;
+	}
+
 }
 
-ul.tiles {
+.tiles {
+	position:relative;
 	display:block;
 	overflow:hidden;
-	width:100%;
 	margin:0;
 	padding:0;
 	list-style:none;
@@ -15,7 +88,7 @@ ul.tiles {
 	li {
 		position:relative;
 		float:left;
-		margin:0;
+		margin:0 -100% 0 0;
 		padding: 0;
 		width:20%;
 		overflow: hidden;
@@ -23,7 +96,7 @@ ul.tiles {
 		&:before{
 			content: "";
 			display: block;
-			padding-top: 100%;
+			margin-top: 100%;
 		}
 
 		img {
@@ -33,10 +106,160 @@ ul.tiles {
 			width:100%;
 		}
 
+		.name {
+			margin: 1em 15% 0;
+			text-align: left;
+			font-style: italic;
+		}
+
 		.elm-content {
 			position:absolute;
-
 		}
+
+	}
+
+	.fact {
+		width:40%;
+		.elm-content {
+			vertical-align: middle;
+			text-align: center;
+			top:50%;
+			left:0;
+			padding:8%;
+			text-shadow: none;
+			transform: translate(0, -50%);
+
+			@include adjust-font-size-to($size-md);
+			font-style: italic;
+
+			@include breakpoint($xs) {
+				@include adjust-font-size-to($size-lg);
+			}
+			@include breakpoint($sm) {
+				@include adjust-font-size-to($size-xxl);
+			}
+		}
+	}
+
+	.fact-blue {
+		background: $color-brand;
+		color:#fff;
+	}
+	.fact-white {
+		background:#fff;
+		color: $color-brand;
+	}
+
+	.snapshot {
+		position:relative; 
+		.elm-content {
+			position:absolute;
+			bottom:0;
+			padding:9%;
+			background: rgba($color-brand, .8);
+			color:#fff;
+			text-shadow: none;
+			text-align: center;
+		}
+		
+		.elm-content,
+		q,
+		.name {
+			transform: translate3d(0,100%,0);
+			transition: transform .3s ease;
+		}
+		q,
+		.name {
+			position:relative;
+		}
+		q {
+			transition-delay: .2s;
+		}
+		.name {
+			transition-delay: .2s;
+		}
+
+		&:hover {
+			.elm-content,
+			q,
+			.name {
+				transform: translate3d(0,0,0);		
+			}
+		}
+
+
+	}
+
+
+	@mixin tile-position($x:0,$y:0) {
+		margin-left: $x * 0.2 * 100%;
+		margin-top: $y * 0.2 * 100%;
+	}
+
+	#tiles-mood-1 {
+		@include tile-position(0, 2);
+		width: 80%;
+	}
+
+	#tiles-fact-1 {
+		@include tile-position(0, 1);
+	}
+	#tiles-fact-2 {
+		@include tile-position(3, 3);
+	}
+	#tiles-fact-3 {
+		@include tile-position(2, 7);
+	}
+
+	#tiles-snapshot-0 {
+		@include tile-position(1, 0);
+	}
+	#tiles-snapshot-1 {
+		@include tile-position(2, 0);
+	}
+	#tiles-snapshot-2 {
+		@include tile-position(3, 0);
+	}
+
+	#tiles-snapshot-3 {
+		@include tile-position(2, 1);
+	}
+	#tiles-snapshot-4 {
+		@include tile-position(3, 1);
+	}
+	#tiles-snapshot-5 {
+		@include tile-position(4, 1);
+	}
+
+	#tiles-snapshot-6 {
+		@include tile-position(3, 2);
+	}
+
+	#tiles-snapshot-7 {
+		@include tile-position(0, 5);
+	}
+	#tiles-snapshot-8 {
+		@include tile-position(4, 5);
+	}
+
+	#tiles-snapshot-9 {
+		@include tile-position(0, 6);
+	}
+	#tiles-snapshot-10 {
+		@include tile-position(1, 6);
+	}
+	#tiles-snapshot-11 {
+		@include tile-position(2, 6);
+	}
+	#tiles-snapshot-12 {
+		@include tile-position(3, 6);
+	}
+	#tiles-snapshot-13 {
+		@include tile-position(4, 6);
+	}
+
+	#tiles-snapshot-14 {
+		@include tile-position(1, 7);
 	}
 
 }

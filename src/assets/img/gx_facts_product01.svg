@@ -1,9 +1,8 @@
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.08 195.6" >
-
-    <g transform="rotate(-119, 98, 97)">
-       <clipPath id="product-mask">
-          <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M150.948,169.495c-14.917,11.23-33.808,17.538-53.901,17.538
+	<defs>
+		<clipPath id="be-dish-clippath">
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M150.948,169.495c-14.917,11.23-33.808,17.538-53.901,17.538
 			c-13.454,0-26.064-3.006-37.394-8.33c-10.37-4.873-19.674-11.649-27.402-19.984c-14.95-15.829-23.977-37.29-24.462-61.17
 			C8.188,61.761,29.394,30.499,60.052,16.27c11.247-5.22,23.765-8.158,36.996-8.158c19.859,0,38.125,6.535,52.952,17.522
 			c14.657,10.862,25.957,26.076,31.805,43.783c-0.079-0.238,0.299,0.699,0.238,1.874c0.132,0.646,0.679,1.241,0.596,2.119
@@ -29,9 +28,19 @@
 			c-0.414,0.414-0.877,0.513-1.324,0.943s-0.861,1.175-1.291,1.506c-0.431,0.331-0.993,0.612-1.242,0.91
 			c-0.248,0.298-0.629,0.943-1.159,1.258c-0.529,0.314-0.596,0.265-1.109,0.844c0,0-0.877,1.043-1.308,1.473
 			C151.983,168.718,150.948,169.495,150.948,169.495z"/>
-       </clipPath>
-       <image class="shadow" height="100%" width="100%" xlink:href="gx_facts_product01_shadow.png" />
-       <image class="product" clip-path="url(#product-mask)" height="100%" width="100%" xlink:href="gx_facts_product01.jpg" />
+		</clipPath>
+
+	    <filter id="be-straight-shadow">
+	        <feGaussianBlur in="SourceAlpha" stdDeviation="5"  result="blur"/>
+	        <feMerge>
+	            <feMergeNode in="blur" />
+	            <feMergeNode in="SourceGraphic" />
+	        </feMerge>
+	    </filter>
+	</defs>
+
+    <g id="be-dish" filter="url(#be-straight-shadow)">
+       <image clip-path="url(#be-dish-clippath)" transform="rotate(-119, 98, 97)" height="100%" width="100%" xlink:href="./gx_facts_product01.jpg" />
     </g> 
 
 </svg>

@@ -16,11 +16,22 @@
 
 .content-section {
 	position:relative;
-	overflow:hidden;
+//	overflow:hidden;
+
+	.content-wrapper {
+		padding-top: rhythm(10);
+		padding-bottom: rhythm(10);
+
+		@include breakpoint($sm) {
+			padding-top: rhythm(20);
+			padding-bottom: rhythm(20);
+		}
+	}
+
 
 	&:nth-of-type(1) {
 		.content-wrapper {
-			margin-top:0;
+			padding-top:0;
 		}
 	}
 }

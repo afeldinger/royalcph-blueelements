@@ -20,17 +20,7 @@
       <div class="content-wrapper">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20 -40 553 813">
           <defs>
-            <filter id="product-shadow">
-              <feOffset in="SourceAlpha" dx="10" dy="-10" result="offset" />
-              <feGaussianBlur in="offset" stdDeviation="20" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <g filter="url(#product-shadow)">
-            <clipPath id="cloudshape-mask">
+            <clipPath id="be-platter-clippath">
               <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M351,36c0.853,3.151,2.095,2.867,3,6c2.667,1.333,5.333,2.667,8,4
 			c0,0.667,0,1.333,0,2c0.569,0.89,2.129,3.372,3,4c1.333,0.333,2.667,0.667,4,1c1.975,1.42,1.803,4.272,3,6
 			c0.339,0.489,2.503,2.623,3,3c0.667,0,1.333,0,2,0c1.963,1.532,3.403,6.231,4,9c4.887,1.545,4.899,3.919,7,8c0,0.667,0,1.333,0,2
@@ -104,7 +94,17 @@
 			c0,0.333,0,0.667,0,1c1.333,0.333,2.667,0.667,4,1c0.667,1,1.333,2,2,3c0.667,0,1.333,0,2,0c0,0.333,0,0.667,0,1
 			c2,0.333,4,0.667,6,1c1,1.333,2,2.667,3,4c2,0.333,4,0.667,6,1c0.333,0.667,0.667,1.333,1,2C344.071,32.741,346.105,34.929,351,36z" />
             </clipPath>
-            <image class="product" clip-path="url(#cloudshape-mask)" height="92.61%" width="89.15%" xlink:href="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/img/gx_narrative_product.jpg" />
+            <filter id="be-straigh-shadow">
+              <feOffset in="SourceAlpha" dx="10" dy="-10" result="offset" />
+              <feGaussianBlur in="offset" stdDeviation="20" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <g id="be-platter">
+            <image clip-path="url(#be-platter-clippath)" filter="url(#be-straight-shadow)" height="92.61%" width="89.15%" xlink:href="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/img/gx_narrative_product.jpg" />
           </g>
         </svg>
         <div class="main-content">
