@@ -23,12 +23,26 @@ ul.logos {
 	margin:0;
 	padding:0;
 	list-style:none;
+	overflow:hidden;
+
 
 	li {
 		display:inline;
-		margin: 0 1em;
-		padding: 0;
-		
+		float:left;
+		width: 50%;
+
+		&:nth-of-type(2n+1) {
+			clear:right;
+		}
+
+		@include breakpoint($xs) {
+			display:inline;
+			float:none;
+			width:auto;
+			clear:none;
+			margin: 0 1em;
+			padding: 0;
+		}
 		@include breakpoint($sm) {
 			&:nth-of-type(5):after {
 				content:"\A"; 

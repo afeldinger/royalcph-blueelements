@@ -1282,11 +1282,25 @@ ul.logos {
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 }
 ul.logos li {
   display: inline;
-  margin: 0 1em;
-  padding: 0;
+  float: left;
+  width: 50%;
+}
+ul.logos li:nth-of-type(2n+1) {
+  clear: right;
+}
+@media (min-width: 30em) {
+  ul.logos li {
+    display: inline;
+    float: none;
+    width: auto;
+    clear: none;
+    margin: 0 1em;
+    padding: 0;
+  }
 }
 @media (min-width: 45em) {
   ul.logos li:nth-of-type(5):after {
@@ -1775,15 +1789,16 @@ img.mfp-img {
 .section-designer {
   min-height: 465px;
   background: #f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 45% 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   color: #282b20;
   font-style: italic;
 }
+.no-touch .section-designer {
+  background-attachment: fixed;
+  background-size: cover;
+}
 .section-designer .content-wrapper {
-  margin-top: 2.66667rem;
-  margin-bottom: 2.66667rem;
+  padding-top: 2.66667rem;
+  padding-bottom: 2.66667rem;
   width: 100%;
 }
 .section-designer .main-content {
@@ -1834,25 +1849,40 @@ img.mfp-img {
 @media (min-width: 45em) {
   .section-explore .splash {
     position: absolute;
-    right: 10px;
+    right: 30px;
     margin-top: -30px;
   }
 }
 @media (min-width: 60em) {
   .section-explore .splash {
-    margin-top: -80px;
     right: 80px;
   }
 }
 .section-explore .snapshot-view {
   position: relative;
+  margin: 0 auto;
+  width: 700px;
   max-width: 100%;
   overflow: hidden;
 }
+.section-explore .snapshot-view svg {
+  position: relative;
+  width: 700px;
+  height: 634.02154px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: left .3s;
+          transition: left .3s;
+}
+@media (min-width: 700px) {
+  .section-explore .snapshot-view svg {
+    left: 0 !important;
+  }
+}
 .section-explore .snapshot-view .viewport {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 25%;
   border: 4px solid #fff;
   border-radius: 3px;
   width: 130px;
@@ -1874,27 +1904,13 @@ img.mfp-img {
   color: #282b20;
   -webkit-transition: color .2s;
           transition: color .2s;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
 }
 .section-explore .snapshot-view .viewport a:hover {
   color: #1a2550;
-}
-.section-explore .snapshot-view .elm-image {
-  position: relative;
-  margin: 0 auto;
-  width: 700px;
-  overflow: hidden;
-}
-.section-explore .snapshot-view .elm-image:before {
-  content: "";
-  display: block;
-  margin-top: 90.57451%;
-}
-.section-explore .snapshot-view .elm-image svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 @media (min-width: 45em) {
   .section-explore h1 {
@@ -2121,7 +2137,8 @@ img.mfp-img {
   margin-top: 40%;
   width: 80%;
   background: url(../img/gx_facts_mood01.jpg) no-repeat 50% 50%;
-  background-repeat: no-repeat;
+}
+.no-touch .tiles #tiles-mood-1 {
   background-attachment: fixed;
   background-size: cover;
 }
@@ -2204,6 +2221,8 @@ img.mfp-img {
 .section-mood {
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+.no-touch .section-mood {
   background-attachment: fixed;
   background-size: cover;
 }

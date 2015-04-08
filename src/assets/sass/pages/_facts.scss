@@ -210,9 +210,12 @@
 		width: 80%;
 
 		background: url(../img/gx_facts_mood01.jpg) no-repeat 50% 50%;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
+
+		.no-touch & {
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		
 		img {
 			display: none;
 		}

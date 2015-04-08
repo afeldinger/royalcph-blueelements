@@ -2081,38 +2081,86 @@ $.magnificPopup.registerModule(RETINA_NS, {
 
 /*>>fastclick*/
  _checkInstance(); }));
+/*!
+ * jQuery UI Touch Punch 0.2.3
+ *
+ * Copyright 2011–2014, Dave Furfero
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ *  jquery.ui.widget.js
+ *  jquery.ui.mouse.js
+ */
+!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 (function(f,k,l,e,m){function g(a,c){if(c){var b=c.getAttribute("viewBox"),d=f.createDocumentFragment(),e=c.cloneNode(!0);for(b&&a.setAttribute("viewBox",b);e.childNodes.length;)d.appendChild(e.childNodes[0]);a.appendChild(d)}}function n(){var a=f.createElement("x"),c=this.s;a.innerHTML=this.responseText;this.onload=function(){c.splice(0).map(function(b){g(b[0],a.querySelector("#"+b[1].replace(/(\W)/g,"\\$1")))})};this.onload()}function h(){for(var a;a=k[0];){var c=a.parentNode,b=a.getAttribute("xlink:href").split("#"),
 d=b[0],b=b[1];c.removeChild(a);if(d.length){if(a=e[d]=e[d]||new XMLHttpRequest,a.s||(a.s=[],a.open("GET",d),a.onload=n,a.send()),a.s.push([c,b]),4===a.readyState)a.onload()}else g(c,f.getElementById(b))}l(h)}m&&h()})(document,document.getElementsByTagName("use"),window.requestAnimationFrame||window.setTimeout,{},/Trident\/[567]\b/.test(navigator.userAgent)||537>(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]);
 
 
+(function() {
+	'use strict';
 
-$(document).ready(function() {
 
-    $('#snapshot-viewport').draggable(
-        {
-            containment: 'parent',
-            opacity: 0.5
-        }
-    );
+	var touchevents = function() {
+		var bool;
+		if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+		  bool = true;
+		}
+	};
 
-    $('.tiles li').hover(
-    	function() {
-    		$(this).addClass('over');
-    	},
-    	function() {
-    		$(this).removeClass('over');
-    	}
-    );
 
-	// init flexsliders on page
-	$('.flexslider').flexslider({
-		animation: 'slide',
-		slideshow: false,
+	$(document).ready(function() {
+
+		if (!touchevents()) {
+			$('body').addClass('no-touch');
+		}
+		
+		// Move snapshot object sideways on small clients
+		$('.snapshot-view').each(function() {
+			
+			var viewport_img = $(this).find('svg');
+			var viewport_min_width = viewport_img.width();
+			var viewport_width = viewport_min_width;
+			var viewport_oob = 0;
+			
+			var viewfinder = $(this).find('#snapshot-viewport');
+			var viewfinder_width = viewfinder.width();
+			
+		    viewfinder.draggable({
+		        containment: 'parent',
+		        opacity: 0.5
+		    }).on('dragstart', function() {
+		    	viewport_width = $(this).parents('.snapshot-view:first').width();
+		    	viewport_oob = viewport_min_width - viewport_width;
+		    }).on('drag', function() {
+		    	if (viewport_width < viewport_min_width) {
+		    		var x = $(this).offset().left;
+		    		var x_ratio = x / (viewport_width - viewfinder_width);
+		    		var x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
+		    		viewport_img.css('left', x_offset + 'px');
+		    	}
+		    });
+		});
+
+		// IE fix for missing li:hover
+	    $('.tiles li').hover(
+	    	function() {
+	    		$(this).addClass('over');
+	    	},
+	    	function() {
+	    		$(this).removeClass('over');
+	    	}
+	    );
+
+		// init flexsliders on page
+		$('.flexslider').flexslider({
+			animation: 'slide',
+			slideshow: false,
+		});
+
+		// handle video links in a lightbox
+		$('a[href*="vimeo.com"], a[href*="youtube.com"]').magnificPopup({
+			type: 'iframe',
+		});
+
 	});
-
-	// handle video links in a lightbox
-	$('a[href*="vimeo.com"], a[href*="youtube.com"]').magnificPopup({
-		type: 'iframe',
-	});
-
-});
+})();

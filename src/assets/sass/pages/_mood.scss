@@ -1,9 +1,12 @@
 .section-mood {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
 
+	.no-touch & {
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	
 	.content-wrapper {
 		margin-top:0;
 		margin-bottom:0;
