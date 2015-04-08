@@ -32,13 +32,13 @@
 	@include icon($logo-imerco);
 }
 .logo-magasin {
-	@extend .logo-missing;
+	@include icon($logo-magasin);
 }
 .logo-illum {
 	@extend .logo-missing;
 }
 .logo-salling {
-	@extend .logo-missing;
+	@include icon($logo-salling);
 }
 
 

@@ -472,7 +472,7 @@ Splash
   color: inherit;
 }
 
-.logo-missing, .logo-magasin, .logo-illum, .logo-salling {
+.logo-missing, .logo-illum {
   font-family: "icons";
   speak: none;
   font-style: normal;
@@ -482,8 +482,8 @@ Splash
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-.logo-missing:before, .logo-magasin:before, .logo-illum:before, .logo-salling:before {
-  content: "";
+.logo-missing:before, .logo-illum:before {
+  content: "";
 }
 
 .logo-royalcph {
@@ -497,7 +497,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-royalcph:before {
-  content: "";
+  content: "";
 }
 
 .logo-royalcph-simple {
@@ -511,7 +511,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-royalcph-simple:before {
-  content: "";
+  content: "";
 }
 
 .logo-kopogkande {
@@ -525,7 +525,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-kopogkande:before {
-  content: "";
+  content: "";
 }
 
 .logo-illumsbolighus {
@@ -539,7 +539,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-illumsbolighus:before {
-  content: "";
+  content: "";
 }
 
 .logo-bahne {
@@ -553,7 +553,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-bahne:before {
-  content: "";
+  content: "";
 }
 
 .logo-inspiration {
@@ -567,7 +567,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-inspiration:before {
-  content: "";
+  content: "";
 }
 
 .logo-imerco {
@@ -581,7 +581,35 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-imerco:before {
-  content: "";
+  content: "";
+}
+
+.logo-magasin {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-magasin:before {
+  content: "";
+}
+
+.logo-salling {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-salling:before {
+  content: "";
 }
 
 .icon-arrow-right {
@@ -595,7 +623,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-arrow-right:before {
-  content: "";
+  content: "";
 }
 
 .icon-arrow-left {
@@ -609,7 +637,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-arrow-left:before {
-  content: "";
+  content: "";
 }
 
 .icon-scroll-down {
@@ -623,7 +651,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-scroll-down:before {
-  content: "";
+  content: "";
 }
 
 .icon-scroll-up {
@@ -637,7 +665,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-scroll-up:before {
-  content: "";
+  content: "";
 }
 
 .icon-play {
@@ -651,7 +679,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-play:before {
-  content: "";
+  content: "";
 }
 
 .icon-map-marker {
@@ -665,7 +693,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-map-marker:before {
-  content: "";
+  content: "";
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -1090,7 +1118,7 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
 }
 .flex-direction-nav a:before {
-  content: "";
+  content: "";
 }
 .flex-direction-nav a.flex-next {
   font-family: "icons";
@@ -1103,7 +1131,7 @@ html[xmlns] .flexslider .slides {
   -webkit-font-smoothing: antialiased;
 }
 .flex-direction-nav a.flex-next:before {
-  content: "";
+  content: "";
 }
 .flex-direction-nav .flex-prev {
   left: 0;
@@ -1782,9 +1810,62 @@ img.mfp-img {
   }
 }
 
+.section-explore .content-wrapper {
+  position: relative;
+}
 .section-explore h1,
 .section-explore h1 + p {
   text-align: center;
+}
+.section-explore h1 {
+  margin-bottom: 0.66667rem;
+}
+.section-explore h1 + p {
+  margin-top: 0.66667rem;
+}
+.section-explore .splash {
+  float: left;
+  margin-top: 10px;
+  margin-left: -20px;
+  margin-bottom: -70px;
+}
+@media (min-width: 45em) {
+  .section-explore .splash {
+    position: absolute;
+    float: none;
+    right: 10px;
+    margin-top: -30px;
+  }
+}
+@media (min-width: 60em) {
+  .section-explore .splash {
+    margin-top: -80px;
+    right: 80px;
+  }
+}
+.section-explore .snapshot-view .elm-image {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+}
+.section-explore .snapshot-view .elm-image:before {
+  content: "";
+  display: block;
+  margin-top: 90.57451%;
+}
+.section-explore .snapshot-view .elm-image svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section-explore .pricing-info {
+  position: absolute;
+  bottom: -20px;
+  right: 15%;
 }
 @media (min-width: 45em) {
   .section-explore h1 {
@@ -1794,6 +1875,10 @@ img.mfp-img {
     line-height: 3.66667rem;
     line-height: 45px;
     line-height: 3rem;
+  }
+  .section-explore .pricing-info {
+    right: 25%;
+    margin-bottom: 10%;
   }
 }
 
