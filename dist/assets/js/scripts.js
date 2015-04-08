@@ -2095,6 +2095,15 @@ $(document).ready(function() {
         }
     );
 
+    $('.tiles li').hover(
+    	function() {
+    		$(this).addClass('over');
+    	},
+    	function() {
+    		$(this).removeClass('over');
+    	}
+    );
+
 	// init flexsliders on page
 	$('.flexslider').flexslider({
 		animation: 'slide',

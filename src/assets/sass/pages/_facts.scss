@@ -1,7 +1,7 @@
 
 .section-facts {
 	@extend %gold-main-content;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	.content-wrapper {
 		position:relative;
@@ -157,38 +157,40 @@
 		.elm-content {
 			position:absolute;
 			display:none;
-			bottom:0;
+			bottom:-100%;
 			padding:9%;
 			background: rgba($color-brand, .8);
 			color:#fff;
 			text-shadow: none;
 			text-align: center;
 
+			transform: translate3d(0,0,0);
+			transition: bottom .3s ease;
+
 			@include breakpoint($sm) {
 				display: block;
 			}
 		}
 		
-		.elm-content,
-		q,
-		.name {
-			transform: translate3d(0,100%,0);
-			transition: transform .3s ease;
-		}
-		q,
-		.name {
-			position:relative;
-		}
 		q {
-			transition-delay: .2s;
-		}
-		.name {
-			transition-delay: .2s;
+			margin:0;
 		}
 
-		&:hover {
-			.elm-content,
-			q,
+		.name {
+			
+			transition: transform .3s ease;
+		}
+		.name {
+			position:relative;
+			transition-delay: .2s;
+			transform: translate3d(0,100%,0);
+		}
+
+
+		&.over {
+			.elm-content {
+				bottom: 0;
+			}
 			.name {
 				transform: translate3d(0,0,0);		
 			}

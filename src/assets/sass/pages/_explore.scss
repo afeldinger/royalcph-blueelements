@@ -1,9 +1,15 @@
 
 .section-explore {
+	@extend .no-margin;
 	@extend %gold-main-content;
 
 	.content-wrapper {
 		position: relative;
+	}
+
+	.main-content {
+		margin-left: $content-margin;
+		margin-right: $content-margin;
 	}
 	
 	h1,
@@ -18,14 +24,10 @@
 	}
 	
 	.splash {
-		float:left;
-		margin-top:10px;
-		margin-left: -20px;
-		margin-bottom: -70px;
-
+		margin: rhythm(5) auto;
+		
 		@include breakpoint($sm) {
 			position: absolute;
-			float:none;
 			right: 10px;
 			margin-top: -30px;
 		}
@@ -36,6 +38,8 @@
 	}
 	.snapshot-view {
 		position:relative;
+		max-width: 100%;
+		overflow: hidden;
 
 		.viewport {
 			position:absolute;
@@ -51,23 +55,27 @@
 			a {
 				position:absolute;
 				display:block;
-				bottom:0;
+				bottom:-4px;
 				left:0;
 				width:100%;
-				padding: 4px 8px 0px;
+				padding: 4px 8px;
 				font-style: italic;
 				background: #fff;
 				text-align: center;
 				text-shadow: none;
 				color: $color-text-dark;
+				transition: color .2s;
+
+				&:hover {
+					color: $color-brand;
+				}
 			}
 		}
 
 		.elm-image {
 			position:relative;
 			margin:0 auto;
-			width:100%;
-			max-width:700px;
+			width:700px;
 			overflow: hidden;
 
 			&:before{
@@ -88,11 +96,7 @@
 
 	}
 
-	.pricing-info {
-		position:absolute;
-		bottom:-20px;
-		right:15%;
-	}
+	
 
     @include breakpoint($sm) {
 		h1 {
@@ -101,8 +105,9 @@
 		}
 
 		.pricing-info {
+			position:absolute;
 			right: 25%;
-			margin-bottom: 10%;
+			bottom: 80px;
 		}
 	}
 }
