@@ -1,9 +1,12 @@
 
 
 %gold-main-content {
+	
 	@extend %text-emboss-shadow;
 
 	.main-content {
+		//@extend %gold-effect;
+
 		h1,
 		h2 {
 			+ p:nth-of-type(1) {

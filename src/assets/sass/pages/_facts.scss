@@ -80,7 +80,7 @@
 	position:relative;
 	display:block;
 	overflow:hidden;
-	margin:0;
+	margin:-20% 0 0;
 	padding:0;
 	list-style:none;
 	clear:both;
@@ -142,11 +142,13 @@
 	}
 
 	.fact-blue {
-		background: $color-brand;
+		background: $color-brand url(../img/bg_texture_blue.jpg);
+		background-size: cover;
 		color:#fff;
 	}
 	.fact-white {
-		background:#fff;
+		background:#fff url(../img/bg_texture_white.jpg);
+		background-size: cover;
 		color: $color-brand;
 	}
 
@@ -154,12 +156,17 @@
 		position:relative; 
 		.elm-content {
 			position:absolute;
+			display:none;
 			bottom:0;
 			padding:9%;
 			background: rgba($color-brand, .8);
 			color:#fff;
 			text-shadow: none;
 			text-align: center;
+
+			@include breakpoint($sm) {
+				display: block;
+			}
 		}
 		
 		.elm-content,
@@ -191,14 +198,22 @@
 	}
 
 
-	@mixin tile-position($x:0,$y:0) {
-		margin-left: $x * 0.2 * 100%;
-		margin-top: $y * 0.2 * 100%;
+	@mixin tile-position($x:0, $y:0, $col-size:0.2) {
+		margin-left: $x * $col-size * 100%;
+		margin-top: $y * $col-size * 100%;
 	}
 
 	#tiles-mood-1 {
 		@include tile-position(0, 2);
 		width: 80%;
+
+		background: url(../img/gx_facts_mood01.jpg) no-repeat 50% 50%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		img {
+			display: none;
+		}
 	}
 
 	#tiles-fact-1 {
