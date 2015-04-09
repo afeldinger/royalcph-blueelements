@@ -2126,7 +2126,7 @@ window.fbAsyncInit = function() {
 	}
 	console.log(server_uri);
 
-	var pageID = 1051;//null; // should use @UmbracoContext.PageId
+	var pageID = null; // should use @UmbracoContext.PageId
 
 	var touchevents = function() {
 		return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
@@ -2276,6 +2276,8 @@ window.fbAsyncInit = function() {
 			$('body').addClass('no-touch');
 		}
 
+		pageID = $('#pageId').val();
+		console.log('pageid: '+pageID);
 
 		var snaps = getImageSnapList(15);
 		console.log(snaps);
