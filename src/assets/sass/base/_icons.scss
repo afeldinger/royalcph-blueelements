@@ -35,7 +35,7 @@
 	@include icon($logo-magasin);
 }
 .logo-illum {
-	@extend .logo-missing;
+	@include icon($logo-illum);
 }
 .logo-salling {
 	@include icon($logo-salling);
@@ -59,4 +59,10 @@
 }
 .icon-map-marker {
 	@include icon($icon-map-marker);
+}
+.icon-close {
+	@include icon($icon-close);
+}
+.icon-facebook {
+	@include icon($icon-facebook);
 }

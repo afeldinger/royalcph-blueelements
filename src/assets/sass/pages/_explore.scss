@@ -138,6 +138,34 @@
 	form {
 		display:block;
 		max-width: rel-width(480px);
-		margin:rhythm(6) auto;
+		margin:rhythm(10) auto;
 	}
+
+	h2 {
+		@include adjust-font-size-to($size-xl);
+		margin-top:0;
+		padding-bottom: rhythm(2);
+		text-align: center;
+		border-bottom: 1px solid $color-borders;
+	}
+
+	.form-step {
+		display:none;
+
+		&.active {
+			display:block;
+		}
+	}
+	
+	.form-step-1 {
+
+		.form-col {
+			width: perc-width(145px, 480px);
+
+			&:nth-of-type(2n+2) {
+				width: perc-width(320px, 480px);
+			}
+		}
+	}
+	
 }

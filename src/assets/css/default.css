@@ -472,7 +472,7 @@ Splash
   color: inherit;
 }
 
-.logo-missing, .logo-illum {
+.logo-missing {
   font-family: "icons";
   speak: none;
   font-style: normal;
@@ -482,7 +482,7 @@ Splash
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-.logo-missing:before, .logo-illum:before {
+.logo-missing:before {
   content: "";
 }
 
@@ -553,7 +553,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .logo-bahne:before {
-  content: "";
+  content: "";
 }
 
 .logo-inspiration {
@@ -598,6 +598,20 @@ Splash
   content: "";
 }
 
+.logo-illum {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.logo-illum:before {
+  content: "";
+}
+
 .logo-salling {
   font-family: "icons";
   speak: none;
@@ -623,7 +637,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-arrow-right:before {
-  content: "";
+  content: "";
 }
 
 .icon-arrow-left {
@@ -637,7 +651,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-arrow-left:before {
-  content: "";
+  content: "";
 }
 
 .icon-scroll-down {
@@ -651,7 +665,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-scroll-down:before {
-  content: "";
+  content: "";
 }
 
 .icon-scroll-up {
@@ -665,7 +679,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-scroll-up:before {
-  content: "";
+  content: "";
 }
 
 .icon-play {
@@ -679,7 +693,7 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-play:before {
-  content: "";
+  content: "";
 }
 
 .icon-map-marker {
@@ -693,7 +707,35 @@ Splash
   -webkit-font-smoothing: antialiased;
 }
 .icon-map-marker:before {
-  content: "";
+  content: "";
+}
+
+.icon-close {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-close:before {
+  content: "";
+}
+
+.icon-facebook {
+  font-family: "icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-facebook:before {
+  content: "";
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -864,6 +906,11 @@ font-style: italic;
   font-style: italic;
   font-weight: 400;
 }
+html {
+  font-size: 93.75%;
+  line-height: 0.33333em;
+}
+
 *, *:before, *:after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -878,7 +925,7 @@ input,
 textarea,
 button,
 select {
-  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", Georgia, Garamond, "Times New Roman", serif;
+  font-family: "Monotype Bodoni W01", "Bodoni Std", "Bodoni MT", Georgia, Garamond, "Times New Roman", serif;
 }
 
 body {
@@ -893,7 +940,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bodoni SvtyTwo ITC TT", "bodoni-svtytwo-1", Georgia, Garamond, "Times New Roman", serif;
+  font-family: "Monotype Bodoni W01", "Bodoni Std", "Bodoni MT", Georgia, Garamond, "Times New Roman", serif;
   font-weight: 400;
   color: inherit;
 }
@@ -905,6 +952,7 @@ h1 {
   line-height: 2.33333rem;
   line-height: 30px;
   line-height: 2rem;
+  letter-spacing: -1px;
   margin: 2rem 0;
   text-transform: uppercase;
 }
@@ -926,6 +974,7 @@ h2 {
   line-height: 2.33333rem;
   line-height: 25px;
   line-height: 1.66667rem;
+  letter-spacing: -1px;
   margin: 1.66667rem 0;
   text-transform: uppercase;
 }
@@ -936,6 +985,7 @@ h3 {
   line-height: 30px;
   line-height: 2rem;
   margin: 1.33333rem 0 0.66667rem;
+  letter-spacing: -1px;
 }
 
 h4 {
@@ -944,6 +994,7 @@ h4 {
   line-height: 25px;
   line-height: 1.66667rem;
   margin: 1rem 0;
+  letter-spacing: -1px;
 }
 
 h5 {
@@ -997,6 +1048,7 @@ a .icon {
 .caps {
   text-transform: uppercase;
   font-style: normal;
+  letter-spacing: -1px;
 }
 
 img {
@@ -1193,7 +1245,7 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
 }
 .flex-direction-nav a:before {
-  content: "";
+  content: "";
 }
 .flex-direction-nav a.flex-next {
   font-family: "icons";
@@ -1206,7 +1258,7 @@ html[xmlns] .flexslider .slides {
   -webkit-font-smoothing: antialiased;
 }
 .flex-direction-nav a.flex-next:before {
-  content: "";
+  content: "";
 }
 .flex-direction-nav .flex-prev {
   left: 0;
@@ -1387,6 +1439,34 @@ ul.logos .icon {
   font-size: 4.33333rem;
   line-height: 70px;
   line-height: 4.66667rem;
+}
+
+.form-col {
+  display: inline;
+  float: left;
+  width: 48%;
+}
+.form-col:nth-of-type(2n+2) {
+  float: right;
+}
+
+label {
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+label .label {
+  display: block;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
 }
 
 .page-header {
@@ -2034,7 +2114,29 @@ img.mfp-img {
 .snapshot-form form {
   display: block;
   max-width: 32em;
-  margin: 2rem auto;
+  margin: 3.33333rem auto;
+}
+.snapshot-form h2 {
+  font-size: 25px;
+  font-size: 1.66667rem;
+  line-height: 30px;
+  line-height: 2rem;
+  margin-top: 0;
+  padding-bottom: 0.66667rem;
+  text-align: center;
+  border-bottom: 1px solid #bcbcbc;
+}
+.snapshot-form .form-step {
+  display: none;
+}
+.snapshot-form .form-step.active {
+  display: block;
+}
+.snapshot-form .form-step-1 .form-col {
+  width: 30.20833%;
+}
+.snapshot-form .form-step-1 .form-col:nth-of-type(2n+2) {
+  width: 66.66667%;
 }
 
 .section-facts {

@@ -124,7 +124,7 @@ font-style: italic;
 }
 
 
-
+@include establish-baseline;
 
 *, *:before, *:after {
     -webkit-font-smoothing: antialiased;
@@ -149,6 +149,10 @@ body {
 }
 
 
+@mixin letter-spacing-sm {
+  letter-spacing: -1px;
+}
+
 h1,
 h2,
 h3,
@@ -163,6 +167,7 @@ h6 {
 h1 {
     @include adjust-font-size-to($size-xxl);
     @include adjust-leading-to(6);
+    @include letter-spacing-sm;
     margin: rhythm(6) 0;
     text-transform: uppercase;
 
@@ -174,6 +179,7 @@ h1 {
 h2 {
     @include adjust-font-size-to($size-xxl);
     @include adjust-leading-to(5);
+    @include letter-spacing-sm;
     margin: rhythm(5) 0;
     text-transform: uppercase;
 
@@ -182,11 +188,13 @@ h2 {
 h3 {
     @include adjust-font-size-to($size-xl);
     margin: rhythm(4) 0 rhythm(2);
+    @include letter-spacing-sm;
 }
 
 h4 {
     @include adjust-font-size-to($size-lg);
     margin: rhythm(3) 0;
+    @include letter-spacing-sm;
 }
 
 h5 {
@@ -237,5 +245,6 @@ a {
 .caps {
 	text-transform: uppercase;
 	font-style: normal;
+  @include letter-spacing-sm;
 }
 
