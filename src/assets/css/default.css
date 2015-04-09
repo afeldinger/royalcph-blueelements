@@ -1487,6 +1487,31 @@ button {
 .page-header a {
   color: #fff;
 }
+@media (min-width: 45em) {
+  .page-header nav.country {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
+.page-header nav.country ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.page-header nav.country li {
+  display: inline;
+}
+.page-header nav.country li:nth-of-type(n+1) {
+  margin-left: 0.66667rem;
+}
+.page-header nav.country a {
+  display: inline-block;
+  color: #ffeba2;
+}
+.page-header nav.country a.active {
+  text-decoration: underline;
+}
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -1944,7 +1969,6 @@ img.mfp-img {
   min-height: 465px;
   background: #f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 45% 0;
   color: #282b20;
-  font-style: italic;
 }
 .no-touch .section-designer {
   background-attachment: fixed;
@@ -1965,6 +1989,23 @@ img.mfp-img {
   .section-designer .main-content {
     margin-left: 17.70833%;
   }
+}
+.section-designer h1 {
+  font-size: 25px;
+  font-size: 1.66667rem;
+  line-height: 30px;
+  line-height: 2rem;
+}
+@media (min-width: 45em) {
+  .section-designer h1 {
+    font-size: 30px;
+    font-size: 2rem;
+    line-height: 35px;
+    line-height: 2.33333rem;
+  }
+}
+.section-designer p {
+  font-style: italic;
 }
 @media (min-width: 45em) {
   .section-designer {
@@ -1987,15 +2028,16 @@ img.mfp-img {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
-.section-explore h1,
-.section-explore h1 + p {
+.section-explore .main-content h1,
+.section-explore .main-content p {
   text-align: center;
 }
-.section-explore h1 {
+.section-explore .main-content h1 {
   margin-bottom: 0.66667rem;
 }
-.section-explore h1 + p {
+.section-explore .main-content p {
   margin-top: 0.66667rem;
+  margin-bottom: 0.66667rem;
 }
 .section-explore .splash {
   margin: 1.66667rem auto;
@@ -2020,6 +2062,12 @@ img.mfp-img {
     line-height: 3.66667rem;
     line-height: 45px;
     line-height: 3rem;
+  }
+  .section-explore .main-content h1,
+  .section-explore .main-content p {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .section-explore .pricing-info {
     position: absolute;

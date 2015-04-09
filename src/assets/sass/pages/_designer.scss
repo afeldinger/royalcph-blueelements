@@ -10,7 +10,6 @@
 	}
 
 	color: $color-text-dark;
-	font-style:italic;
 
 	.content-wrapper {
 		padding-top:rhythm(8);
@@ -25,10 +24,21 @@
 
 		width: rel-width(140px);
 		margin-left: 5%;
-
+		
 		@include breakpoint($sm) {
 			margin-left: perc-width(170px);
 		}
+	}
+	
+	h1 {
+		@include adjust-font-size-to($size-xl);
+		@include breakpoint($sm) {
+			@include adjust-font-size-to($size-xxl);
+		}
+	}
+
+	p {
+		font-style:italic;
 	}
 
 

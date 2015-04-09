@@ -18,4 +18,33 @@
 	a {
 		color:#fff;
 	}
+
+	nav.country {
+		@include breakpoint($sm) {
+			position:absolute;
+			top:$content-margin;
+			right: $content-margin;	
+		}
+
+		ul {
+			margin:0 auto;
+			padding:0;
+			list-style:none;
+		}
+		li {
+			display:inline;
+			&:nth-of-type(n+1) {
+				margin-left: rhythm(2);	
+			}
+			
+		}
+		a {
+			display:inline-block;
+			color: $color-gold;
+
+			&.active {
+				text-decoration: underline;
+			}
+		}
+	}
 }

@@ -10,18 +10,20 @@
 	.main-content {
 		margin-left: $content-margin;
 		margin-right: $content-margin;
+
+		h1,
+		p {
+			text-align:center;
+		}
+		h1 {
+			margin-bottom: rhythm(2);
+		}
+		p {
+			margin-top: rhythm(2);
+			margin-bottom: rhythm(2);
+		}
 	}
 	
-	h1,
-	h1 + p {
-		text-align:center;
-	}
-	h1 {
-		margin-bottom: rhythm(2);
-	}
-	h1 + p {
-		margin-top: rhythm(2);
-	}
 	
 	.splash {
 		margin: rhythm(5) auto;
@@ -41,6 +43,15 @@
 		h1 {
 			@include adjust-font-size-to(50px);
 			@include adjust-leading-to(9);
+		}
+
+		.main-content {
+			h1,
+			p {
+				max-width:70%;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		.pricing-info {
