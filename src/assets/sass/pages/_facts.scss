@@ -29,7 +29,7 @@
 
 		}
 		@include breakpoint($md) {
-			margin-right: -300px;
+			margin-right: -330px;
 		}
 	}
 
@@ -168,6 +168,7 @@
 		.elm-content {
 			position:absolute;
 			display:none;
+			width:100%;
 			bottom:-100%;
 			padding:9%;
 			background: rgba($color-brand, .8);

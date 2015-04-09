@@ -2254,7 +2254,7 @@ img.mfp-img {
 }
 @media (min-width: 60em) {
   .section-facts svg {
-    margin-right: -300px;
+    margin-right: -330px;
   }
 }
 .section-facts .main-content {
@@ -2407,6 +2407,7 @@ img.mfp-img {
 .tiles .snapshot .elm-content {
   position: absolute;
   display: none;
+  width: 100%;
   bottom: -100%;
   padding: 9%;
   background: rgba(26, 37, 80, 0.8);

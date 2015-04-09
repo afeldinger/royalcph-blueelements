@@ -189,9 +189,13 @@ window.fbAsyncInit = function() {
 		pageID = $('#pageId').val();
 		console.log('pageid: '+pageID);
 
+/*
 		var snaps = getImageSnapList(15);
 		console.log(snaps);
-
+*/
+		if ($('.scroll-down').length === 0) {
+			$('<div class="scroll scroll-down"><span class="icon icon-scroll-down" aria-hidden="true"></span></div>').insertAfter('header.page-header');
+		}
 		
 		// Move snapshot object sideways on small clients
 		$('.snapshot-view').each(function() {
