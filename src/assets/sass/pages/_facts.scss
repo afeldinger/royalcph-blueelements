@@ -39,8 +39,14 @@
 		min-height: 600px;
 
 		p {
-			@include adjust-font-size-to($size-xl);
+			@include adjust-font-size-to($size-md);
 			font-style: italic;
+		}
+
+		@include breakpoint($xs) {
+			p {
+				@include adjust-font-size-to($size-xl);
+			}
 		}
 
 		@include breakpoint($sm) {
@@ -128,12 +134,17 @@
 			padding:8%;
 			text-shadow: none;
 			transform: translate(0, -50%);
-
-			@include adjust-font-size-to($size-md);
 			font-style: italic;
+
+			@include adjust-font-size-to($size-sm);
+			
+			@include breakpoint(0 $xs) {
+				@include adjust-leading-to(3);
+			}
 
 			@include breakpoint($xs) {
 				@include adjust-font-size-to($size-lg);
+				@include adjust-leading-to(4);
 			}
 			@include breakpoint($sm) {
 				@include adjust-font-size-to($size-xxl);
@@ -215,7 +226,7 @@
 			background-attachment: fixed;
 			background-size: cover;
 		}
-		
+
 		img {
 			display: none;
 		}

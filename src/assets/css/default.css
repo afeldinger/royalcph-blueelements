@@ -763,6 +763,80 @@ body {
     font-style: normal;
 }
 */
+/*
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/4e3cd7ee-0719-4362-b87b-7f12a33dce14.eot?#iefix");
+src:url("../fonts/4e3cd7ee-0719-4362-b87b-7f12a33dce14.eot?#iefix") format("eot"),url("../fonts/73f99668-7882-4f92-ba4d-c3b149828f67.woff2") format("woff2"),url("../fonts/d7f7fba3-4873-4084-b7f2-6f3fa4ee6019.woff") format("woff"),url("../fonts/3d829673-d42c-49ec-8799-1287be541432.ttf") format("truetype"),url("../fonts/03aed8dc-9240-455c-9c8b-2af3002590e9.svg#03aed8dc-9240-455c-9c8b-2af3002590e9") format("svg");
+font-weight: 300;
+font-style: normal;
+}
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/c5b77b15-773a-4eb4-976a-49da92e5829d.eot?#iefix");
+src:url("../fonts/c5b77b15-773a-4eb4-976a-49da92e5829d.eot?#iefix") format("eot"),url("../fonts/a02f71e1-59b5-46db-a78d-84bbf0abef28.woff2") format("woff2"),url("../fonts/fef20495-bab9-40eb-a873-7791998e1f4f.woff") format("woff"),url("../fonts/e005478c-7941-4de3-bd68-040d7d07645e.ttf") format("truetype"),url("../fonts/e74f7fa9-a29a-40e0-85ea-653bff2f2002.svg#e74f7fa9-a29a-40e0-85ea-653bff2f2002") format("svg");
+font-weight: 300;
+font-style: italic;
+}
+*/
+@font-face {
+  font-family: "Monotype Bodoni W01";
+  src: url("../fonts/68217aa1-2e0f-46ff-8346-2dc7f2b6da58.eot?#iefix");
+  src: url("../fonts/68217aa1-2e0f-46ff-8346-2dc7f2b6da58.eot?#iefix") format("eot"), url("../fonts/53e23b34-cb9c-473a-8eca-5e1dc6dac872.woff2") format("woff2"), url("../fonts/4998dec5-0c5b-4fbc-bcb0-b8881a830aab.woff") format("woff"), url("../fonts/fedc1312-4f84-4eef-9fea-ea0863dab099.ttf") format("truetype"), url("../fonts/6f65f35b-416f-411e-9985-5ba096d468b6.svg#6f65f35b-416f-411e-9985-5ba096d468b6") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monotype Bodoni W01";
+  src: url("../fonts/a0a6fabd-52f1-4bb0-ab19-96dbd11fbbd7.eot?#iefix");
+  src: url("../fonts/a0a6fabd-52f1-4bb0-ab19-96dbd11fbbd7.eot?#iefix") format("eot"), url("../fonts/728e98fa-05f0-4756-a37f-4e99eba723dd.woff2") format("woff2"), url("../fonts/a0316db4-7327-4a8f-846c-649ae16d512b.woff") format("woff"), url("../fonts/5b0905b2-1ac9-459a-a860-4731600070ef.ttf") format("truetype"), url("../fonts/a2c65c78-d700-4bbb-b80c-6775921b9457.svg#a2c65c78-d700-4bbb-b80c-6775921b9457") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Monotype Bodoni W01";
+  src: url("../fonts/ad42559d-c219-4fda-bd8e-c85aebe62e62.eot?#iefix");
+  src: url("../fonts/ad42559d-c219-4fda-bd8e-c85aebe62e62.eot?#iefix") format("eot"), url("../fonts/ed1bac45-e5f7-4c2d-bead-65bce2e942dd.woff2") format("woff2"), url("../fonts/6a76c8c6-2abe-4842-b3e2-e675c21ddd49.woff") format("woff"), url("../fonts/aaf1ac29-cd40-43ec-9a28-a947df44d661.ttf") format("truetype"), url("../fonts/cf4a1397-b8a7-47e5-981d-acab77e93efc.svg#cf4a1397-b8a7-47e5-981d-acab77e93efc") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monotype Bodoni W01";
+  src: url("../fonts/e13cc406-81c1-4488-98f4-9681fcd4ad90.eot?#iefix");
+  src: url("../fonts/e13cc406-81c1-4488-98f4-9681fcd4ad90.eot?#iefix") format("eot"), url("../fonts/56cfc387-d0fb-4db1-8c63-7e9181861403.woff2") format("woff2"), url("../fonts/70d2660b-742e-42fd-8a76-4bcb1c2f9b40.woff") format("woff"), url("../fonts/942ebb33-f273-4c9f-bfce-f12b16fc03e0.ttf") format("truetype"), url("../fonts/744ea55c-40b6-48d2-93f4-5d1d056ca8fa.svg#744ea55c-40b6-48d2-93f4-5d1d056ca8fa") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+/*
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/acb2f47f-a202-4cbc-a4f5-3d24c9783855.eot?#iefix");
+src:url("../fonts/acb2f47f-a202-4cbc-a4f5-3d24c9783855.eot?#iefix") format("eot"),url("../fonts/a355da81-c4c0-44e5-9473-8fc6f0d3333c.woff2") format("woff2"),url("../fonts/8510ce40-9e2d-4641-82fc-fba89070ed86.woff") format("woff"),url("../fonts/53cd43d2-fda7-48cd-b9ba-bd0fb29e38a5.ttf") format("truetype"),url("../fonts/840f0efa-7d6c-4adb-8984-2a4200484ca3.svg#840f0efa-7d6c-4adb-8984-2a4200484ca3") format("svg");
+font-weight: 800;
+font-style: normal;
+}
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/1f99cd88-05c6-4315-bfe8-55b3dae69ffe.eot?#iefix");
+src:url("../fonts/1f99cd88-05c6-4315-bfe8-55b3dae69ffe.eot?#iefix") format("eot"),url("../fonts/fadd8292-7dfe-40fe-869a-bf3c86ecf72f.woff2") format("woff2"),url("../fonts/ddef3355-4913-49b9-8c9c-7439b579b5fc.woff") format("woff"),url("../fonts/5c1629e9-4976-4fe4-8a1c-4327896dbc60.ttf") format("truetype"),url("../fonts/a3f2e567-c60e-40f6-ad4d-b14f3ccc4273.svg#a3f2e567-c60e-40f6-ad4d-b14f3ccc4273") format("svg");
+font-weight: 800;
+font-style: italic;
+}
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/5a04b357-906e-46c5-bad2-5254510b3f42.eot?#iefix");
+src:url("../fonts/5a04b357-906e-46c5-bad2-5254510b3f42.eot?#iefix") format("eot"),url("../fonts/cceea128-3218-4c87-9e2c-7ff5315c9ee6.woff2") format("woff2"),url("../fonts/f0825aee-8e80-485c-8c2f-261f04bd1284.woff") format("woff"),url("../fonts/c2ad57e3-0de3-48f3-acee-bd82cd569b85.ttf") format("truetype"),url("../fonts/dbfee8f7-c98d-4563-b7f7-7880bd9790cf.svg#dbfee8f7-c98d-4563-b7f7-7880bd9790cf") format("svg");
+font-weight: 900;
+font-style: normal;
+}
+@font-face{
+font-family:"Monotype Bodoni W01";
+src:url("../fonts/de2a773c-e739-4589-8f33-9d3f5cd3fca6.eot?#iefix");
+src:url("../fonts/de2a773c-e739-4589-8f33-9d3f5cd3fca6.eot?#iefix") format("eot"),url("../fonts/be47c9a6-6739-4bc8-b3b3-926ca9993990.woff2") format("woff2"),url("../fonts/6d876b8c-6729-4743-980b-76d19d69200b.woff") format("woff"),url("../fonts/b2739fa1-e4b0-4e33-b2a8-651bfdae4ae0.ttf") format("truetype"),url("../fonts/5df5cd88-797d-4422-ae60-270b77327713.svg#5df5cd88-797d-4422-ae60-270b77327713") format("svg");
+font-weight: 900;
+font-style: italic;
+}
+*/
 @font-face {
   font-family: 'bodoni-svtytwo-1';
   src: url("../fonts/BodoniSvtyTwoITCTTBook.eot");
@@ -1826,6 +1900,9 @@ img.mfp-img {
   }
 }
 
+.section-explore .content-wrapper {
+  position: relative;
+}
 .section-explore .main-content {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -1888,8 +1965,8 @@ img.mfp-img {
 }
 @media (min-width: 700px) {
   .snapshot-view svg {
-    -webkit-transform: translate3d(0, 0, 0) !important;
-            transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate(0, 0) !important, translate3d(0, 0, 0) !important;
+            transform: translate(0, 0) !important, translate3d(0, 0, 0) !important;
   }
 }
 .snapshot-view .viewport {
@@ -1932,23 +2009,32 @@ img.mfp-img {
   top: 0;
   left: 0;
   width: 130px;
-  min-height: 360px;
+  height: 150px;
   background: #fff;
   color: #282b20;
   text-shadow: none;
   z-index: 1;
   opacity: 0;
+  overflow: hidden;
 }
 .snapshot-form.active {
+  position: fixed;
   visibility: visible;
   left: 0 !important;
+  top: 20% !important;
   width: 100% !important;
+  min-height: 360px;
   z-index: 20;
   opacity: 1;
   -webkit-transition-property: display,opacity, left, top, margin-top, width;
           transition-property: display,opacity, left, top, margin-top, width;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+.snapshot-form form {
+  display: block;
+  max-width: 32em;
+  margin: 2rem auto;
 }
 
 .section-facts {
@@ -1990,11 +2076,19 @@ img.mfp-img {
   min-height: 600px;
 }
 .section-facts .main-content p {
-  font-size: 25px;
-  font-size: 1.66667rem;
-  line-height: 30px;
-  line-height: 2rem;
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
   font-style: italic;
+}
+@media (min-width: 30em) {
+  .section-facts .main-content p {
+    font-size: 25px;
+    font-size: 1.66667rem;
+    line-height: 30px;
+    line-height: 2rem;
+  }
 }
 @media (min-width: 45em) {
   .section-facts .main-content {
@@ -2080,11 +2174,17 @@ img.mfp-img {
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  font-size: 15px;
-  font-size: 1rem;
+  font-style: italic;
+  font-size: 12px;
+  font-size: 0.8rem;
   line-height: 20px;
   line-height: 1.33333rem;
-  font-style: italic;
+}
+@media (min-width: 0) and (max-width: 30em) {
+  .tiles .fact .elm-content {
+    line-height: 15px;
+    line-height: 1rem;
+  }
 }
 @media (min-width: 30em) {
   .tiles .fact .elm-content {
@@ -2092,6 +2192,8 @@ img.mfp-img {
     font-size: 1.33333rem;
     line-height: 25px;
     line-height: 1.66667rem;
+    line-height: 20px;
+    line-height: 1.33333rem;
   }
 }
 @media (min-width: 45em) {
