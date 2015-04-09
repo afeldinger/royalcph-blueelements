@@ -2111,6 +2111,22 @@ img.mfp-img {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
+.snapshot-form .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  color: #282b20;
+}
+.snapshot-form .close:before {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
 .snapshot-form form {
   display: block;
   max-width: 32em;

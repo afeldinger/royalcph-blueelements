@@ -135,6 +135,25 @@
 
 	}
 
+	.close {
+		position:absolute;
+		top:20px;
+		right:20px;
+		font-size:32px;
+		width:32px;
+		height:32px;
+		overflow: hidden;
+		color: $color-text-dark;
+
+		&:before {
+			width:32px;
+			height:32px;
+			line-height: 32px;
+			text-align:center;
+		}
+
+	}
+
 	form {
 		display:block;
 		max-width: rel-width(480px);
@@ -156,7 +175,7 @@
 			display:block;
 		}
 	}
-	
+
 	.form-step-1 {
 
 		.form-col {

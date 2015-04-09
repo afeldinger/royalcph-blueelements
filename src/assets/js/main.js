@@ -1,40 +1,40 @@
 
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = '//connect.facebook.net/en_US/sdk.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+/* Facebook connect */
+window.fbAsyncInit = function() {
+    FB.init({
+        appId: '287716124685668',
+        xfbml: true,
+        version: 'v2.2'
+    });
+
+    FB.Event.subscribe('auth.statusChange', function(response) {
+        if (response.status === 'connected') {
+            showAccountInfo();
+        }
+    });
+};
+
 (function() {
 	'use strict';
 
 	// Base url for ajax requests
 	var server_uri = 'http://blueelements.rc.magnetix.dk';
-	var pageID = null; // should use @UmbracoContext.PageId
+	var pageID = 1051;//null; // should use @UmbracoContext.PageId
 
 	var touchevents = function() {
 		return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
 	};
-
-	/* Facebook connect */
-	window.fbAsyncInit = function() {
-	    FB.init({
-	        appId: '287716124685668',
-	        xfbml: true,
-	        version: 'v2.2'
-	    });
-
-	    FB.Event.subscribe('auth.statusChange', function(response) {
-	        if (response.status === 'connected') {
-	            showAccountInfo();
-	        }
-	    });
-	};
-
-	(function(d, s, id) {
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) {
-	        return;
-	    }
-	    js = d.createElement(s);
-	    js.id = id;
-	    js.src = '//connect.facebook.net/en_US/sdk.js';
-	    fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
 
 	// Retrieve FB account details and use in fields
     function showAccountInfo() {
@@ -76,7 +76,7 @@
 
 
 	// Ajax requests
-    function crop(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission) {
+    function send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission) {
         var snapdata = {
             Left: left,
             Top: top,
@@ -94,21 +94,23 @@
  		
         $.ajax({
             async: true,
-            url: '/umbraco/surface/ImageSnapSurface/SubmitImageSnap',
+            url: server_uri + '/umbraco/surface/ImageSnapSurface/SubmitImageSnap',
             type: 'post',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({ imageSnap: snapdata, pi: pageID }),
             success: function(result) {
                 if (result.success) {
-                    $('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
+                	console.log(result);
+
+                    //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
                     $('#fullImageUrl').val('http://local.blueelements.rc.com/' + result.imageUrl);
                     $('#snapId').val(result.snapId);
                 } else {
-                    alert(result.error);
+                    console.log(result.error);
                 }
             },
             error: function() {
-                alert('Der opstod en teknisk fejl');
+                console.log('Der opstod en teknisk fejl');
             }
         });
     }
@@ -128,20 +130,20 @@
         $.ajax({
             async: true,
             //url: "/home/crop",
-            url: '/umbraco/surface/ImageSnapSurface/UpdateUserData',
+            url: server_uri + '/umbraco/surface/ImageSnapSurface/UpdateUserData',
             type: 'post',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({ imageSnap: snapdata, pi: pageID }),
             success: function(result) {
                 if (result.success) {
                     //$('<img src="/uploadedfiles/' + result.filename + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
-                    alert('User updated');
+                    console.log('User updated');
                 } else {
-                    alert(result.error);
+                    console.log(result.error);
                 }
             },
             error: function() {
-                alert('Der opstod en teknisk fejl');
+                console.log('Der opstod en teknisk fejl');
             }
         });
     }
@@ -178,10 +180,10 @@
 			$('body').addClass('no-touch');
 		}
 
-/*
+
 		var snaps = getImageSnapList(15);
 		console.log(snaps);
-*/
+
 		
 		// Move snapshot object sideways on small clients
 		$('.snapshot-view').each(function() {
@@ -220,6 +222,10 @@
 		    	$('.snapshot-form').addClass('active');
 
 		    	var pos = $(this).position();
+		    	var top = pos.top;
+		    	var left = pos.left;
+		    	var scale = 2226 / viewport_min_width;
+
 		    	console.log(pos);
 
 /*
@@ -232,15 +238,13 @@
 	                var top = sel.position().top - scaledimage.top;
 	                var left = sel.position().left - scaledimage.left;
 
-	                //alert('---> Kordinater <---\r\nTop: ' + top + '\r\nLeft: ' + left + '\r\nScale: ' + scale);
+	                //console.log('---> Kordinater <---\r\nTop: ' + top + '\r\nLeft: ' + left + '\r\nScale: ' + scale);
 */
-            }).find('a').click(function(event) {
-		    	event.preventDefault();
+
 
 		    	// send snapshot coordinates to server
-/*
-	            var scaledimage = $('#scaledimage').offset();
-	            var sel = $('#cropselector');
+	            //var scaledimage = $('#scaledimage').offset();
+	            //var sel = $('#cropselector');
 	            var firstName = $('#userfirstname').val();
 	            var lastName = $('#userlastname').val();
 	            var email = $('#useremail').val();
@@ -249,17 +253,23 @@
 	            var clickedFacebookShare = null;
 	            var facebookSharePostId = $('#facebookSharePostId').val();
 	            var allowEmailPermission = null;
+
+	            var crop_data = send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
 	 
+	 /*
 	            $("<img/>")
 	                .attr("src", $("#scaledimage").attr("src"))
 	                .load(function() {
-	                    //alert(this);
+	                    //console.log(this);
 	                    var scale = this.width / $("#scaledimage").width(); //originalbilledet er jo større end det brugeren ser og det skal afspejles når der croppes
 	                    var top = sel.position().top - scaledimage.top;
 	                    var left = sel.position().left - scaledimage.left;
-	                    crop(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+	                    send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
 	                });
 */
+            }).find('a').click(function(event) {
+		    	event.preventDefault();
+
 
 		    });
 		});
@@ -278,6 +288,37 @@
 				$(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
 			});
 		});
+
+
+ /*
+        document.getElementById('add-comment-btn').onclick = function() {
+            //updateImageSnap(snapId, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+            updateImageSnap($('#snapId').val(), "", "", "", $('#usercomment').val(), "", null, "", null);
+            return false;
+        }
+ 
+        document.getElementById('login-btn').onclick = function() {
+            FB.login(function(response) {
+ 
+            }, { scope: 'email' });
+            return false;
+        }
+ 
+        document.getElementById('add-userdata-btn').onclick = function() {
+            var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
+            updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), "", $('#userfacebookId').val(), null, "", userallowemailpermission);
+            return false;
+        }
+
+        document.getElementById('share-btn').onclick = function() {
+            updateImageSnap($('#snapId').val(), "", "", "", "", "", true, "", null);
+            shareImageSnap();
+            return false;
+        }
+ */
+
+
+
 
 		// IE fix for missing li:hover
 	    $('.tiles li').hover(
