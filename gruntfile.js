@@ -289,12 +289,20 @@ module.exports = function(grunt) {
 
     copy: {
       dist: {
-        files: [{
-          expand: true, 
-          cwd: 'src/assets/fonts/', 
-          src: ['*.{svg,woff,eot,ttf}'],
-          dest: 'dist/assets/fonts/',
-        }],
+        files: [
+          {
+            expand: true, 
+            cwd: 'src/assets/fonts/', 
+            src: ['*.{svg,woff,eot,ttf}'],
+            dest: 'dist/assets/fonts/',
+          },
+          {
+            expand: true,
+            cwd: 'src/assets/js/',
+            src: ['main.js'],
+            dest: 'dist/assets/js/',
+          }
+        ],
       },
 
     },

@@ -2119,7 +2119,13 @@ window.fbAsyncInit = function() {
 	'use strict';
 
 	// Base url for ajax requests
-	var server_uri = 'http://blueelements.rc.magnetix.dk';
+	
+	var server_uri = '';
+	if (location.host === 'localhost' || location.host === 'git.krympevaerk.dk') {
+		server_uri = 'http://blueelements.rc.magnetix.dk';
+	}
+	console.log(server_uri);
+
 	var pageID = 1051;//null; // should use @UmbracoContext.PageId
 
 	var touchevents = function() {
