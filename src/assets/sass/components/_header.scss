@@ -9,8 +9,14 @@
 		text-align:center;
 		@include adjust-font-size-to(50px);
 		color:#fff;
-
-		span:nth-of-type(n+2) {
+		svg {
+			width:50px;
+			height:50px;
+		}
+		img {
+			display: inline;
+		}
+		span {
 			display:none;
 		}
 	}

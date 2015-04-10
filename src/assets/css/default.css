@@ -461,6 +461,26 @@ Splash
     background-position: left top;
   }
 }
+@-webkit-keyframes scroll-down-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+@keyframes scroll-down-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons.eot");
@@ -1070,8 +1090,11 @@ img.full-width {
   left: 80%;
   left: calc(50% + 320px);
   font-size: 50px;
-  z-index: 30;
   color: #ffeba2;
+  -webkit-animation: scroll-down-bounce 4s;
+          animation: scroll-down-bounce 4s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
 }
 @media (min-width: 45em) {
   .scroll-down {
@@ -1505,7 +1528,14 @@ button {
   line-height: 3.66667rem;
   color: #fff;
 }
-.page-header h1 span:nth-of-type(n+2) {
+.page-header h1 svg {
+  width: 50px;
+  height: 50px;
+}
+.page-header h1 img {
+  display: inline;
+}
+.page-header h1 span {
   display: none;
 }
 .page-header a {
@@ -2682,4 +2712,48 @@ img.mfp-img {
   .products .product img {
     float: right;
   }
+}
+
+.store-locator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 165px;
+  height: 165px;
+  overflow: hidden;
+}
+.store-locator:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #1a2550;
+}
+.store-locator a {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  display: block;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+  z-index: 5;
+  font-style: italic;
+  @includ adjust-font-size-to($size-lg);
+}
+.store-locator .icon {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.33333rem;
+}
+.store-locator .icon:before {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  font-style: normal;
 }

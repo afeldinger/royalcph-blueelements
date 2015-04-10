@@ -86,3 +86,48 @@
 
 	}	
 }
+.store-locator {
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:165px;
+	height:165px;
+	overflow:hidden;
+
+	&:before {
+		content: '';
+		position:absolute;
+		top:40px;
+		left:40px;
+		width:200%;
+		height:200%;
+		transform: rotate(45deg);
+		background: $color-brand;
+	}
+
+	a {
+		position:absolute;
+		bottom:rhythm(3);
+		right:0;
+		display:block;
+		width:100px;
+		color: #fff;
+		text-align: center;
+		z-index:5;
+		font-style:italic;
+		@includ adjust-font-size-to($size-lg);
+	}
+	.icon {
+		display:block;
+		text-align: center;
+		margin-bottom:rhythm(1);
+
+		&:before {
+			width:35px;
+			height:35px;
+			font-size: 35px;
+			font-style:normal;
+
+		}
+	}
+}
