@@ -36,7 +36,7 @@ window.fbAsyncInit = function() {
 	}
 	console.log(server_uri);
 
-	var pageID = null; // should use @UmbracoContext.PageId
+	var pageID = null;
 
 	var touchevents = function() {
 		return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
@@ -47,14 +47,14 @@ window.fbAsyncInit = function() {
         FB.api('/me?fields=name,picture,email', function(response) {
             //Set variable her!!
             //document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
-
+            console.log(response);
             if (response !== null && response.id !== null && response.id !== '') {
                 var nameSplit = response.name.split(' ');
                 $('#userfirstname').val(nameSplit[0].trim());
                 $('#userlastname').val(response.name.substring(nameSplit[0].length).trim());
                 $('#useremail').val(response.email);
                 $('#userfacebookId').val(response.id);
-                //console.log(response);
+                
             }
         });
     }
@@ -109,7 +109,10 @@ window.fbAsyncInit = function() {
                 	console.log(result);
 
                     //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
-                    $('#fullImageUrl').val('http://local.blueelements.rc.com/' + result.imageUrl);
+                    var full_url = server_uri + result.imageUrl
+                    console.log(full_url);
+                    $('#userimagecrop').attr('src', full_url);
+                    $('#fullImageUrl').val(full_url).show();
                     $('#snapId').val(result.snapId);
                 } else {
                     console.log(result.error);
@@ -187,15 +190,6 @@ window.fbAsyncInit = function() {
 		}
 
 		pageID = $('#pageId').val();
-		console.log('pageid: '+pageID);
-
-/*
-		var snaps = getImageSnapList(15);
-		console.log(snaps);
-*/
-		if ($('.scroll-down').length === 0) {
-			$('<div class="scroll scroll-down"><span class="icon icon-scroll-down" aria-hidden="true"></span></div>').insertAfter('header.page-header');
-		}
 		
 		// Move snapshot object sideways on small clients
 		$('.snapshot-view').each(function() {
@@ -231,14 +225,13 @@ window.fbAsyncInit = function() {
 			    	$('.snapshot-form').css({'left':x, 'top':y, 'height':$(this).height()});
 			    }
 		    }).click(function(event) {
-		    	$('.snapshot-form').addClass('active');
 
 		    	var pos = $(this).position();
 		    	var top = pos.top;
 		    	var left = pos.left;
 		    	var scale = 2226 / viewport_min_width;
 
-		    	console.log(pos);
+		    	//console.log(pos);
 
 /*
 	            $("<img/>")
@@ -267,6 +260,9 @@ window.fbAsyncInit = function() {
 	            var allowEmailPermission = null;
 
 	            var crop_data = send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+
+                $('#fullImageUrl').hide();
+                $('.snapshot-form').addClass('active');
 	 
 	 /*
 	            $("<img/>")
@@ -292,22 +288,47 @@ window.fbAsyncInit = function() {
 				event.preventDefault();
 				$(this).parents('.snapshot-form').removeClass('active');
 			});
-			
+
+            $(this).find('form').submit(function(event) {
+                event.preventDefault();
+            })
+			/*
 			$(this).find('.form-step button.next').click(function(event) {
 				event.preventDefault();
 
 
-				$(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+				//$(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
 			});
+            */
+            $(this).find('#btn-add-comment').click(function(event) {
+                event.preventDefault();
+                //updateImageSnap(snapId, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+                updateImageSnap($('#snapId').val(), '', '', '', $('#usercomment').val(), '', null, '', null);
+                $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+            });
+
+            $(this).find('#btn-add-userdata').click(function(event) {
+                event.preventDefault();
+                
+                var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
+                updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), '', $('#userfacebookId').val(), null, '', userallowemailpermission);
+
+                $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+            });
+
+            $(this).find('button.fb-connect').click(function(event) {
+                event.preventDefault();
+
+                FB.login(function(response) {
+
+                }, { scope: 'email' });
+
+            });
+
 		});
 
 
  /*
-        document.getElementById('add-comment-btn').onclick = function() {
-            //updateImageSnap(snapId, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
-            updateImageSnap($('#snapId').val(), "", "", "", $('#usercomment').val(), "", null, "", null);
-            return false;
-        }
  
         document.getElementById('login-btn').onclick = function() {
             FB.login(function(response) {
@@ -316,11 +337,6 @@ window.fbAsyncInit = function() {
             return false;
         }
  
-        document.getElementById('add-userdata-btn').onclick = function() {
-            var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
-            updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), "", $('#userfacebookId').val(), null, "", userallowemailpermission);
-            return false;
-        }
 
         document.getElementById('share-btn').onclick = function() {
             updateImageSnap($('#snapId').val(), "", "", "", "", "", true, "", null);
