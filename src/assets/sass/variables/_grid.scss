@@ -14,3 +14,11 @@ $lg-bp: $lg + 2 * $content-margin-em ;
 @include add-gutter(.3);
 @include sgs-change('output', 'isolation');
 */
+
+
+$form-spacing: 		15px;
+$form-spacing-sm:	10px;
+$field-padding-h: 	8px;
+$field-padding-v: 	8px;
+$button-padding-h:	18px;
+$button-padding-v:	0px;

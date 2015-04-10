@@ -179,6 +179,10 @@ window.fbAsyncInit = function() {
         });
     }
 
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
 
     $(document).ready(function() {
 
@@ -230,19 +234,6 @@ window.fbAsyncInit = function() {
                 var scale = 2226 / viewport_min_width;
 
 
-/*
-                $("<img/>")
-                .attr("src", $("#scaledimage").attr("src"))
-                .load(function() {
-                    var scaledimage = $('#scaledimage').offset();
-                    var sel = $('#cropselector');
-                    var scale = this.width / $("#scaledimage").width(); //originalbilledet er jo større end det brugeren ser og det skal afspejles når der croppes
-                    var top = sel.position().top - scaledimage.top;
-                    var left = sel.position().left - scaledimage.left;
-
-                    //console.log('---> Kordinater <---\r\nTop: ' + top + '\r\nLeft: ' + left + '\r\nScale: ' + scale);
-*/
-
 
                 // send snapshot coordinates to server
                 //var scaledimage = $('#scaledimage').offset();
@@ -259,19 +250,9 @@ window.fbAsyncInit = function() {
                 var crop_data = send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
 
                 $('#userimagecrop').hide();
-                $('.snapshot-form').addClass('active');
+                $('.snapshot-form').addClass('active').find('.form-step:first').addClass('active').siblings('.form-step').removeClass('active');
      
-     /*
-                $("<img/>")
-                    .attr("src", $("#scaledimage").attr("src"))
-                    .load(function() {
-                        //console.log(this);
-                        var scale = this.width / $("#scaledimage").width(); //originalbilledet er jo større end det brugeren ser og det skal afspejles når der croppes
-                        var top = sel.position().top - scaledimage.top;
-                        var left = sel.position().left - scaledimage.left;
-                        send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
-                    });
-*/
+
             }).find('a').click(function(event) {
                 event.preventDefault();
 
@@ -307,10 +288,29 @@ window.fbAsyncInit = function() {
             $(this).find('#btn-add-userdata').click(function(event) {
                 event.preventDefault();
                 
-                var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
-                updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), '', $('#userfacebookId').val(), null, '', userallowemailpermission);
+                // validate user data before submitting
+                var err = false;
+                $(this).parents('.form-step:first').find('input:visible').filter('[type=text], [type=email]').each(function() {
 
-                $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+                    $(this).parents('label').toggleClass('error', $(this).val() === '');
+
+                    if ($(this).is('[type=email]') && $(this).val() !== '') {
+                        $(this).parents('label').toggleClass('error', !validateEmail($(this).val()));
+                    }
+
+                    if ($(this).parents('label').hasClass('error')) err = true;
+                });
+
+                if (!err) {
+                    var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
+                    updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), '', $('#userfacebookId').val(), null, '', userallowemailpermission);
+
+                    $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+
+                    // submission flow is complete: hide the viewfinder
+                    $('#snapshot-viewport').hide();
+                }
+
             });
 
             $(this).find('button.fb-connect').click(function(event) {
@@ -348,6 +348,43 @@ window.fbAsyncInit = function() {
  
 
  */
+
+
+        // control checkboxes and radiobuttons
+        $('input[type=radio], input[type=checkbox]').each(function() {
+
+            // set state on load
+            $(this).parents('label').toggleClass('checked', $(this).is(':checked'));
+
+            $(this).on('change', function() {
+
+                var fld_name = $(this).attr('name');
+                $('input[name=' + fld_name + ']', $(this).parents('form:first')).add(this).each(function() {
+                    $(this).parents('label').toggleClass('checked', $(this).is(':checked'));
+                });
+            });
+        });
+
+        // control input fields focus/blur state
+        $(':input').focus(function() {
+            $(this).parents('label').addClass('focus');
+        }).blur(function() {
+            $(this).parents('label')
+                .removeClass('focus')
+                .toggleClass('has-value', $(this).val()!=='')
+            ;
+        }).each(function() {
+            $(this).parents('label').toggleClass('has-value', $(this).val()!=='');
+        });
+
+        $('label').hover(
+            function() {
+                $(this).addClass('over');
+            }, 
+            function() {
+                $(this).removeClass('over');
+            }
+        ).filter(':has(.icon)').addClass('has-icon');
 
 
 

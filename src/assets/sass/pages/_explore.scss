@@ -82,7 +82,7 @@
 
 
 		@include breakpoint(700px) {
-			transform: translate(0,0) !important, translate3d(0,0,0) !important;
+			transform: translate(0,0) !important;
 		}
 	}
 
@@ -140,12 +140,15 @@
 		top: 20% !important;
 		width:100% !important;
 		height: auto !important;
-		min-height: 360px;
 		z-index:20;
 		opacity: 1;
 
 		transition-property: display,opacity, left, top, margin-top, width;
 		transition-duration: 0.3s;
+
+		@include breakpoint($sm) {
+			min-height: 360px;
+		}
 
 	}
 
@@ -182,6 +185,7 @@
 	h2 {
 		@include adjust-font-size-to($size-lg);
 		margin-top:0;
+		margin-bottom: rhythm(2);
 		padding-bottom: rhythm(2);
 		text-align: center;
 		border-bottom: 1px solid $color-borders;
@@ -191,9 +195,10 @@
 		display:none;
 		overflow: hidden;
 		
-		> h2,
 		> p {
+			margin-top:0;
 			text-align:center;
+			font-style: italic;
 		}
 		&.active {
 			display:block;
@@ -209,15 +214,44 @@
 				font-style: italic;
 			}
 
-			button {
-				float: right;
-				clear: both;
-			}
 
 			&:nth-of-type(2n+2) {
 				width: perc-width(320px, 480px);
 			}
 		}
+
+		button {
+			float: right;
+			clear: both;
+		}
+	}
+
+	.form-step-2 {
+		.form-col {
+
+			@include breakpoint($xs) {
+				&:nth-of-type(2) {
+					width:50%;
+					padding-left:4%;
+					border-left: 1px solid $color-borders;
+				}
+			}
+			.fb-connect {
+				width: 100%;
+				@include breakpoint($xs) {
+					margin-top: rhythm(15);
+				}
+			}
+
+		}
+		button {
+			float:right;
+			clear:both;
+		}
+	}
+
+	.form-step-3 {
+		text-align: center;
 	}
 	
 	.terms-link {
