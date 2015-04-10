@@ -112,8 +112,8 @@ window.fbAsyncInit = function() {
                     //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
                     var full_url = server_uri + result.imageUrl
                     console.log(full_url);
-                    $('#userimagecrop').attr('src', full_url);
-                    $('#fullImageUrl').val(full_url).show();
+                    $('#userimagecrop').attr('src', full_url).show();;
+                    $('#fullImageUrl').val(full_url)
                     $('#snapId').val(result.snapId);
                 } else {
                     console.log(result.error);
@@ -262,7 +262,7 @@ window.fbAsyncInit = function() {
 
                 var crop_data = send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
 
-                $('#fullImageUrl').hide();
+                $('#userimagecrop').hide();
                 $('.snapshot-form').addClass('active');
      
      /*

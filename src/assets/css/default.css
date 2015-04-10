@@ -1522,6 +1522,51 @@ button {
   line-height: 1.33333rem;
 }
 
+button {
+  background: #1a2550;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  padding: 0.33333rem 0.66667rem;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 20px;
+  line-height: 1.33333rem;
+}
+
+textarea {
+  background: #ededee;
+  border: 0;
+  padding: 0.66667rem;
+  margin: 0.66667rem 0;
+  height: 7.33333rem;
+}
+
+.input-text,
+.input-textarea,
+.input-select {
+  width: 100%;
+}
+.input-text input,
+.input-text textarea,
+.input-text select,
+.input-textarea input,
+.input-textarea textarea,
+.input-textarea select,
+.input-select input,
+.input-select textarea,
+.input-select select {
+  width: 100%;
+}
+
+label {
+  width: 100%;
+}
+label textarea {
+  width: 100%;
+}
+
 .page-header {
   margin-top: 2.66667rem;
   margin-bottom: 2.66667rem;
@@ -2261,6 +2306,13 @@ img.mfp-img {
 }
 .snapshot-form .form-step-1 .form-col {
   width: 30.20833%;
+}
+.snapshot-form .form-step-1 .form-col .label {
+  font-style: italic;
+}
+.snapshot-form .form-step-1 .form-col button {
+  float: right;
+  clear: both;
 }
 .snapshot-form .form-step-1 .form-col:nth-of-type(2n+2) {
   width: 66.66667%;

@@ -197,9 +197,18 @@
 	}
 
 	.form-step-1 {
-
+		
 		.form-col {
 			width: perc-width(145px, 480px);
+
+			.label {
+				font-style: italic;
+			}
+
+			button {
+				float: right;
+				clear: both;
+			}
 
 			&:nth-of-type(2n+2) {
 				width: perc-width(320px, 480px);

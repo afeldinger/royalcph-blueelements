@@ -28,3 +28,43 @@ select,
 button {
 	@include adjust-font-size-to($size-md);
 }
+
+button {
+	background:$color-brand;
+	color:#fff;
+	text-transform: uppercase;
+	text-align:center;
+	border:0;
+	padding: rhythm(1) rhythm(2);
+	@include adjust-font-size-to($size-sm);
+}
+.input-text {
+	
+}
+
+textarea {
+	background:#ededee;
+	border:0;
+	padding:rhythm(2);
+	margin: rhythm(2) 0;
+	height: rhythm(22);
+}
+
+
+.input-text,
+.input-textarea,
+.input-select {
+	width:100%;
+
+	input,
+	textarea,
+	select {
+		width: 100%;
+	}
+}
+label {
+	width:100%;
+	textarea {
+		width: 100%;
+	}
+}
