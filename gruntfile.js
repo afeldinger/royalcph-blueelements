@@ -170,7 +170,7 @@ module.exports = function(grunt) {
       js: {
           src: [
               'src/assets/js/libs/*.js', // All JS in the libs folder
-              'src/assets/js/*.js'  // Custom JS files
+              //'src/assets/js/*.js'  // Custom JS files
           ],
           dest: 'dist/assets/js/scripts.js',
       },
