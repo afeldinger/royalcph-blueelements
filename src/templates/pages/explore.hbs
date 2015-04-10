@@ -95,7 +95,7 @@ class: section-explore
 	</svg>
 </div>
 
-<div class="snapshot-form active">
+<div class="snapshot-form">
 	<a href="#" class="close">{{icon 'icon-close'}}<span>Close</span></a>
 	
 	<form id="form-snapshot-submit" action="" method="post">
@@ -105,6 +105,10 @@ class: section-explore
 	    <input type="hidden" id="userfacebookId" value="Facebook ID" />
 	    <input type="hidden" id="facebookSharePostId" value="Facebook share post ID" />
 	    <input type="hidden" id="fullImageUrl" value="" />
+		<input type="hidden" id="fb_link" value="http://blueelements.royalcopenhagen.com">
+		<input type="hidden" id="fb_name" value="@Umbraco.Field("")">
+		<input type="hidden" id="fb_caption" value="@Umbraco.Field("")">
+		<input type="hidden" id="fb_description" value="@Umbraco.Field("")">
 
 	    <div class="form-step form-step-1 active">
 		    <h2>WHAT MAKES THIS YOUR FAVORITE DETAIL?</h2>
