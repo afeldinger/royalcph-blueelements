@@ -140,6 +140,7 @@
 		left:0 !important;
 		top: 20% !important;
 		width:100% !important;
+		height: auto !important;
 		min-height: 360px;
 		z-index:20;
 		opacity: 1;
@@ -188,6 +189,7 @@
 
 	.form-step {
 		display:none;
+		overflow: hidden;
 
 		&.active {
 			display:block;

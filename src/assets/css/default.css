@@ -2208,6 +2208,7 @@ img.mfp-img {
   left: 0 !important;
   top: 20% !important;
   width: 100% !important;
+  height: auto !important;
   min-height: 360px;
   z-index: 20;
   opacity: 1;
@@ -2253,6 +2254,7 @@ img.mfp-img {
 }
 .snapshot-form .form-step {
   display: none;
+  overflow: hidden;
 }
 .snapshot-form .form-step.active {
   display: block;
