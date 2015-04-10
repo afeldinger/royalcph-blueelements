@@ -899,33 +899,40 @@ font-weight: 900;
 font-style: italic;
 }
 */
+/*
 @font-face {
   font-family: 'bodoni-svtytwo-1';
-  src: url("../fonts/BodoniSvtyTwoITCTTBook.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/BodoniSvtyTwoITCTTBook.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBook.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBook.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBook.svg#1a565e8a76ea597cd4cd4388d4d08105") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: 400;
+  src: url('../fonts/BodoniSvtyTwoITCTTBook.eot'); // IE9 Compat Modes
+  src: url('../fonts/BodoniSvtyTwoITCTTBook.eot?#iefix') format('embedded-opentype'), // IE6-IE8 // format('eot') ?
+       url('../fonts/BodoniSvtyTwoITCTTBook.woff') format('woff'), // Modern Browsers
+       url('../fonts/BodoniSvtyTwoITCTTBook.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../fonts/BodoniSvtyTwoITCTTBook.svg#1a565e8a76ea597cd4cd4388d4d08105') format('svg'); // Legacy iOS
+  font-style:   normal;
+  font-weight:  400;
 }
+
 @font-face {
   font-family: 'bodoni-svtytwo-1';
-  src: url("../fonts/BodoniSvtyTwoITCTTBold.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/BodoniSvtyTwoITCTTBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBold.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBold.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBold.svg#9aa64ce3c4781d177662f1291723ead4") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: 700;
+  src: url('../fonts/BodoniSvtyTwoITCTTBold.eot'); // IE9 Compat Modes
+  src: url('../fonts/BodoniSvtyTwoITCTTBold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../fonts/BodoniSvtyTwoITCTTBold.woff') format('woff'), // Modern Browsers
+       url('../fonts/BodoniSvtyTwoITCTTBold.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../fonts/BodoniSvtyTwoITCTTBold.svg#9aa64ce3c4781d177662f1291723ead4') format('svg'); // Legacy iOS
+  font-style:   normal;
+  font-weight:  700;
 }
+
 @font-face {
   font-family: 'bodoni-svtytwo-1';
-  src: url("../fonts/BodoniSvtyTwoITCTTBookIta.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/BodoniSvtyTwoITCTTBookIta.eot?#iefix") format("embedded-opentype"), url("../fonts/BodoniSvtyTwoITCTTBookIta.woff") format("woff"), url("../fonts/BodoniSvtyTwoITCTTBookIta.ttf") format("truetype"), url("../fonts/BodoniSvtyTwoITCTTBookIta.svg#db7b7489795eca1c2c221fea4c9f11a3") format("svg");
-  /* Legacy iOS */
-  font-style: italic;
-  font-weight: 400;
+  src: url('../fonts/BodoniSvtyTwoITCTTBookIta.eot'); // IE9 Compat Modes
+  src: url('../fonts/BodoniSvtyTwoITCTTBookIta.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../fonts/BodoniSvtyTwoITCTTBookIta.woff') format('woff'), // Modern Browsers
+       url('../fonts/BodoniSvtyTwoITCTTBookIta.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../fonts/BodoniSvtyTwoITCTTBookIta.svg#db7b7489795eca1c2c221fea4c9f11a3') format('svg'); // Legacy iOS
+  font-style:   italic;
+  font-weight:  400;
 }
+*/
 html {
   font-size: 93.75%;
   line-height: 0.33333em;
@@ -1162,8 +1169,6 @@ img.full-width {
 }
 .splash .splash-container .side1 {
   padding-top: 40px;
-}
-.splash .splash-container .side1 p {
   font-size: 1.8em;
 }
 .splash .splash-container .side2 {
@@ -1590,6 +1595,7 @@ button {
 
 .input-text input {
   border: 1px solid #bcbcbc;
+  padding: 3px 0.66667rem;
 }
 
 textarea {
