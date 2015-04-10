@@ -1603,7 +1603,7 @@ textarea {
   border: 0;
   padding: 0.66667rem;
   margin: 0.66667rem 0;
-  height: 7.33333rem;
+  height: 75px;
 }
 
 .input-text,
@@ -2299,8 +2299,8 @@ img.mfp-img {
 .snapshot-form {
   position: absolute;
   visibility: hidden;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 25%;
   width: 130px;
   height: 150px;
   background: #fff;
@@ -2311,7 +2311,6 @@ img.mfp-img {
   overflow: hidden;
 }
 .snapshot-form.active {
-  position: fixed;
   visibility: visible;
   left: 0 !important;
   top: 20% !important;
@@ -2347,14 +2346,15 @@ img.mfp-img {
 .snapshot-form form {
   display: block;
   overflow: hidden;
-  max-width: 32em;
+  max-width: 34.5em;
   margin: 3.33333rem auto;
+  padding: 0 1.25rem;
 }
 .snapshot-form h2 {
-  font-size: 25px;
-  font-size: 1.66667rem;
-  line-height: 30px;
-  line-height: 2rem;
+  font-size: 20px;
+  font-size: 1.33333rem;
+  line-height: 25px;
+  line-height: 1.66667rem;
   margin-top: 0;
   padding-bottom: 0.66667rem;
   text-align: center;
@@ -2363,6 +2363,10 @@ img.mfp-img {
 .snapshot-form .form-step {
   display: none;
   overflow: hidden;
+}
+.snapshot-form .form-step > h2,
+.snapshot-form .form-step > p {
+  text-align: center;
 }
 .snapshot-form .form-step.active {
   display: block;
@@ -2379,6 +2383,42 @@ img.mfp-img {
 }
 .snapshot-form .form-step-1 .form-col:nth-of-type(2n+2) {
   width: 66.66667%;
+}
+.snapshot-form .terms-link {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+.snapshot-form .terms-link a {
+  position: relative;
+  color: rgba(40, 43, 32, 0.6);
+  background: #fff;
+  font-style: italic;
+  line-height: 2em;
+  z-index: 5;
+  padding: 0 10px;
+  -webkit-transition: color .3s;
+          transition: color .3s;
+}
+.snapshot-form .terms-link a:hover {
+  color: #282b20;
+}
+.snapshot-form .terms-link:after {
+  content: '';
+  display: block;
+  height: 1px;
+  border-top: 1px solid #bcbcbc;
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+.snapshot-form .terms-content {
+  max-height: 1px;
+  overflow: hidden;
+  -webkit-transition: max-height .7s;
+          transition: max-height .7s;
+}
+.snapshot-form .terms-content.active {
+  max-height: 999em;
 }
 
 .section-facts {

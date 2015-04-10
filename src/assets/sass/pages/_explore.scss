@@ -122,8 +122,8 @@
 .snapshot-form {
 	position: absolute;
 	visibility: hidden;
-	top:0;
-	left:0;
+	top:10%;
+	left:25%;
 	width: 130px;
 	height: 150px;
 	background: #fff;
@@ -135,7 +135,6 @@
 
 
 	&.active {
-		position:fixed;
 		visibility: visible;
 		left:0 !important;
 		top: 20% !important;
@@ -175,12 +174,13 @@
 	form {
 		display:block;
 		overflow:hidden;
-		max-width: rel-width(480px);
+		max-width: rel-width(480px) + (2 * $content-margin-em);
 		margin:rhythm(10) auto;
+		padding: 0 $content-margin;
 	}
 
 	h2 {
-		@include adjust-font-size-to($size-xl);
+		@include adjust-font-size-to($size-lg);
 		margin-top:0;
 		padding-bottom: rhythm(2);
 		text-align: center;
@@ -190,7 +190,11 @@
 	.form-step {
 		display:none;
 		overflow: hidden;
-
+		
+		> h2,
+		> p {
+			text-align:center;
+		}
 		&.active {
 			display:block;
 		}
@@ -216,4 +220,42 @@
 		}
 	}
 	
+	.terms-link {
+		display:block;
+		margin-top:rhythm(3);
+		text-align: center;
+
+		a {
+			position:relative;
+			color: rgba($color-text-dark, .6);
+			background:#fff;
+			font-style: italic;
+			line-height: 2em;
+			z-index:5;
+			padding: 0 10px;
+			transition: color .3s;
+			
+
+			&:hover {
+				color: rgba($color-text-dark, 1);
+			}
+		}
+		&:after {
+			content: '';
+			display:block;
+			height:1px;
+			border-top: 1px solid $color-borders;
+			margin-top:-1em;
+			margin-bottom:1em;
+		}
+	}
+	.terms-content {
+		max-height:1px;
+		overflow: hidden;
+		transition: max-height .7s;
+
+		&.active {
+			max-height:999em;
+		}
+	}
 }

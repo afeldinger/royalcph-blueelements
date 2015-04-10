@@ -329,6 +329,11 @@ window.fbAsyncInit = function() {
                 shareImageSnap();
             });
 
+            $(this).find('.terms-link a').click(function(event) {
+                event.preventDefault();
+                $('.terms-content').toggleClass('active');
+            });
+
         });
 
 
