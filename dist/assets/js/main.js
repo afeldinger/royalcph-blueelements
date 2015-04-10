@@ -183,7 +183,7 @@ window.fbAsyncInit = function() {
     var touchevents = function() {
         return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
     };
-    
+
     $(document).ready(function() {
 
         if (!touchevents()) {
@@ -327,11 +327,11 @@ window.fbAsyncInit = function() {
             });
 
 
-            $(this).find('#share-btn').onclick = function() {
-                updateImageSnap($('#snapId').val(), "", "", "", "", "", true, "", null);
+            $(this).find('#share-btn').click(function(event) {
+                event.preventDefault();
+                updateImageSnap($('#snapId').val(), '', '', '', '', '', true, '', null);
                 shareImageSnap();
-                return false;
-            }
+            });
 
         });
 
