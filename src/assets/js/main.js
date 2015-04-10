@@ -106,7 +106,7 @@ window.fbAsyncInit = function() {
                     console.log(result);
 
                     //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
-                    var full_url = server_uri + result.imageUrl;
+                    var full_url = result.imageUrl;
                     console.log(full_url);
                     $('#userimagecrop').attr('src', full_url).show();
                     $('#fullImageUrl').val(full_url);
@@ -180,15 +180,7 @@ window.fbAsyncInit = function() {
     }
 
 
-    var touchevents = function() {
-        return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
-    };
-
     $(document).ready(function() {
-
-        if (!touchevents()) {
-            $('body').addClass('no-touch');
-        }
 
         pageID = $('#pageId').val();
         
@@ -203,6 +195,8 @@ window.fbAsyncInit = function() {
             
             var viewfinder = $(this).find('#snapshot-viewport');
             var viewfinder_width = viewfinder.width();
+
+            var x_offset = 0;
             
             viewfinder.draggable({
                 containment: 'parent',
@@ -215,7 +209,7 @@ window.fbAsyncInit = function() {
                     if (viewport_width < viewport_min_width) {
                         var x = $(this).offset().left;
                         var x_ratio = x / (viewport_width - viewfinder_width);
-                        var x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
+                        x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
                         viewport_img.css('transform', 'translate(' + x_offset + 'px,0)');
                     }
                 },
@@ -230,9 +224,11 @@ window.fbAsyncInit = function() {
                 var pos = $(this).position();
                 var top = pos.top;
                 var left = pos.left;
+                if (viewport_width < viewport_min_width) {
+                    left -= x_offset;
+                }
                 var scale = 2226 / viewport_min_width;
 
-                //console.log(pos);
 
 /*
                 $("<img/>")

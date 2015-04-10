@@ -171,6 +171,7 @@ module.exports = function(grunt) {
           src: [
               'src/assets/js/libs/*.js', // All JS in the libs folder
               //'src/assets/js/*.js'  // Custom JS files
+              '!src/assets/js/libs/modernizr.js'
           ],
           dest: 'dist/assets/js/scripts.js',
       },

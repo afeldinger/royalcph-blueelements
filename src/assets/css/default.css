@@ -1338,7 +1338,7 @@ html[xmlns] .flexslider .slides {
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
-  color: #1a2550;
+  color: #002454;
   -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
   font-family: "icons";
@@ -1451,7 +1451,7 @@ html[xmlns] .flexslider .slides {
   width: 9px;
   height: 9px;
   display: block;
-  background: #1a2550;
+  background: #002454;
   cursor: pointer;
   text-indent: -9999px;
   opacity: .5;
@@ -1461,7 +1461,7 @@ html[xmlns] .flexslider .slides {
 }
 .flex-control-paging li a:hover {
   opacity: 1;
-  background: #1a2550;
+  background: #002454;
 }
 .flex-control-paging li a.flex-active {
   background: #ffeba2;
@@ -1581,7 +1581,7 @@ button {
 }
 
 button {
-  background: #1a2550;
+  background: #002454;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -2293,7 +2293,7 @@ img.mfp-img {
   line-height: 1.33333rem;
 }
 .snapshot-view .viewport a:hover {
-  color: #1a2550;
+  color: #002454;
 }
 
 .snapshot-form {
@@ -2556,14 +2556,14 @@ img.mfp-img {
   }
 }
 .tiles .fact-blue {
-  background: #1a2550 url(../img/bg_texture_blue.jpg);
+  background: #002454 url(../img/bg_texture_blue.jpg);
   background-size: cover;
   color: #fff;
 }
 .tiles .fact-white {
   background: #fff url(../img/bg_texture_white.jpg);
   background-size: cover;
-  color: #1a2550;
+  color: #002454;
 }
 .tiles .snapshot {
   position: relative;
@@ -2574,7 +2574,7 @@ img.mfp-img {
   width: 100%;
   bottom: -100%;
   padding: 9%;
-  background: rgba(26, 37, 80, 0.8);
+  background: rgba(0, 36, 84, 0.8);
   color: #fff;
   text-shadow: none;
   text-align: center;
@@ -2774,7 +2774,7 @@ img.mfp-img {
 
 .section-products {
   background: #fff;
-  color: #1a2550;
+  color: #002454;
 }
 .section-products .content-wrapper {
   padding-top: 0;
@@ -2849,7 +2849,7 @@ img.mfp-img {
 }
 
 .store-locator {
-  background: #1a2550;
+  background: #002454;
   margin-left: -1.25rem;
   margin-right: -1.25rem;
 }
@@ -2892,7 +2892,7 @@ img.mfp-img {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    background: #1a2550;
+    background: #002454;
   }
   .store-locator a {
     position: absolute;
