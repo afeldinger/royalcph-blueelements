@@ -34,12 +34,11 @@ function shareImageSnap() {
         display: 'popup',
         method: 'feed',
         //href: 'https://developers.facebook.com/docs/',
-        link: 'http://local.blueelements.rc.com/dk',
+        link: $('#fb_link').val(),
         picture: $('#fullImageUrl').val(),
-        //picture: 'http://placehold.it/550x450',
-        name: 'Name',
-        caption: 'Caption text',
-        description: 'Description'
+        name: $('#fb_name').val(),
+        caption: $('#fb_caption').val(),
+        description: $('#fb_description').val()
 
     }, function(response) {
         if (response !== null && response.post_id !== null && response.post_id !== '') {
@@ -77,9 +76,6 @@ window.fbAsyncInit = function() {
 
     var pageID = null;
 
-    var touchevents = function() {
-        return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
-    };
 
 
     // Ajax requests
@@ -184,6 +180,10 @@ window.fbAsyncInit = function() {
     }
 
 
+    var touchevents = function() {
+        return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)? true:false;
+    };
+    
     $(document).ready(function() {
 
         if (!touchevents()) {
@@ -326,6 +326,13 @@ window.fbAsyncInit = function() {
 
             });
 
+
+            $(this).find('#share-btn').onclick = function() {
+                updateImageSnap($('#snapId').val(), "", "", "", "", "", true, "", null);
+                shareImageSnap();
+                return false;
+            }
+
         });
 
 
@@ -339,11 +346,6 @@ window.fbAsyncInit = function() {
         }
  
 
-        document.getElementById('share-btn').onclick = function() {
-            updateImageSnap($('#snapId').val(), "", "", "", "", "", true, "", null);
-            shareImageSnap();
-            return false;
-        }
  */
 
 

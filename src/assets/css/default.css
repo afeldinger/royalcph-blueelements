@@ -844,28 +844,28 @@ font-style: italic;
 @font-face {
   font-family: "Monotype Bodoni W01";
   src: url("../fonts/68217aa1-2e0f-46ff-8346-2dc7f2b6da58.eot?#iefix");
-  src: url("../fonts/68217aa1-2e0f-46ff-8346-2dc7f2b6da58.eot?#iefix") format("eot"), url("../fonts/53e23b34-cb9c-473a-8eca-5e1dc6dac872.woff2") format("woff2"), url("../fonts/4998dec5-0c5b-4fbc-bcb0-b8881a830aab.woff") format("woff"), url("../fonts/fedc1312-4f84-4eef-9fea-ea0863dab099.ttf") format("truetype"), url("../fonts/6f65f35b-416f-411e-9985-5ba096d468b6.svg#6f65f35b-416f-411e-9985-5ba096d468b6") format("svg");
+  src: url("../fonts/68217aa1-2e0f-46ff-8346-2dc7f2b6da58.eot?#iefix") format("eot"), url("../fonts/4998dec5-0c5b-4fbc-bcb0-b8881a830aab.woff") format("woff"), url("../fonts/fedc1312-4f84-4eef-9fea-ea0863dab099.ttf") format("truetype"), url("../fonts/6f65f35b-416f-411e-9985-5ba096d468b6.svg#6f65f35b-416f-411e-9985-5ba096d468b6") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Monotype Bodoni W01";
   src: url("../fonts/a0a6fabd-52f1-4bb0-ab19-96dbd11fbbd7.eot?#iefix");
-  src: url("../fonts/a0a6fabd-52f1-4bb0-ab19-96dbd11fbbd7.eot?#iefix") format("eot"), url("../fonts/728e98fa-05f0-4756-a37f-4e99eba723dd.woff2") format("woff2"), url("../fonts/a0316db4-7327-4a8f-846c-649ae16d512b.woff") format("woff"), url("../fonts/5b0905b2-1ac9-459a-a860-4731600070ef.ttf") format("truetype"), url("../fonts/a2c65c78-d700-4bbb-b80c-6775921b9457.svg#a2c65c78-d700-4bbb-b80c-6775921b9457") format("svg");
+  src: url("../fonts/a0a6fabd-52f1-4bb0-ab19-96dbd11fbbd7.eot?#iefix") format("eot"), url("../fonts/a0316db4-7327-4a8f-846c-649ae16d512b.woff") format("woff"), url("../fonts/5b0905b2-1ac9-459a-a860-4731600070ef.ttf") format("truetype"), url("../fonts/a2c65c78-d700-4bbb-b80c-6775921b9457.svg#a2c65c78-d700-4bbb-b80c-6775921b9457") format("svg");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Monotype Bodoni W01";
   src: url("../fonts/ad42559d-c219-4fda-bd8e-c85aebe62e62.eot?#iefix");
-  src: url("../fonts/ad42559d-c219-4fda-bd8e-c85aebe62e62.eot?#iefix") format("eot"), url("../fonts/ed1bac45-e5f7-4c2d-bead-65bce2e942dd.woff2") format("woff2"), url("../fonts/6a76c8c6-2abe-4842-b3e2-e675c21ddd49.woff") format("woff"), url("../fonts/aaf1ac29-cd40-43ec-9a28-a947df44d661.ttf") format("truetype"), url("../fonts/cf4a1397-b8a7-47e5-981d-acab77e93efc.svg#cf4a1397-b8a7-47e5-981d-acab77e93efc") format("svg");
+  src: url("../fonts/ad42559d-c219-4fda-bd8e-c85aebe62e62.eot?#iefix") format("eot"), url("../fonts/6a76c8c6-2abe-4842-b3e2-e675c21ddd49.woff") format("woff"), url("../fonts/aaf1ac29-cd40-43ec-9a28-a947df44d661.ttf") format("truetype"), url("../fonts/cf4a1397-b8a7-47e5-981d-acab77e93efc.svg#cf4a1397-b8a7-47e5-981d-acab77e93efc") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Monotype Bodoni W01";
   src: url("../fonts/e13cc406-81c1-4488-98f4-9681fcd4ad90.eot?#iefix");
-  src: url("../fonts/e13cc406-81c1-4488-98f4-9681fcd4ad90.eot?#iefix") format("eot"), url("../fonts/56cfc387-d0fb-4db1-8c63-7e9181861403.woff2") format("woff2"), url("../fonts/70d2660b-742e-42fd-8a76-4bcb1c2f9b40.woff") format("woff"), url("../fonts/942ebb33-f273-4c9f-bfce-f12b16fc03e0.ttf") format("truetype"), url("../fonts/744ea55c-40b6-48d2-93f4-5d1d056ca8fa.svg#744ea55c-40b6-48d2-93f4-5d1d056ca8fa") format("svg");
+  src: url("../fonts/e13cc406-81c1-4488-98f4-9681fcd4ad90.eot?#iefix") format("eot"), url("../fonts/70d2660b-742e-42fd-8a76-4bcb1c2f9b40.woff") format("woff"), url("../fonts/942ebb33-f273-4c9f-bfce-f12b16fc03e0.ttf") format("truetype"), url("../fonts/744ea55c-40b6-48d2-93f4-5d1d056ca8fa.svg#744ea55c-40b6-48d2-93f4-5d1d056ca8fa") format("svg");
   font-weight: 700;
   font-style: italic;
 }
