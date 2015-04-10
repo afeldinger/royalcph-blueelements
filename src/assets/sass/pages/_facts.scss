@@ -37,6 +37,7 @@
 		width: 60%;
 		margin-left: 5%;
 		min-height: 600px;
+		padding-bottom:300px;
 
 		p {
 			@include adjust-font-size-to($size-md);
@@ -44,6 +45,8 @@
 		}
 
 		@include breakpoint($xs) {
+			padding-bottom:0;
+
 			p {
 				@include adjust-font-size-to($size-xl);
 			}
@@ -61,9 +64,11 @@
 	}
 	
 	.pricing-info {
+
 		position:absolute;
-		top:510px;
+		top:580px;
 		right: 80px;
+
 		@include breakpoint($xs) {
 			top: 440px;
 			right: 200px;
@@ -220,10 +225,12 @@
 		width: 80%;
 
 		background: url(../img/gx_facts_mood01.jpg) no-repeat 50% 50%;
+		background-attachment: fixed;
+		background-size: cover;
 
-		.no-touch & {
-			background-attachment: fixed;
-			background-size: cover;
+		.touch & {
+			min-height: none;
+			background-attachment: scroll;
 		}
 
 		img {

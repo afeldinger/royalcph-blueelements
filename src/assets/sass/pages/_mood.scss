@@ -5,13 +5,20 @@
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 
-	.no-touch & {
-		min-height:465px;
-		background-attachment: fixed;
-		background-size: cover;
-		
+	min-height:465px;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	img {
+		opacity: 0;
+	}
+
+	.touch & {
+		min-height: 0;
+		background: none;
+
 		img {
-			opacity: 0;
+			opacity: 1;
 		}
 	}
 	

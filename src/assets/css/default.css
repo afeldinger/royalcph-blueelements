@@ -2212,12 +2212,14 @@ img.mfp-img {
 
 .section-designer {
   min-height: 465px;
-  background: #f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 45% 0;
-  color: #282b20;
-}
-.no-touch .section-designer {
+  background: #f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 60% 0;
   background-attachment: fixed;
   background-size: cover;
+  color: #282b20;
+}
+.touch .section-designer {
+  min-height: none;
+  background-attachment: scroll;
 }
 .section-designer .content-wrapper {
   padding-top: 2.66667rem;
@@ -2227,12 +2229,17 @@ img.mfp-img {
 .section-designer .main-content {
   display: inline;
   float: left;
-  width: 9.33333em;
+  width: 10.66667em;
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.7);
   margin-left: 5%;
 }
 @media (min-width: 45em) {
   .section-designer .main-content {
     margin-left: 17.70833%;
+    width: 9.33333em;
+    padding: 0;
+    background: transparent;
   }
 }
 .section-designer h1 {
@@ -2240,6 +2247,7 @@ img.mfp-img {
   font-size: 1.66667rem;
   line-height: 30px;
   line-height: 2rem;
+  margin-top: 0;
 }
 @media (min-width: 45em) {
   .section-designer h1 {
@@ -2536,6 +2544,10 @@ img.mfp-img {
 .snapshot-form .terms-content.active {
   max-height: 999em;
 }
+.snapshot-form .terms-content a {
+  color: inherit;
+  text-decoration: underline;
+}
 
 .section-facts {
   overflow: hidden;
@@ -2574,6 +2586,7 @@ img.mfp-img {
   width: 60%;
   margin-left: 5%;
   min-height: 600px;
+  padding-bottom: 300px;
 }
 .section-facts .main-content p {
   font-size: 15px;
@@ -2583,6 +2596,9 @@ img.mfp-img {
   font-style: italic;
 }
 @media (min-width: 30em) {
+  .section-facts .main-content {
+    padding-bottom: 0;
+  }
   .section-facts .main-content p {
     font-size: 25px;
     font-size: 1.66667rem;
@@ -2605,7 +2621,7 @@ img.mfp-img {
 }
 .section-facts .pricing-info {
   position: absolute;
-  top: 510px;
+  top: 580px;
   right: 80px;
 }
 @media (min-width: 30em) {
@@ -2770,10 +2786,12 @@ img.mfp-img {
   margin-top: 40%;
   width: 80%;
   background: url(../img/gx_facts_mood01.jpg) no-repeat 50% 50%;
-}
-.no-touch .tiles #tiles-mood-1 {
   background-attachment: fixed;
   background-size: cover;
+}
+.touch .tiles #tiles-mood-1 {
+  min-height: none;
+  background-attachment: scroll;
 }
 .tiles #tiles-mood-1 img {
   display: none;
@@ -2855,14 +2873,19 @@ img.mfp-img {
   background-image: url(../img/gx_mood01.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
-.no-touch .section-mood-1 {
   min-height: 465px;
   background-attachment: fixed;
   background-size: cover;
 }
-.no-touch .section-mood-1 img {
+.section-mood-1 img {
   opacity: 0;
+}
+.touch .section-mood-1 {
+  min-height: 0;
+  background: none;
+}
+.touch .section-mood-1 img {
+  opacity: 1;
 }
 .section-mood-1 .content-wrapper {
   margin-top: 0;

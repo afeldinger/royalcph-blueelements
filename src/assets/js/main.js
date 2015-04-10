@@ -19,9 +19,9 @@ function showAccountInfo() {
         console.log(response);
         if (response !== null && response.id !== null && response.id !== '') {
             var nameSplit = response.name.split(' ');
-            $('#userfirstname').val(nameSplit[0].trim());
-            $('#userlastname').val(response.name.substring(nameSplit[0].length).trim());
-            $('#useremail').val(response.email);
+            $('#userfirstname').val(nameSplit[0].trim()).trigger('change');
+            $('#userlastname').val(response.name.substring(nameSplit[0].length).trim()).trigger('change');
+            $('#useremail').val(response.email).trigger('change');
             $('#userfacebookId').val(response.id);
             
         }

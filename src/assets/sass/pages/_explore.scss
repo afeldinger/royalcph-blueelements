@@ -301,5 +301,10 @@
 		&.active {
 			max-height:999em;
 		}
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
 	}
 }

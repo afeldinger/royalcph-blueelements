@@ -2,11 +2,13 @@
 .section-designer {
 
 	min-height:465px;
-	background:#f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 45% 0;
+	background:#f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 60% 0;
+	background-attachment: fixed;
+	background-size: cover;
 
-	.no-touch & {
-		background-attachment: fixed;
-		background-size: cover;
+	.touch & {
+		min-height: none;
+		background-attachment: scroll;
 	}
 
 	color: $color-text-dark;
@@ -22,16 +24,22 @@
 		display:inline;
 		float:left;
 
-		width: rel-width(140px);
+		width: rel-width(160px);
+		padding: 10px;
+		background-color: rgba(#f0f0f0, .7);
 		margin-left: 5%;
 		
 		@include breakpoint($sm) {
 			margin-left: perc-width(170px);
+			width: rel-width(140px);
+			padding:0;
+			background: transparent;
 		}
 	}
 	
 	h1 {
 		@include adjust-font-size-to($size-xl);
+		margin-top:0;
 		@include breakpoint($sm) {
 			@include adjust-font-size-to($size-xxl);
 		}
