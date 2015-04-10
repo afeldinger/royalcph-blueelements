@@ -67,6 +67,11 @@ window.fbAsyncInit = function() {
 (function() {
     'use strict';
 
+
+    if (!touchevents()) {
+        $('body').addClass('no-touch');
+    }
+    
     // Base url for ajax requests
     
     var server_uri = '';
@@ -186,9 +191,6 @@ window.fbAsyncInit = function() {
 
     $(document).ready(function() {
 
-        if (!touchevents()) {
-            $('body').addClass('no-touch');
-        }
 
         pageID = $('#pageId').val();
         
