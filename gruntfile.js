@@ -301,6 +301,12 @@ module.exports = function(grunt) {
             cwd: 'src/assets/js/',
             src: ['main.js'],
             dest: 'dist/assets/js/',
+          },
+          {
+            expand: true,
+            cwd: 'src/assets/favicons/',
+            src: ['*'],
+            dest: 'dist/',
           }
         ],
       },
