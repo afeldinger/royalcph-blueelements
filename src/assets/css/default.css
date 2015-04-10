@@ -2410,16 +2410,16 @@ img.mfp-img {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
   color: #282b20;
 }
 .snapshot-form .close:before {
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   text-align: center;
 }
 .snapshot-form .close span:nth-of-type(n+2) {
@@ -2455,14 +2455,24 @@ img.mfp-img {
 .snapshot-form .form-step.active {
   display: block;
 }
-.snapshot-form .form-step-1 .form-col {
-  width: 30.20833%;
+.snapshot-form .form-step-1 .form-col img {
+  max-width: 50%;
+  margin: 15px auto;
 }
 .snapshot-form .form-step-1 .form-col .label {
   font-style: italic;
 }
-.snapshot-form .form-step-1 .form-col:nth-of-type(2n+2) {
-  width: 66.66667%;
+@media (min-width: 30em) {
+  .snapshot-form .form-step-1 .form-col {
+    width: 30.20833%;
+  }
+  .snapshot-form .form-step-1 .form-col:nth-of-type(2n+2) {
+    width: 66.66667%;
+  }
+  .snapshot-form .form-step-1 .form-col img {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 .snapshot-form .form-step-1 button {
   float: right;
