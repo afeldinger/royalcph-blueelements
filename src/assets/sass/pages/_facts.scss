@@ -1,10 +1,11 @@
 
 .section-facts {
 	@extend %gold-main-content;
+	position:static;
 	overflow: hidden;
 
 	.content-wrapper {
-		position:relative;
+		position:static;
 	}
 
 	svg {
@@ -36,8 +37,7 @@
 	.main-content {
 		width: 60%;
 		margin-left: 5%;
-		min-height: 600px;
-		padding-bottom:300px;
+		min-height: 500px;
 
 		p {
 			@include adjust-font-size-to($size-md);
@@ -45,7 +45,6 @@
 		}
 
 		@include breakpoint($xs) {
-			padding-bottom:0;
 
 			p {
 				@include adjust-font-size-to($size-xl);
@@ -53,7 +52,7 @@
 		}
 
 		@include breakpoint($sm) {
-			min-height: 790px;
+			min-height: 490px;
 			width: rel-width(300px);
 			margin-left: perc-width(170px);
 
@@ -62,7 +61,7 @@
 			}
 		}
 	}
-	
+	/*
 	.pricing-info {
 
 		position:absolute;
@@ -82,6 +81,19 @@
 			top: 650px;
 		}
 	}
+	*/
+	.pricing-info {
+		min-height:250px;
+		margin-left: 50%;
+		@include breakpoint($sm) {
+			min-height: 300px;
+			margin-left:0;
+		}
+		@include breakpoint($lg) {
+			margin-right: 10%;
+		}
+
+	}
 
 	ul.tiles {
 		clear:both;
@@ -92,7 +104,7 @@
 }
 
 .tiles {
-	position:relative;
+	position:static;
 	display:block;
 	overflow:hidden;
 	margin:-20% 0 0;
@@ -221,6 +233,7 @@
 	}
 
 	#tiles-mood-1 {
+		position:static;
 		@include tile-position(0, 2);
 		width: 80%;
 

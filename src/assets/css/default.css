@@ -2211,6 +2211,7 @@ img.mfp-img {
 }
 
 .section-designer {
+  position: static;
   min-height: 465px;
   background: #f0f0f0 url(../img/gx_louise_campbell.jpg) no-repeat 60% 0;
   background-attachment: fixed;
@@ -2550,10 +2551,32 @@ img.mfp-img {
 }
 
 .section-facts {
+  position: static;
   overflow: hidden;
+  	/*
+  	.pricing-info {
+  
+  		position:absolute;
+  		top:580px;
+  		right: 80px;
+  
+  		@include breakpoint($xs) {
+  			top: 440px;
+  			right: 200px;
+  		}
+  		@include breakpoint($sm) {
+  			top:600px;
+  			right:340px;
+  		}
+  		@include breakpoint($md) {
+  			right:420px;
+  			top: 650px;
+  		}
+  	}
+  	*/
 }
 .section-facts .content-wrapper {
-  position: relative;
+  position: static;
 }
 .section-facts svg {
   display: inline;
@@ -2585,8 +2608,7 @@ img.mfp-img {
 .section-facts .main-content {
   width: 60%;
   margin-left: 5%;
-  min-height: 600px;
-  padding-bottom: 300px;
+  min-height: 500px;
 }
 .section-facts .main-content p {
   font-size: 15px;
@@ -2596,9 +2618,6 @@ img.mfp-img {
   font-style: italic;
 }
 @media (min-width: 30em) {
-  .section-facts .main-content {
-    padding-bottom: 0;
-  }
   .section-facts .main-content p {
     font-size: 25px;
     font-size: 1.66667rem;
@@ -2608,7 +2627,7 @@ img.mfp-img {
 }
 @media (min-width: 45em) {
   .section-facts .main-content {
-    min-height: 790px;
+    min-height: 490px;
     width: 20em;
     margin-left: 17.70833%;
   }
@@ -2620,26 +2639,18 @@ img.mfp-img {
   }
 }
 .section-facts .pricing-info {
-  position: absolute;
-  top: 580px;
-  right: 80px;
-}
-@media (min-width: 30em) {
-  .section-facts .pricing-info {
-    top: 440px;
-    right: 200px;
-  }
+  min-height: 250px;
+  margin-left: 50%;
 }
 @media (min-width: 45em) {
   .section-facts .pricing-info {
-    top: 600px;
-    right: 340px;
+    min-height: 300px;
+    margin-left: 0;
   }
 }
 @media (min-width: 60em) {
   .section-facts .pricing-info {
-    right: 420px;
-    top: 650px;
+    margin-right: 10%;
   }
 }
 .section-facts ul.tiles {
@@ -2649,7 +2660,7 @@ img.mfp-img {
 }
 
 .tiles {
-  position: relative;
+  position: static;
   display: block;
   overflow: hidden;
   margin: -20% 0 0;
@@ -2782,6 +2793,7 @@ img.mfp-img {
           transform: translate3d(0, 0, 0);
 }
 .tiles #tiles-mood-1 {
+  position: static;
   margin-left: 0%;
   margin-top: 40%;
   width: 80%;
@@ -2876,6 +2888,7 @@ img.mfp-img {
   min-height: 465px;
   background-attachment: fixed;
   background-size: cover;
+  position: static;
 }
 .section-mood-1 img {
   opacity: 0;
