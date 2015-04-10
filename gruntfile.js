@@ -300,7 +300,10 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/assets/js/',
-            src: ['main.js'],
+            src: [
+              'main.js',
+              'libs/modernizr.min.js'
+            ],
             dest: 'dist/assets/js/',
           },
           {
