@@ -133,6 +133,7 @@
 	opacity: 0;
 	overflow: hidden;
 
+
 	&.active {
 		position:fixed;
 		visibility: visible;
@@ -172,6 +173,7 @@
 
 	form {
 		display:block;
+		overflow:hidden;
 		max-width: rel-width(480px);
 		margin:rhythm(10) auto;
 	}
