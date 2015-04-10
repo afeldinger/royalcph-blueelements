@@ -35,8 +35,8 @@ function shareImageSnap() {
         method: 'feed',
         //href: 'https://developers.facebook.com/docs/',
         link: 'http://local.blueelements.rc.com/dk',
-        //picture: $('#fullImageUrl').val(),
-        picture: 'http://placehold.it/550x450',
+        picture: $('#fullImageUrl').val(),
+        //picture: 'http://placehold.it/550x450',
         name: 'Name',
         caption: 'Caption text',
         description: 'Description'
@@ -52,7 +52,7 @@ function shareImageSnap() {
 /* Facebook connect */
 window.fbAsyncInit = function() {
     FB.init({
-        appId: '287716124685668',
+        appId: $('#facebookAppId').val(),
         xfbml: true,
         version: 'v2.2'
     });
@@ -110,10 +110,10 @@ window.fbAsyncInit = function() {
                     console.log(result);
 
                     //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
-                    var full_url = server_uri + result.imageUrl
+                    var full_url = server_uri + result.imageUrl;
                     console.log(full_url);
-                    $('#userimagecrop').attr('src', full_url).show();;
-                    $('#fullImageUrl').val(full_url)
+                    $('#userimagecrop').attr('src', full_url).show();
+                    $('#fullImageUrl').val(full_url);
                     $('#snapId').val(result.snapId);
                 } else {
                     console.log(result.error);
@@ -292,7 +292,7 @@ window.fbAsyncInit = function() {
 
             $(this).find('form').submit(function(event) {
                 event.preventDefault();
-            })
+            });
             /*
             $(this).find('.form-step button.next').click(function(event) {
                 event.preventDefault();

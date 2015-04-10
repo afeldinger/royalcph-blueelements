@@ -39,7 +39,9 @@ button {
 	@include adjust-font-size-to($size-sm);
 }
 .input-text {
-	
+	input {
+		border: 1px solid $color-borders;
+	}
 }
 
 textarea {

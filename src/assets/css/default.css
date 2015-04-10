@@ -1588,6 +1588,10 @@ button {
   line-height: 1.33333rem;
 }
 
+.input-text input {
+  border: 1px solid #bcbcbc;
+}
+
 textarea {
   background: #ededee;
   border: 0;
