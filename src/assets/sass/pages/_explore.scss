@@ -164,7 +164,10 @@
 			line-height: 32px;
 			text-align:center;
 		}
-
+		
+		span:nth-of-type(n+2) {
+			display:none;
+		}
 	}
 
 	form {

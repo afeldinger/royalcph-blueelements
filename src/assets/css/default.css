@@ -2232,6 +2232,9 @@ img.mfp-img {
   line-height: 32px;
   text-align: center;
 }
+.snapshot-form .close span:nth-of-type(n+2) {
+  display: none;
+}
 .snapshot-form form {
   display: block;
   max-width: 32em;
