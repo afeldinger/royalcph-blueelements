@@ -11,3 +11,9 @@
 @function rel-width($width, $rel: $base-font-size) {
   @return $width / $rel * 1em;
 }
+
+
+@mixin tile-position($x:0, $y:0, $col-size:0.2) {
+	margin-left: $x * $col-size * 100%;
+	margin-top: $y * $col-size * 100%;
+}

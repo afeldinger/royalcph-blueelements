@@ -776,7 +776,7 @@ body {
 }
 
 body {
-  background: url(../img/bg_marble.jpg) 50% 0;
+  background: #232a32 url(../img/bg_marble.jpg) 50% 0;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1140,6 +1140,12 @@ img.full-width {
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.33333rem;
+}
+.pricing-info .product-name {
+  font-size: 25px;
+  font-size: 1.66667rem;
+  line-height: 30px;
+  line-height: 2rem;
 }
 .pricing-info .product-msrp .label {
   display: block;
@@ -2122,7 +2128,7 @@ img.mfp-img {
   .section-explore .pricing-info {
     position: absolute;
     right: 25%;
-    right: calc(50% - 200px);
+    right: calc(50% - 240px);
     bottom: 80px;
   }
 }
@@ -2322,8 +2328,14 @@ img.mfp-img {
 }
 .section-facts .pricing-info {
   position: absolute;
-  top: 440px;
-  right: 200px;
+  top: 510px;
+  right: 80px;
+}
+@media (min-width: 30em) {
+  .section-facts .pricing-info {
+    top: 440px;
+    right: 200px;
+  }
 }
 @media (min-width: 45em) {
   .section-facts .pricing-info {
@@ -2333,7 +2345,8 @@ img.mfp-img {
 }
 @media (min-width: 60em) {
   .section-facts .pricing-info {
-    right: 500px;
+    right: 420px;
+    top: 650px;
   }
 }
 .section-facts ul.tiles {

@@ -63,6 +63,9 @@ img.full-width {
 		margin: 0;
 		@include adjust-font-size-to($size-md);
 	}
+	.product-name {
+		@include adjust-font-size-to($size-xl);
+	}
 	.product-msrp {
 
 		.label {

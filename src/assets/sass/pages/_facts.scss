@@ -62,15 +62,19 @@
 	
 	.pricing-info {
 		position:absolute;
-		top:440px;
-		right: 200px;
-
+		top:510px;
+		right: 80px;
+		@include breakpoint($xs) {
+			top: 440px;
+			right: 200px;
+		}
 		@include breakpoint($sm) {
 			top:600px;
 			right:340px;
 		}
 		@include breakpoint($md) {
-			right:500px;
+			right:420px;
+			top: 650px;
 		}
 	}
 
@@ -209,12 +213,6 @@
 		}
 
 
-	}
-
-
-	@mixin tile-position($x:0, $y:0, $col-size:0.2) {
-		margin-left: $x * $col-size * 100%;
-		margin-top: $y * $col-size * 100%;
 	}
 
 	#tiles-mood-1 {
