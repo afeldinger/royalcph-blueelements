@@ -1,4 +1,4 @@
-
+var FB;
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
@@ -10,71 +10,71 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
-// Retrieve FB account details and use in fields
-function showAccountInfo() {
-    FB.api('/me?fields=name,picture,email', function(response) {
-        //Set variable her!!
-        //document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
-        console.log(response);
-        if (response !== null && response.id !== null && response.id !== '') {
-            var nameSplit = response.name.split(' ');
-            $('#userfirstname').val(nameSplit[0].trim()).trigger('change');
-            $('#userlastname').val(response.name.substring(nameSplit[0].length).trim()).trigger('change');
-            $('#useremail').val(response.email).trigger('change');
-            $('#userfacebookId').val(response.id);
-            
-        }
-    });
-}
-
-// Share snapshot on FB
-function shareImageSnap() {
-    FB.ui({
-        display: 'popup',
-        method: 'feed',
-        //href: 'https://developers.facebook.com/docs/',
-        link: $('#fb_link').val(),
-        picture: $('#fullImageUrl').val(),
-        name: $('#fb_name').val(),
-        caption: $('#fb_caption').val(),
-        description: $('#fb_description').val()
-
-    }, function(response) {
-        if (response !== null && response.post_id !== null && response.post_id !== '') {
-            // Update user data.
-            updateImageSnap($('#snapId').val(), '', '', '', '', '', null, response.post_id, null);
-        }
-    });
-}
-
-/* Facebook connect */
-window.fbAsyncInit = function() {
-    FB.init({
-        appId: $('#facebookAppId').val(),
-        xfbml: true,
-        version: 'v2.2'
-    });
-
-    FB.Event.subscribe('auth.statusChange', function(response) {
-        if (response.status === 'connected') {
-            showAccountInfo();
-        }
-    });
-};
-
 (function() {
     'use strict';
 
     // Base url for ajax requests
-    
     var server_uri = '';
     if (location.host === 'localhost' || location.host === 'git.krympevaerk.dk') {
         server_uri = 'http://blueelements.rc.magnetix.dk';
     }
-    console.log(server_uri);
+    //console.log(server_uri);
 
     var pageID = null;
+
+
+    // Facebook integration
+
+    // Retrieve FB account details and use in fields
+    function showAccountInfo() {
+        FB.api('/me?fields=name,picture,email', function(response) {
+            //Set variable her!!
+            //document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
+            //console.log(response);
+            if (response !== null && response.id !== null && response.id !== '') {
+                var nameSplit = response.name.split(' ');
+                $('#userfirstname').val(nameSplit[0].trim()).trigger('blur');
+                $('#userlastname').val(response.name.substring(nameSplit[0].length).trim()).trigger('blur');
+                $('#useremail').val(response.email).trigger('blur');
+                $('#userfacebookId').val(response.id);
+            }
+        });               
+    }
+
+    // Share snapshot on FB
+    function shareImageSnap() {
+        FB.ui({
+            display: 'popup',
+            method: 'feed',
+            //href: 'https://developers.facebook.com/docs/',
+            link: $('#fb_link').val(),
+            picture: $('#fullImageUrl').val(),
+            name: $('#fb_name').val(),
+            caption: $('#fb_caption').val(),
+            description: $('#fb_description').val()
+
+        }, function(response) {
+            if (response !== null && response.post_id !== null && response.post_id !== '') {
+                // Update user data.
+                updateImageSnap($('#snapId').val(), '', '', '', '', '', null, response.post_id, null);
+            }
+        });
+    }
+
+    /* Facebook connect */
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: $('#facebookAppId').val(),
+            xfbml: true,
+            version: 'v2.2'
+        });
+
+        FB.Event.subscribe('auth.statusChange', function(response) {
+            if (response.status === 'connected') {
+                showAccountInfo();
+            }
+        });
+    };
 
 
 
@@ -187,7 +187,7 @@ window.fbAsyncInit = function() {
     $(document).ready(function() {
 
         pageID = $('#pageId').val();
-        
+
         // Move snapshot object sideways on small clients
         $('.snapshot-view').each(function() {
 
@@ -298,7 +298,9 @@ window.fbAsyncInit = function() {
                         $(this).parents('label').toggleClass('error', !validateEmail($(this).val()));
                     }
 
-                    if ($(this).parents('label').hasClass('error')) err = true;
+                    if ($(this).parents('label').hasClass('error')) {
+                        err = true;
+                    }
                 });
 
                 if (!err) {

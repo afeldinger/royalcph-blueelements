@@ -1681,7 +1681,7 @@ textarea {
 .input-radio input {
   position: absolute;
   top: 2px;
-  left: 0;
+  left: 1px;
 }
 
 .input-text .label, .input-textarea .label {
