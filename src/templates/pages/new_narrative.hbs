@@ -78,7 +78,7 @@ class: section-narrative
 	c13.99-23.325,32.34-37.625,46.33-47.259C169.301,16.835,175.789,13.387,179.591,13.235z"/>
 		</clipPath>
 
-	    <filter id="be-straigh-shadow">
+	    <filter id="be-offset-shadow">
 	        <feOffset in="SourceAlpha" dx="10" dy="-10" result="offset" />
 	        <feGaussianBlur in="offset" stdDeviation="20"  result="blur"/>
 
@@ -89,10 +89,9 @@ class: section-narrative
 	    </filter>
 	</defs>
 
-    <g id="be-platter">
-       <image clip-path="url(#be-platter-clippath)" filter="url(#be-straight-shadow)" height="92.61%" width="89.15%" xlink:href="{{assets}}/img/gx_narrative_product.jpg" />
+    <g id="be-platter" filter="url(#be-offset-shadow)">
+       <image clip-path="url(#be-platter-clippath)" height="92.61%" width="89.15%" xlink:href="{{assets}}/img/gx_narrative_product.jpg" />
     </g>
-
 </svg>
 
 <div class="main-content">

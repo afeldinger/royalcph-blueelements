@@ -184,6 +184,29 @@ var FB;
         return re.test(email);
     }
 
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) {
+                    func.apply(context, args);
+                }
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    }
+
     $(document).ready(function() {
 
         pageID = $('#pageId').val();
@@ -209,14 +232,14 @@ var FB;
                     viewport_width = $(this).parents('.snapshot-view:first').width();
                     viewport_oob = viewport_min_width - viewport_width;
                 },
-                drag: function() {
+                drag: debounce(function() {
                     if (viewport_width < viewport_min_width) {
                         var x = $(this).offset().left;
                         var x_ratio = x / (viewport_width - viewfinder_width);
                         x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
-                        viewport_img.css('transform', 'translate(' + x_offset + 'px,0)');
+                        viewport_img.css('transform', 'translateX(' + x_offset + 'px)');
                     }
-                },
+                }, 10, true),
                 stop: function(event, ui) {
                     var pos = $(this).offset();
                     var x = pos.left;

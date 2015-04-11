@@ -80,9 +80,8 @@
 		height:1009px / 1114px * 700px;
 		transform: translate3d(0,0,0);
 
-
 		@include breakpoint(700px) {
-			transform: translate(0,0) !important;
+			transform: translateX(0) !important;
 		}
 	}
 

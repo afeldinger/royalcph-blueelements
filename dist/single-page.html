@@ -57,13 +57,17 @@
         <div class="splash">
           <div class="splash-container">
             <div class="side1">
-              Nyhed!
+              <div class="elm-content">
+                Nyhed!
+              </div>
             </div>
             <div class="side2">
-              Snap your
-              <br> favourite detail,
-              <br> tell us why you
-              <br> like it and win!
+              <div class="elm-content">
+                Snap your
+                <br> favourite detail,
+                <br> tell us why you
+                <br> like it and win!
+              </div>
             </div>
           </div>
         </div>
@@ -301,7 +305,7 @@
 	c2.636-9.736,11.76-38.233,19.769-52.025s10.848-21.094,13.078-29.917c2.23-8.823,8.516-30.323,22.506-53.648
 	c13.99-23.325,32.34-37.625,46.33-47.259C169.301,16.835,175.789,13.387,179.591,13.235z" />
             </clipPath>
-            <filter id="be-straigh-shadow">
+            <filter id="be-offset-shadow">
               <feOffset in="SourceAlpha" dx="10" dy="-10" result="offset" />
               <feGaussianBlur in="offset" stdDeviation="20" result="blur" />
               <feMerge>
@@ -310,8 +314,8 @@
               </feMerge>
             </filter>
           </defs>
-          <g id="be-platter">
-            <image clip-path="url(#be-platter-clippath)" filter="url(#be-straight-shadow)" height="92.61%" width="89.15%" xlink:href="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/img/gx_narrative_product.jpg" />
+          <g id="be-platter" filter="url(#be-offset-shadow)">
+            <image clip-path="url(#be-platter-clippath)" height="92.61%" width="89.15%" xlink:href="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/img/gx_narrative_product.jpg" />
           </g>
         </svg>
         <div class="main-content">
@@ -343,7 +347,7 @@
     <section class="content-section section-designer">
       <div class="content-wrapper">
         <div class="main-content">
-          <h1>Lorem ipsum dolor sit amet</h1>
+          <h1>Designeren af Blue Elements</h1>
           <p>
             <span class="caps">Louise Campbell</span> is a pioneer in innovative, contemporary design and one of the world’s leading creative talents. She has won numerous awards for her design work and has a knack for twisting familiar elements to create something new and unique.
           </p>
@@ -698,6 +702,5 @@
       </div>
     </footer>
     <script src="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/js/scripts.min.js"></script>
-    <script src="http://git.krympevaerk.dk/royalcph/blueelements/dist/assets/js/main.js"></script>
   </body>
 </html>

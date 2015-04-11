@@ -35,7 +35,7 @@
 	}
 
 	.main-content {
-		width: 60%;
+		width: 50%;
 		margin-left: 5%;
 		min-height: 500px;
 
@@ -45,6 +45,7 @@
 		}
 
 		@include breakpoint($xs) {
+			width: 60%;
 
 			p {
 				@include adjust-font-size-to($size-xl);
@@ -53,7 +54,7 @@
 
 		@include breakpoint($sm) {
 			min-height: 490px;
-			width: rel-width(300px);
+			width: perc-width(300px);
 			margin-left: perc-width(170px);
 
 			p {
@@ -191,17 +192,23 @@
 			display:none;
 			width:100%;
 			bottom:-100%;
+			max-height: 100%;
 			padding:9%;
 			background: rgba($color-brand, .8);
 			color:#fff;
 			text-shadow: none;
 			text-align: center;
+			overflow: hidden;
+			@include adjust-font-size-to($size-sm);
 
 			transform: translate3d(0,0,0);
 			transition: bottom .3s ease;
 
 			@include breakpoint($sm) {
 				display: block;
+			}
+			@include breakpoint($md) {
+				@include adjust-font-size-to($size-md);
 			}
 		}
 		

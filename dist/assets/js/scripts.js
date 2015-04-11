@@ -2091,3 +2091,445 @@ $.magnificPopup.registerModule(RETINA_NS, {
 ;window.Modernizr=function(a,b,c){function z(a){j.cssText=a}function A(a,b){return z(m.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&&j[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+o.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+p.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.8.3",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n="Webkit Moz O ms",o=n.split(" "),p=n.toLowerCase().split(" "),q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&&!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&&B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.flexbox=function(){return F("flexWrap")},q.flexboxlegacy=function(){return F("boxDirection")},q.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:w(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},q.backgroundsize=function(){return F("backgroundSize")},q.csstransforms=function(){return!!F("transform")},q.csstransforms3d=function(){var a=!!F("perspective");return a&&"webkitPerspective"in g.style&&w("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}",function(b,c){a=b.offsetLeft===9&&b.offsetHeight===3}),a},q.csstransitions=function(){return F("transition")};for(var G in q)y(q,G)&&(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),i=k=null,function(a,b){function l(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function m(){var a=s.elements;return typeof a=="string"?a.split(" "):a}function n(a){var b=j[a[h]];return b||(b={},i++,a[h]=i,j[i]=b),b}function o(a,c,d){c||(c=b);if(k)return c.createElement(a);d||(d=n(c));var g;return d.cache[a]?g=d.cache[a].cloneNode():f.test(a)?g=(d.cache[a]=d.createElem(a)).cloneNode():g=d.createElem(a),g.canHaveChildren&&!e.test(a)&&!g.tagUrn?d.frag.appendChild(g):g}function p(a,c){a||(a=b);if(k)return a.createDocumentFragment();c=c||n(a);var d=c.frag.cloneNode(),e=0,f=m(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function q(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return s.shivMethods?o(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+m().join().replace(/[\w\-]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(s,b.frag)}function r(a){a||(a=b);var c=n(a);return s.shivCSS&&!g&&!c.hasCSS&&(c.hasCSS=!!l(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),k||q(a,c),a}var c="3.7.0",d=a.html5||{},e=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,f=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,g,h="_html5shiv",i=0,j={},k;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",g="hidden"in a,k=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){g=!0,k=!0}})();var s={elements:d.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",version:c,shivCSS:d.shivCSS!==!1,supportsUnknownElements:k,shivMethods:d.shivMethods!==!1,type:"default",shivDocument:r,createElement:o,createDocumentFragment:p};a.html5=s,r(b)}(this,b),e._version=d,e._prefixes=m,e._domPrefixes=p,e._cssomPrefixes=o,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+t.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
 (function(f,k,l,e,m){function g(a,c){if(c){var b=c.getAttribute("viewBox"),d=f.createDocumentFragment(),e=c.cloneNode(!0);for(b&&a.setAttribute("viewBox",b);e.childNodes.length;)d.appendChild(e.childNodes[0]);a.appendChild(d)}}function n(){var a=f.createElement("x"),c=this.s;a.innerHTML=this.responseText;this.onload=function(){c.splice(0).map(function(b){g(b[0],a.querySelector("#"+b[1].replace(/(\W)/g,"\\$1")))})};this.onload()}function h(){for(var a;a=k[0];){var c=a.parentNode,b=a.getAttribute("xlink:href").split("#"),
 d=b[0],b=b[1];c.removeChild(a);if(d.length){if(a=e[d]=e[d]||new XMLHttpRequest,a.s||(a.s=[],a.open("GET",d),a.onload=n,a.send()),a.s.push([c,b]),4===a.readyState)a.onload()}else g(c,f.getElementById(b))}l(h)}m&&h()})(document,document.getElementsByTagName("use"),window.requestAnimationFrame||window.setTimeout,{},/Trident\/[567]\b/.test(navigator.userAgent)||537>(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]);
+
+var FB;
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = '//connect.facebook.net/en_US/sdk.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+(function() {
+    'use strict';
+
+    // Base url for ajax requests
+    var server_uri = '';
+    if (location.host === 'localhost' || location.host === 'git.krympevaerk.dk') {
+        server_uri = 'http://blueelements.rc.magnetix.dk';
+    }
+    //console.log(server_uri);
+
+    var pageID = null;
+
+
+    // Facebook integration
+
+    // Retrieve FB account details and use in fields
+    function showAccountInfo() {
+        FB.api('/me?fields=name,picture,email', function(response) {
+            //Set variable her!!
+            //document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
+            //console.log(response);
+            if (response !== null && response.id !== null && response.id !== '') {
+                var nameSplit = response.name.split(' ');
+                $('#userfirstname').val(nameSplit[0].trim()).trigger('blur');
+                $('#userlastname').val(response.name.substring(nameSplit[0].length).trim()).trigger('blur');
+                $('#useremail').val(response.email).trigger('blur');
+                $('#userfacebookId').val(response.id);
+            }
+        });               
+    }
+
+    // Share snapshot on FB
+    function shareImageSnap() {
+        FB.ui({
+            display: 'popup',
+            method: 'feed',
+            //href: 'https://developers.facebook.com/docs/',
+            link: $('#fb_link').val(),
+            picture: $('#fullImageUrl').val(),
+            name: $('#fb_name').val(),
+            caption: $('#fb_caption').val(),
+            description: $('#fb_description').val()
+
+        }, function(response) {
+            if (response !== null && response.post_id !== null && response.post_id !== '') {
+                // Update user data.
+                updateImageSnap($('#snapId').val(), '', '', '', '', '', null, response.post_id, null);
+            }
+        });
+    }
+
+    /* Facebook connect */
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: $('#facebookAppId').val(),
+            xfbml: true,
+            version: 'v2.2'
+        });
+
+        FB.Event.subscribe('auth.statusChange', function(response) {
+            if (response.status === 'connected') {
+                showAccountInfo();
+            }
+        });
+    };
+
+
+
+    // Ajax requests
+    function send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission) {
+        var snapdata = {
+            Left: left,
+            Top: top,
+            ScaleFactor: scale,
+            FirstName: firstName,
+            LastName: lastName,
+            Email: email,
+            Comment: comment,
+            FacebookId: facebookId,
+            ClickedFacebookShare: clickedFacebookShare,
+            FacebookSharePostId: facebookSharePostId,
+            AllowEmailPermission: allowEmailPermission
+        };
+ 
+        
+        $.ajax({
+            async: true,
+            url: server_uri + '/umbraco/surface/ImageSnapSurface/SubmitImageSnap',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ imageSnap: snapdata, pi: pageID }),
+            success: function(result) {
+                if (result.success) {
+                    console.log(result);
+
+                    //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
+                    var full_url = result.imageUrl;
+                    console.log(full_url);
+                    $('#userimagecrop').attr('src', full_url).show();
+                    $('#fullImageUrl').val(full_url);
+                    $('#snapId').val(result.snapId);
+                } else {
+                    console.log(result.error);
+                }
+            },
+            error: function() {
+                console.log('Der opstod en teknisk fejl');
+            }
+        });
+    }
+ 
+    function updateImageSnap(snapId, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission) {
+        var snapdata = {
+            SnapId: snapId,
+            FirstName: firstName,
+            LastName: lastName,
+            Email: email,
+            Comment: comment,
+            FacebookId: facebookId,
+            ClickedFacebookShare: clickedFacebookShare,
+            FacebookSharePostId: facebookSharePostId,
+            AllowEmailPermission: allowEmailPermission
+        };
+        $.ajax({
+            async: true,
+            //url: "/home/crop",
+            url: server_uri + '/umbraco/surface/ImageSnapSurface/UpdateUserData',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ imageSnap: snapdata, pi: pageID }),
+            success: function(result) {
+                if (result.success) {
+                    //$('<img src="/uploadedfiles/' + result.filename + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
+                    console.log('User updated');
+                } else {
+                    console.log(result.error);
+                }
+            },
+            error: function() {
+                console.log('Der opstod en teknisk fejl');
+            }
+        });
+    }
+
+
+    function getImageSnapList(countRequest) {
+        var request = {
+            imageSnapCountRequest: countRequest
+        };
+
+        $.ajax({
+            async: true,
+            url: server_uri + '/umbraco/surface/ImageSnapSurface/GetImageSnaps',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(request),
+            success: function(result) {
+                if (result.success) {
+                    return result.snapList;
+                } else {
+                    console.log(result.error);
+                }
+            },
+            error: function() {
+                console.log('Error fetching image snaps');
+            }
+        });
+    }
+
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) {
+                    func.apply(context, args);
+                }
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    }
+
+    $(document).ready(function() {
+
+        pageID = $('#pageId').val();
+
+        // Move snapshot object sideways on small clients
+        $('.snapshot-view').each(function() {
+
+            
+            var viewport_img = $(this).find('svg');
+            var viewport_min_width = viewport_img.width();
+            var viewport_width = viewport_min_width;
+            var viewport_oob = 0;
+            
+            var viewfinder = $(this).find('#snapshot-viewport');
+            var viewfinder_width = viewfinder.width();
+
+            var x_offset = 0;
+            
+            viewfinder.draggable({
+                containment: 'parent',
+                opacity: 0.5,
+                start: function() {
+                    viewport_width = $(this).parents('.snapshot-view:first').width();
+                    viewport_oob = viewport_min_width - viewport_width;
+                },
+                drag: debounce(function() {
+                    if (viewport_width < viewport_min_width) {
+                        var x = $(this).offset().left;
+                        var x_ratio = x / (viewport_width - viewfinder_width);
+                        x_offset = -1 * Math.ceil(x_ratio * viewport_oob);
+                        viewport_img.css('transform', 'translateX(' + x_offset + 'px)');
+                    }
+                }, 10, true),
+                stop: function(event, ui) {
+                    var pos = $(this).offset();
+                    var x = pos.left;
+                    var y = pos.top - $('.snapshot-form').offsetParent().offset().top;
+                    $('.snapshot-form').css({'left':x, 'top':y, 'height':$(this).height()});
+                }
+            }).click(function(event) {
+
+                var pos = $(this).position();
+                var top = pos.top;
+                var left = pos.left;
+                if (viewport_width < viewport_min_width) {
+                    left -= x_offset;
+                }
+                var scale = 2226 / viewport_min_width;
+
+
+
+                // send snapshot coordinates to server
+                //var scaledimage = $('#scaledimage').offset();
+                //var sel = $('#cropselector');
+                var firstName = $('#userfirstname').val();
+                var lastName = $('#userlastname').val();
+                var email = $('#useremail').val();
+                var comment = $('#usercomment').val();
+                var facebookId = $('#userfacebookId').val();
+                var clickedFacebookShare = null;
+                var facebookSharePostId = $('#facebookSharePostId').val();
+                var allowEmailPermission = null;
+
+                var crop_data = send_crop_data(top, left, scale, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+
+                $('#userimagecrop').hide();
+                $('.snapshot-form').addClass('active').find('.form-step:first').addClass('active').siblings('.form-step').removeClass('active');
+     
+
+            }).find('a').click(function(event) {
+                event.preventDefault();
+
+
+            });
+        });
+
+        $('.snapshot-form').each(function() {
+
+            $(this).find('.close').click(function(event) {
+                event.preventDefault();
+                $(this).parents('.snapshot-form').removeClass('active');
+            });
+
+            $(this).find('form').submit(function(event) {
+                event.preventDefault();
+            });
+            /*
+            $(this).find('.form-step button.next').click(function(event) {
+                event.preventDefault();
+
+
+                //$(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+            });
+            */
+            $(this).find('#btn-add-comment').click(function(event) {
+                event.preventDefault();
+                //updateImageSnap(snapId, firstName, lastName, email, comment, facebookId, clickedFacebookShare, facebookSharePostId, allowEmailPermission);
+                updateImageSnap($('#snapId').val(), '', '', '', $('#usercomment').val(), '', null, '', null);
+                $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+            });
+
+            $(this).find('#btn-add-userdata').click(function(event) {
+                event.preventDefault();
+                
+                // validate user data before submitting
+                var err = false;
+                $(this).parents('.form-step:first').find('input:visible').filter('[type=text], [type=email]').each(function() {
+
+                    $(this).parents('label').toggleClass('error', $(this).val() === '');
+
+                    if ($(this).is('[type=email]') && $(this).val() !== '') {
+                        $(this).parents('label').toggleClass('error', !validateEmail($(this).val()));
+                    }
+
+                    if ($(this).parents('label').hasClass('error')) {
+                        err = true;
+                    }
+                });
+
+                if (!err) {
+                    var userallowemailpermission = document.getElementById('userallowemailpermission').checked;
+                    updateImageSnap($('#snapId').val(), $('#userfirstname').val(), $('#userlastname').val(), $('#useremail').val(), '', $('#userfacebookId').val(), null, '', userallowemailpermission);
+
+                    $(this).parents('.form-step').removeClass('active').next('.form-step').addClass('active');
+
+                    // submission flow is complete: hide the viewfinder
+                    $('#snapshot-viewport').hide();
+                }
+
+            });
+
+            $(this).find('button.fb-connect').click(function(event) {
+                event.preventDefault();
+
+                FB.login(function(response) {
+
+                }, { scope: 'email' });
+
+            });
+
+
+            $(this).find('#share-btn').click(function(event) {
+                event.preventDefault();
+                updateImageSnap($('#snapId').val(), '', '', '', '', '', true, '', null);
+                shareImageSnap();
+            });
+
+            $(this).find('.terms-link a').click(function(event) {
+                event.preventDefault();
+                $('.terms-content').toggleClass('active');
+            });
+
+        });
+
+
+ /*
+ 
+        document.getElementById('login-btn').onclick = function() {
+            FB.login(function(response) {
+ 
+            }, { scope: 'email' });
+            return false;
+        }
+ 
+
+ */
+
+
+        // control checkboxes and radiobuttons
+        $('input[type=radio], input[type=checkbox]').each(function() {
+
+            // set state on load
+            $(this).parents('label').toggleClass('checked', $(this).is(':checked'));
+
+            $(this).on('change', function() {
+
+                var fld_name = $(this).attr('name');
+                $('input[name=' + fld_name + ']', $(this).parents('form:first')).add(this).each(function() {
+                    $(this).parents('label').toggleClass('checked', $(this).is(':checked'));
+                });
+            });
+        });
+
+        // control input fields focus/blur state
+        $(':input').focus(function() {
+            $(this).parents('label').addClass('focus');
+        }).blur(function() {
+            $(this).parents('label')
+                .removeClass('focus')
+                .toggleClass('has-value', $(this).val()!=='')
+            ;
+        }).each(function() {
+            $(this).parents('label').toggleClass('has-value', $(this).val()!=='');
+        });
+
+        $('label').hover(
+            function() {
+                $(this).addClass('over');
+            }, 
+            function() {
+                $(this).removeClass('over');
+            }
+        ).filter(':has(.icon)').addClass('has-icon');
+
+
+
+
+        // IE fix for missing li:hover
+        $('.tiles li').hover(
+            function() {
+                $(this).addClass('over');
+            },
+            function() {
+                $(this).removeClass('over');
+            }
+        );
+
+        // init flexsliders on page
+        $('.flexslider').flexslider({
+            animation: 'slide',
+            slideshow: false,
+        });
+
+        // handle video links in a lightbox
+        $('a[href*="vimeo.com"], a[href*="youtube.com"]').magnificPopup({
+            type: 'iframe',
+        });
+
+    });
+})();
+
+
