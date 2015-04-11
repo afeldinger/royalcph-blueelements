@@ -103,11 +103,8 @@ var FB;
             data: JSON.stringify({ imageSnap: snapdata, pi: pageID }),
             success: function(result) {
                 if (result.success) {
-                    console.log(result);
 
-                    //$('<img src="' + result.imageUrl + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
                     var full_url = result.imageUrl;
-                    console.log(full_url);
                     $('#userimagecrop').attr('src', full_url).show();
                     $('#fullImageUrl').val(full_url);
                     $('#snapId').val(result.snapId);
@@ -143,7 +140,7 @@ var FB;
             success: function(result) {
                 if (result.success) {
                     //$('<img src="/uploadedfiles/' + result.filename + '" style="padding:5px;" width="100"><br/>').appendTo($('#results'));
-                    console.log('User updated');
+                    //console.log('User updated');
                 } else {
                     console.log(result.error);
                 }

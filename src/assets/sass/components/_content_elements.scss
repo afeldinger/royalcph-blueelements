@@ -18,6 +18,8 @@ img.full-width {
 	left: calc(50% + 320px);
 	font-size: 50px;
 	color: $color-gold;
+	transform: translate3d(0,0,0);
+	backface-visibility: visible;
 
 
 	animation: scroll-down-bounce 4s;
@@ -32,15 +34,12 @@ img.full-width {
 	}
 }
 
-@keyframes splash-animation{
-  0% {
-	transform: rotateY( 0deg );
-  }
-  100% {
-	transform: rotateY( -180deg );
-  }
+@keyframes scroll-down-bounce {
+	0%, 100% {transform: translateY(0);}
+	70% {transform: translateY(30px);}
 }
 
+/*
 .splash {
 	//@extend %text-emboss;
 
@@ -48,6 +47,7 @@ img.full-width {
 	width: 160px;
 	height: 160px;
 	position: relative;
+	backface-visibility: visible;
 	perspective: 800px;
 
 	.splash-container {
@@ -78,7 +78,7 @@ img.full-width {
 				height: 100%;
 				width:1px;
 				vertical-align: middle;
-				margin-right: -1px; /* Adjusts for spacing */
+				margin-right: -1px;
 			}
 
 			.elm-content {	
@@ -95,6 +95,104 @@ img.full-width {
 		}
 	}
 }
+
+@keyframes splash-animation{
+  0% {
+	transform: rotateY( 0deg );
+  }
+  100% {
+	transform: rotateY( -180deg );
+  }
+}
+*/
+
+.splash {
+	//@extend %text-emboss;
+
+
+	text-shadow: none;
+	width: 160px;
+	height: 160px;
+	position: relative;
+	z-index:30;
+
+	.splash-container {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+
+	}
+
+	.side1, .side2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 80px;
+		color: $color-text-dark;
+		font-weight: $weight-bold;
+		text-align:center;
+		background: url(../img/bg_gold.jpg);
+		line-height: 1.4em;
+
+		&:before {			
+			content: '';
+			display: inline-block;
+			height: 100%;
+			width:1px;
+			vertical-align: middle;
+			margin-right: -1px;
+		}
+
+	}
+
+	.elm-content {	
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+
+	.side1 {
+		font-size: 1.8em;
+	}
+
+	.side2 {
+		
+	}
+
+}
+
+.csstransforms3d .splash {
+
+	backface-visibility: visible;
+	perspective: 800px;
+
+	.splash-container {
+		transform-style: preserve-3d;
+		animation: splash-animation 1s 1 3s;
+		animation-fill-mode: forwards;
+
+
+		.side1, .side2 {
+			backface-visibility: hidden;
+		}
+		.side1 {
+
+		}
+		.side2 {
+			transform: rotateY( 180deg );
+		}
+	}
+}
+
+@keyframes splash-animation{
+  0% {
+	transform: rotateY( 0deg );
+  }
+  100% {
+	transform: rotateY( -180deg );
+  }
+}
+
 
 .pricing-info {
 	text-align:center;
