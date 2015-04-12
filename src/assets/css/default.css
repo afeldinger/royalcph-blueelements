@@ -1209,7 +1209,6 @@ img.full-width {
   content: '';
   display: inline-block;
   height: 100%;
-  width: 1px;
   vertical-align: middle;
   margin-right: -1px;
 }
