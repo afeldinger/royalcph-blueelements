@@ -161,7 +161,7 @@ img.full-width {
 
 }
 
-.csstransforms3d .splash {
+.csstransforms3d.not-ie .splash {
 
 	backface-visibility: visible;
 	perspective: 800px;
