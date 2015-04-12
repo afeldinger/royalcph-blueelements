@@ -1186,7 +1186,7 @@ img.full-width {
   width: 160px;
   height: 160px;
   position: relative;
-  z-index: 30;
+  z-index: 10;
 }
 .splash .splash-container {
   display: block;
